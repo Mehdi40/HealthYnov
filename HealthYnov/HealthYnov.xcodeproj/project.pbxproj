@@ -14,6 +14,9 @@
 		912BED0D2003B4A200749DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */; };
 		912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED172003B4A200749DEF /* HealthYnovTests.swift */; };
 		912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED222003B4A200749DEF /* HealthYnovUITests.swift */; };
+		912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
+		912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
+		912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,7 @@
 		912BED1E2003B4A200749DEF /* HealthYnovUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthYnovUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		912BED222003B4A200749DEF /* HealthYnovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthYnovUITests.swift; sourceTree = "<group>"; };
 		912BED242003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthYnov.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				912BED022003B4A200749DEF /* AppDelegate.swift */,
+				912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
 				912BED042003B4A200749DEF /* ViewController.swift */,
 				912BED062003B4A200749DEF /* Main.storyboard */,
 				912BED092003B4A200749DEF /* Assets.xcassets */,
@@ -261,6 +266,7 @@
 			files = (
 				912BED052003B4A200749DEF /* ViewController.swift in Sources */,
 				912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
+				912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +275,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */,
+				912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,6 +284,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */,
+				912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -560,6 +568,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */,
+			);
+			currentVersion = 912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */;
+			path = HealthYnov.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 912BECF72003B4A200749DEF /* Project object */;
 }
