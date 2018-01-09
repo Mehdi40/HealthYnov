@@ -272,7 +272,9 @@
 				912BED052003B4A200749DEF /* ViewController.swift in Sources */,
 				8B6469C92004D781004006F4 /* DataHelper.swift in Sources */,
 				912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
+				8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */,
 				912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
+				8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
