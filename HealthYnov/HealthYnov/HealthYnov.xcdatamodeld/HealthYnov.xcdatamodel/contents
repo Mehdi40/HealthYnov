@@ -48,11 +48,11 @@
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" syncable="YES"/>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="210"/>
-        <element name="Success" positionX="-54" positionY="63" width="128" height="120"/>
-        <element name="Goal" positionX="-36" positionY="81" width="128" height="135"/>
-        <element name="HealthMessage" positionX="-18" positionY="99" width="128" height="90"/>
-        <element name="Activity" positionX="0" positionY="117" width="128" height="105"/>
-        <element name="UserActivity" positionX="18" positionY="126" width="128" height="135"/>
+        <element name="Activity" positionX="0" positionY="117" width="128" height="103"/>
+        <element name="Goal" positionX="61" positionY="-198" width="128" height="135"/>
+        <element name="HealthMessage" positionX="-261" positionY="-225" width="128" height="90"/>
+        <element name="Success" positionX="-90" positionY="-198" width="128" height="120"/>
+        <element name="User" positionX="-531" positionY="-270" width="128" height="210"/>
+        <element name="UserActivity" positionX="-290" positionY="63" width="128" height="133"/>
     </elements>
 </model>

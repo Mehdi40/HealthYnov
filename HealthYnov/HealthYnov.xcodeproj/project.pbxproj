@@ -17,6 +17,13 @@
 		912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
 		912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
 		912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
+		912BED732004D74A00749DEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED722004D74A00749DEF /* ProfileViewController.swift */; };
+		912BED742004D74A00749DEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED722004D74A00749DEF /* ProfileViewController.swift */; };
+		912BED752004D74A00749DEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED722004D74A00749DEF /* ProfileViewController.swift */; };
+		912BED762004EA2600749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
+		912BED772004EA2700749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
+		912BED782004EA3D00749DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED062003B4A200749DEF /* Main.storyboard */; };
+		912BED792004EA3E00749DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED062003B4A200749DEF /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,7 @@
 		912BED222003B4A200749DEF /* HealthYnovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthYnovUITests.swift; sourceTree = "<group>"; };
 		912BED242003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthYnov.xcdatamodel; sourceTree = "<group>"; };
+		912BED722004D74A00749DEF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +113,7 @@
 				912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
 				912BED042003B4A200749DEF /* ViewController.swift */,
 				912BED062003B4A200749DEF /* Main.storyboard */,
+				912BED722004D74A00749DEF /* ProfileViewController.swift */,
 				912BED092003B4A200749DEF /* Assets.xcassets */,
 				912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */,
 				912BED0E2003B4A200749DEF /* Info.plist */,
@@ -247,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912BED782004EA3D00749DEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +264,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912BED792004EA3E00749DEF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +277,7 @@
 			files = (
 				912BED052003B4A200749DEF /* ViewController.swift in Sources */,
 				912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
+				912BED732004D74A00749DEF /* ProfileViewController.swift in Sources */,
 				912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912BED762004EA2600749DEF /* AppDelegate.swift in Sources */,
+				912BED742004D74A00749DEF /* ProfileViewController.swift in Sources */,
 				912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */,
 				912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
@@ -283,6 +297,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				912BED772004EA2700749DEF /* AppDelegate.swift in Sources */,
+				912BED752004D74A00749DEF /* ProfileViewController.swift in Sources */,
 				912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */,
 				912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
