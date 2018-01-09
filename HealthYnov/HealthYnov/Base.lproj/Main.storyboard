@@ -124,7 +124,7 @@
                                 <rect key="frame" x="16" y="60" width="288" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="Successes"/>
+                                    <segment title="Achievements"/>
                                     <segment title="Goals"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>

@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        let appDel = UIApplication.shared.delegate as! AppDelegate
+        appDel.persistentContainer.viewContext
     }
 
     override func didReceiveMemoryWarning() {
@@ -20,3 +23,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 }
+
+// Comment appeler le contexte (BDD) : 
+// let appDel = UIApplication.shared.delegate as! AppDelegate
+// appDel.persistentContainer.viewContext
