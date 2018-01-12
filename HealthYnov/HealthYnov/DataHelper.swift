@@ -27,10 +27,11 @@ public class DataHelper{
     
     // Fill all tables : this launches all the functions below
     
-    private func fillAllTables(){
+    public func fillAllTables(){
         fillActivity()
         fillHealthMessages()
         fillSuccess()
+        printActivity()
     }
     
     // Functions for each table
@@ -58,6 +59,24 @@ public class DataHelper{
         } catch _ {
         
     }
+    }
+    
+    // Print the Activities on the console : just to be sure that Core Data is setting up ✌️
+    
+    public func printActivity(){
+        
+        let activitiesFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
+        let primarySortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        activitiesFetchRequest.sortDescriptors = [primarySortDescriptor]
+        
+        let allActivities = (try! context.fetch(activitiesFetchRequest)) as! [Activity]
+        
+        for activity in allActivities {
+            
+            print(activity.name)
+        }
+        
     }
     
     // Fill the HealthMessages table

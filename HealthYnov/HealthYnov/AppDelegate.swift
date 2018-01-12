@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+ 
+        // Adding code to fill and test Core Data
+        
+       let testcontext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+       let dataHelper = DataHelper(context: testcontext)
+       dataHelper.fillAllTables()
+        
+        
+        
         return true
     }
 
