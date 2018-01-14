@@ -77,6 +77,8 @@ public class DataHelper{
             print(activity.name)
         }
         
+        print("Test")
+        
     }
     
     // Fill the HealthMessages table
@@ -113,6 +115,12 @@ public class DataHelper{
             (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "http://adress/icon.png", requirements: 100),
             (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "http://adress/icon.png", requirements: 250),
             (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "http://adress/icon.png", requirements: 500),
+            
+            // Success Type : Walking distance
+            
+            (name: "Distance - Level 1", desc: "Walk 1 km", icon: "http://adress/icon.png", requirements: 1),
+            (name: "Distance - Level 2", desc: "Walk 5 km", icon: "http://adress/icon.png", requirements: 5),
+            (name: "Distance - Level 3", desc: "Walk 10 km", icon: "http://adress/icon.png", requirements: 10),
             
             // Sucess Type : Climb floors
             
