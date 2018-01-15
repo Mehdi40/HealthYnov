@@ -220,7 +220,7 @@ public class DataHelper{
     public func emptyHealthMessages(){
         
         let healthmessageFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "HealthMessage")
-        let primarySortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        let primarySortDescriptor = NSSortDescriptor(key: "message", ascending: true)
         
         healthmessageFetchRequest.sortDescriptors = [primarySortDescriptor]
         
