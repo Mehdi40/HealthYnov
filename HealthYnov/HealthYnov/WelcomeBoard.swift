@@ -12,22 +12,28 @@ import CoreData
 class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
     @IBOutlet weak var NicknameTF: UITextField!
-    @IBOutlet weak var HeightPicker: UIPickerView!
+    @IBOutlet weak var WHPicker: UIPickerView!
     @IBOutlet weak var GenderSl: UISegmentedControl!
     
-    let heightTotal: Double = 2.40
+    let heightMAX: Double = 2.40
+    let weightMAX: Double = 150
     let heightStep: Double = 0.05
+    let weightStep: Double = 0.5
     var heightValues: [Double] = [1.0]
-    var weightValues: [Double] = [40]
+    var weightValues: [Double] = [30]
+    let heightUnit: String = "m"
+    let weightUnit: String = "kg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        while heightValues.last! < heightTotal {
+        while heightValues.last! < heightMAX {
             heightValues.append(heightValues.last! + heightStep)
         }
         
-        print(heightValues)
+        while weightValues.last! < weightMAX {
+            weightValues.append(weightValues.last! + weightStep)
+        }
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -39,7 +45,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         if component == 0 {
             return heightValues.count
         }
-        
+        // add unit TODO
         if component == 1 {
             return weightValues.count
         }
@@ -64,17 +70,18 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     
     @IBAction func SubmitButton(_ sender: Any) {
         
+        // send data and indentifi components TODO
         let nicknameUser =  NicknameTF.text
-        let height = HeightPicker
-        let weight = WeightPicker
-        let gender = GenderSl
+        var heightSelected = WHPicker(component == 0)
+        var weightSelected = WHPicker(component = 1)
+        var gender = GenderSl
     }
     
     
-    func SignIN(nickname:String, height:Float, weight:Float, gender:Bool) {
+    func SignIN(nickname:String, height:Double, weight:Double, gender:Bool) {
         
   
-        
+        //Fonction for signup
         
     }
     /*
