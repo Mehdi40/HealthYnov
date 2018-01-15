@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B1775F6200CDD4700D6215D /* SuccessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F5200CDD4700D6215D /* SuccessList.swift */; };
+		8B1775F8200D285500D6215D /* SuccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */; };
 		8B6469C92004D781004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
 		8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
 		8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
@@ -44,6 +45,7 @@
 
 /* Begin PBXFileReference section */
 		8B1775F5200CDD4700D6215D /* SuccessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessList.swift; sourceTree = "<group>"; };
+		8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessTableViewCell.swift; sourceTree = "<group>"; };
 		8B6469C82004D781004006F4 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		8B9958062004CA6200002EC7 /* RoundedUImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUImage.swift; sourceTree = "<group>"; };
 		8B9958082004EE5500002EC7 /* WelcomeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBoard.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 				8B9958062004CA6200002EC7 /* RoundedUImage.swift */,
 				8B9958082004EE5500002EC7 /* WelcomeBoard.swift */,
 				8B1775F5200CDD4700D6215D /* SuccessList.swift */,
+				8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */,
 			);
 			path = HealthYnov;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				912BED052003B4A200749DEF /* ViewController.swift in Sources */,
+				8B1775F8200D285500D6215D /* SuccessTableViewCell.swift in Sources */,
 				8B6469C92004D781004006F4 /* DataHelper.swift in Sources */,
 				912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
 				8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */,

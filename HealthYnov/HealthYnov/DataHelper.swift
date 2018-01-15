@@ -32,6 +32,7 @@ public class DataHelper{
     // Fill all tables : this launches all the functions below
     
     public func fillAllTables(){
+        emptySuccess()
         fillActivity()
         fillHealthMessages()
         fillSuccess()
@@ -39,6 +40,23 @@ public class DataHelper{
     }
     
     // Functions for each table
+    
+    // Empty tables
+    
+    public func emptySuccess(){
+        
+        let successFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
+        let primarySortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        
+        successFetchRequest.sortDescriptors = [primarySortDescriptor]
+        
+        let allSuccess = (try! context.fetch(successFetchRequest)) as! [Success]
+        
+        for success in allSuccess {
+                context.delete(success)
+        }
+        
+    }
     
     // Fill the Activity table
     
@@ -118,9 +136,9 @@ public class DataHelper{
             
             // Success Type : Steps
             
-            (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "http://adress/icon.png", requirements: 100),
-            (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "http://adress/icon.png", requirements: 250),
-            (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "http://adress/icon.png", requirements: 500),
+            (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "steps-bronze", requirements: 100),
+            (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "steps-silver", requirements: 250),
+            (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "steps-golden", requirements: 500),
             
             // Success Type : Walking distance
             

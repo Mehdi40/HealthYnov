@@ -29,7 +29,11 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SuccessTableViewCell else {
+            fatalError("Wrong cell type")
+        }
+        
+
         
         //configure cell
 //        cell.textLabel?.text = "Test1"
@@ -38,10 +42,9 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
         let suc = success?[indexPath.row]
 
         
-        cell.textLabel?.text = suc?.name
-        cell.detailTextLabel?.text = "saucisse"
-            
-        
+        cell.Title.text = suc?.name
+        cell.Desc.text = suc?.desc
+        cell.Picture.image = UIImage(named: "\(suc?.icon)")
         return cell
     }
 }
