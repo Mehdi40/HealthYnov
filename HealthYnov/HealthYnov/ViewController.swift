@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         appDel.persistentContainer.viewContext
 
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

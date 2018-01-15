@@ -14,21 +14,48 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
     var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var success: [Success]?
+    var goal: [Goal]?
     
     @IBOutlet weak var successListSegment: UISegmentedControl!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         let fetchRequest: NSFetchRequest<Success> = Success.fetchRequest()
         success = try? context.fetch(fetchRequest)
+        
+        let fetchRequestGoals: NSFetchRequest<Goal> = Goal.fetchRequest()
+        goal = try? context.fetch(fetchRequestGoals)
         
         print(success)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return success?.count ?? 0
+        
+//        return success?.count ?? 0
+        var nbCell = 0
+        
+        switch(successListSegment.selectedSegmentIndex)
+        {
+        case 0:
+//        tableView.reloadData()
+        nbCell = success?.count ?? 0
+            break
+        case 1:
+//        tableView.reloadData()
+        nbCell = goal?.count ?? 0
+            break
+            
+        default:
+            break
+            
+        }
+        
+        return nbCell
     }
+    
+    // Cell
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? SuccessTableViewCell else {
@@ -37,6 +64,7 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
         
 
         let suc = success?[indexPath.row]
+//        let goa = goal?[indexPath.row]
         let imagePath = suc?.icon
 
         

@@ -289,6 +289,9 @@
                                     <segment title="Goals"/>
                                 </segments>
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="segmendDidMove:" destination="IyO-HJ-9dR" eventType="editingDidEnd" id="cS4-b0-B7Z"/>
+                                </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IlM-Ud-iB7">
                                 <rect key="frame" x="16" y="136" width="288" height="432"/>
