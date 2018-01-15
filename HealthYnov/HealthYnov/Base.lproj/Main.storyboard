@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -258,11 +258,6 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <connections>
-                        <outlet property="AvatarHeader" destination="k4C-xg-nSN" id="qKU-wS-Yzh"/>
-                        <outlet property="Userlevel" destination="pJ5-QH-U4h" id="89l-fM-WsC"/>
-                        <outlet property="Usernamelabel" destination="FXx-uA-tnC" id="9H8-kA-JQ9"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -316,10 +311,10 @@
             </objects>
             <point key="canvasLocation" x="823" y="13"/>
         </scene>
-        <!--Welcome Board-->
+        <!--Welcome Board Controller-->
         <scene sceneID="lEc-C3-QbY">
             <objects>
-                <viewController id="GPx-gU-DKy" customClass="WelcomeBoard" customModule="HealthYnov" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="GPx-gU-DKy" customClass="WelcomeBoardController" customModule="HealthYnov" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fI5-wg-YFD">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -328,45 +323,26 @@
                                 <rect key="frame" x="20" y="95" width="280" height="458"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Choose a nickname" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZZe-o5-Koc">
-                                        <rect key="frame" x="0.0" y="0.0" width="280" height="43"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="280" height="40"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="6CV-7F-QXz">
-                                        <rect key="frame" x="0.0" y="53" width="280" height="200"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="MdB-vW-DTo">
-                                                <rect key="frame" x="0.0" y="0.0" width="136" height="200"/>
-                                                <subviews>
-                                                    <pickerView contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="0KZ-HK-LwF" propertyAccessControl="none">
-                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="200"/>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="GPx-gU-DKy" id="K2Z-TX-gyr"/>
-                                                            <outlet property="delegate" destination="GPx-gU-DKy" id="Acf-EM-jIn"/>
-                                                        </connections>
-                                                    </pickerView>
-                                                </subviews>
-                                            </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="8I3-81-wfH">
-                                                <rect key="frame" x="144" y="0.0" width="136" height="200"/>
-                                                <subviews>
-                                                    <pickerView contentMode="scaleToFill" horizontalCompressionResistancePriority="400" verticalCompressionResistancePriority="450" translatesAutoresizingMaskIntoConstraints="NO" id="86w-iy-M82">
-                                                        <rect key="frame" x="0.0" y="0.0" width="136" height="200"/>
-                                                        <connections>
-                                                            <outlet property="dataSource" destination="GPx-gU-DKy" id="Zh9-fl-Cc2"/>
-                                                            <outlet property="delegate" destination="GPx-gU-DKy" id="iEU-jV-r6a"/>
-                                                        </connections>
-                                                    </pickerView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="200" id="pBs-lz-rKv"/>
-                                        </constraints>
+                                        <rect key="frame" x="0.0" y="50" width="280" height="0.0"/>
                                     </stackView>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0KZ-HK-LwF" propertyAccessControl="none">
+                                        <rect key="frame" x="0.0" y="60" width="280" height="200"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="o6e-lv-Cs7"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="dataSource" destination="GPx-gU-DKy" id="K2Z-TX-gyr"/>
+                                            <outlet property="delegate" destination="GPx-gU-DKy" id="Acf-EM-jIn"/>
+                                        </connections>
+                                    </pickerView>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="BNq-OF-4rN">
-                                        <rect key="frame" x="0.0" y="263" width="280" height="41.5"/>
+                                        <rect key="frame" x="0.0" y="270" width="280" height="38"/>
                                         <segments>
                                             <segment title="M"/>
                                             <segment title="F"/>
@@ -374,7 +350,7 @@
                                         <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4h0-fv-Oy1">
-                                        <rect key="frame" x="0.0" y="313.5" width="280" height="144.5"/>
+                                        <rect key="frame" x="0.0" y="317" width="280" height="141"/>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                         <state key="normal" title="Let's started !"/>
                                         <connections>
@@ -410,9 +386,7 @@
                     <connections>
                         <outlet property="GenderSl" destination="BNq-OF-4rN" id="bVx-xS-99W"/>
                         <outlet property="HeightPicker" destination="0KZ-HK-LwF" id="wdW-Qd-Qf0"/>
-                        <outlet property="LSbutton" destination="4h0-fv-Oy1" id="jHT-xB-7Sv"/>
                         <outlet property="NicknameTF" destination="ZZe-o5-Koc" id="Qj2-uc-rtg"/>
-                        <outlet property="WeightPicker" destination="86w-iy-M82" id="a83-WF-zq6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Od7-NK-toE" userLabel="First Responder" sceneMemberID="firstResponder"/>
