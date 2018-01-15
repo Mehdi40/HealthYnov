@@ -1,602 +1,606 @@
 // !$*UTF8*$!
 {
-    archiveVersion = 1;
-    classes = {
-    };
-    objectVersion = 48;
-    objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
 
 /* Begin PBXBuildFile section */
-        8B6469C92004D781004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
-        8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
-        8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
-        8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958062004CA6200002EC7 /* RoundedUImage.swift */; };
-        8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958082004EE5500002EC7 /* WelcomeBoard.swift */; };
-        912BED032003B4A200749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
-        912BED052003B4A200749DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED042003B4A200749DEF /* ViewController.swift */; };
-        912BED082003B4A200749DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED062003B4A200749DEF /* Main.storyboard */; };
-        912BED0A2003B4A200749DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912BED092003B4A200749DEF /* Assets.xcassets */; };
-        912BED0D2003B4A200749DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */; };
-        912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED172003B4A200749DEF /* HealthYnovTests.swift */; };
-        912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED222003B4A200749DEF /* HealthYnovUITests.swift */; };
-        912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
-        912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
-        912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
+		8B1775F6200CDD4700D6215D /* SuccessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F5200CDD4700D6215D /* SuccessList.swift */; };
+		8B6469C92004D781004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
+		8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
+		8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
+		8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958062004CA6200002EC7 /* RoundedUImage.swift */; };
+		8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958082004EE5500002EC7 /* WelcomeBoard.swift */; };
+		912BED032003B4A200749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
+		912BED052003B4A200749DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED042003B4A200749DEF /* ViewController.swift */; };
+		912BED082003B4A200749DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED062003B4A200749DEF /* Main.storyboard */; };
+		912BED0A2003B4A200749DEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 912BED092003B4A200749DEF /* Assets.xcassets */; };
+		912BED0D2003B4A200749DEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */; };
+		912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED172003B4A200749DEF /* HealthYnovTests.swift */; };
+		912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED222003B4A200749DEF /* HealthYnovUITests.swift */; };
+		912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
+		912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
+		912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-        912BED142003B4A200749DEF /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 912BECF72003B4A200749DEF /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 912BECFE2003B4A200749DEF;
-            remoteInfo = HealthYnov;
-        };
-        912BED1F2003B4A200749DEF /* PBXContainerItemProxy */ = {
-            isa = PBXContainerItemProxy;
-            containerPortal = 912BECF72003B4A200749DEF /* Project object */;
-            proxyType = 1;
-            remoteGlobalIDString = 912BECFE2003B4A200749DEF;
-            remoteInfo = HealthYnov;
-        };
+		912BED142003B4A200749DEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 912BECF72003B4A200749DEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 912BECFE2003B4A200749DEF;
+			remoteInfo = HealthYnov;
+		};
+		912BED1F2003B4A200749DEF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 912BECF72003B4A200749DEF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 912BECFE2003B4A200749DEF;
+			remoteInfo = HealthYnov;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-        8B6469C82004D781004006F4 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
-        8B9958062004CA6200002EC7 /* RoundedUImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUImage.swift; sourceTree = "<group>"; };
-        8B9958082004EE5500002EC7 /* WelcomeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBoard.swift; sourceTree = "<group>"; };
-        912BECFF2003B4A200749DEF /* HealthYnov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthYnov.app; sourceTree = BUILT_PRODUCTS_DIR; };
-        912BED022003B4A200749DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-        912BED042003B4A200749DEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-        912BED072003B4A200749DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-        912BED092003B4A200749DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-        912BED0C2003B4A200749DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-        912BED0E2003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        912BED132003B4A200749DEF /* HealthYnovTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthYnovTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        912BED172003B4A200749DEF /* HealthYnovTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthYnovTests.swift; sourceTree = "<group>"; };
-        912BED192003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        912BED1E2003B4A200749DEF /* HealthYnovUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthYnovUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-        912BED222003B4A200749DEF /* HealthYnovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthYnovUITests.swift; sourceTree = "<group>"; };
-        912BED242003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-        912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthYnov.xcdatamodel; sourceTree = "<group>"; };
+		8B1775F5200CDD4700D6215D /* SuccessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessList.swift; sourceTree = "<group>"; };
+		8B6469C82004D781004006F4 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		8B9958062004CA6200002EC7 /* RoundedUImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUImage.swift; sourceTree = "<group>"; };
+		8B9958082004EE5500002EC7 /* WelcomeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBoard.swift; sourceTree = "<group>"; };
+		912BECFF2003B4A200749DEF /* HealthYnov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthYnov.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		912BED022003B4A200749DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		912BED042003B4A200749DEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		912BED072003B4A200749DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		912BED092003B4A200749DEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		912BED0C2003B4A200749DEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		912BED0E2003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912BED132003B4A200749DEF /* HealthYnovTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthYnovTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		912BED172003B4A200749DEF /* HealthYnovTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthYnovTests.swift; sourceTree = "<group>"; };
+		912BED192003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912BED1E2003B4A200749DEF /* HealthYnovUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HealthYnovUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		912BED222003B4A200749DEF /* HealthYnovUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthYnovUITests.swift; sourceTree = "<group>"; };
+		912BED242003B4A200749DEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = HealthYnov.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-        912BECFC2003B4A200749DEF /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        912BED102003B4A200749DEF /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        912BED1B2003B4A200749DEF /* Frameworks */ = {
-            isa = PBXFrameworksBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		912BECFC2003B4A200749DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912BED102003B4A200749DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912BED1B2003B4A200749DEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-        912BECF62003B4A200749DEF = {
-            isa = PBXGroup;
-            children = (
-                912BED012003B4A200749DEF /* HealthYnov */,
-                912BED162003B4A200749DEF /* HealthYnovTests */,
-                912BED212003B4A200749DEF /* HealthYnovUITests */,
-                912BED002003B4A200749DEF /* Products */,
-            );
-            sourceTree = "<group>";
-        };
-        912BED002003B4A200749DEF /* Products */ = {
-            isa = PBXGroup;
-            children = (
-                912BECFF2003B4A200749DEF /* HealthYnov.app */,
-                912BED132003B4A200749DEF /* HealthYnovTests.xctest */,
-                912BED1E2003B4A200749DEF /* HealthYnovUITests.xctest */,
-            );
-            name = Products;
-            sourceTree = "<group>";
-        };
-        912BED012003B4A200749DEF /* HealthYnov */ = {
-            isa = PBXGroup;
-            children = (
-                912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
-                912BED022003B4A200749DEF /* AppDelegate.swift */,
-                912BED042003B4A200749DEF /* ViewController.swift */,
-                912BED062003B4A200749DEF /* Main.storyboard */,
-                912BED092003B4A200749DEF /* Assets.xcassets */,
-                912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */,
-                912BED0E2003B4A200749DEF /* Info.plist */,
-                8B6469C82004D781004006F4 /* DataHelper.swift */,
-                8B9958062004CA6200002EC7 /* RoundedUImage.swift */,
-                8B9958082004EE5500002EC7 /* WelcomeBoard.swift */,
-            );
-            path = HealthYnov;
-            sourceTree = "<group>";
-        };
-        912BED162003B4A200749DEF /* HealthYnovTests */ = {
-            isa = PBXGroup;
-            children = (
-                912BED172003B4A200749DEF /* HealthYnovTests.swift */,
-                912BED192003B4A200749DEF /* Info.plist */,
-            );
-            path = HealthYnovTests;
-            sourceTree = "<group>";
-        };
-        912BED212003B4A200749DEF /* HealthYnovUITests */ = {
-            isa = PBXGroup;
-            children = (
-                912BED222003B4A200749DEF /* HealthYnovUITests.swift */,
-                912BED242003B4A200749DEF /* Info.plist */,
-            );
-            path = HealthYnovUITests;
-            sourceTree = "<group>";
-        };
+		912BECF62003B4A200749DEF = {
+			isa = PBXGroup;
+			children = (
+				912BED012003B4A200749DEF /* HealthYnov */,
+				912BED162003B4A200749DEF /* HealthYnovTests */,
+				912BED212003B4A200749DEF /* HealthYnovUITests */,
+				912BED002003B4A200749DEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		912BED002003B4A200749DEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				912BECFF2003B4A200749DEF /* HealthYnov.app */,
+				912BED132003B4A200749DEF /* HealthYnovTests.xctest */,
+				912BED1E2003B4A200749DEF /* HealthYnovUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		912BED012003B4A200749DEF /* HealthYnov */ = {
+			isa = PBXGroup;
+			children = (
+				912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
+				912BED022003B4A200749DEF /* AppDelegate.swift */,
+				912BED042003B4A200749DEF /* ViewController.swift */,
+				912BED062003B4A200749DEF /* Main.storyboard */,
+				912BED092003B4A200749DEF /* Assets.xcassets */,
+				912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */,
+				912BED0E2003B4A200749DEF /* Info.plist */,
+				8B6469C82004D781004006F4 /* DataHelper.swift */,
+				8B9958062004CA6200002EC7 /* RoundedUImage.swift */,
+				8B9958082004EE5500002EC7 /* WelcomeBoard.swift */,
+				8B1775F5200CDD4700D6215D /* SuccessList.swift */,
+			);
+			path = HealthYnov;
+			sourceTree = "<group>";
+		};
+		912BED162003B4A200749DEF /* HealthYnovTests */ = {
+			isa = PBXGroup;
+			children = (
+				912BED172003B4A200749DEF /* HealthYnovTests.swift */,
+				912BED192003B4A200749DEF /* Info.plist */,
+			);
+			path = HealthYnovTests;
+			sourceTree = "<group>";
+		};
+		912BED212003B4A200749DEF /* HealthYnovUITests */ = {
+			isa = PBXGroup;
+			children = (
+				912BED222003B4A200749DEF /* HealthYnovUITests.swift */,
+				912BED242003B4A200749DEF /* Info.plist */,
+			);
+			path = HealthYnovUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-        912BECFE2003B4A200749DEF /* HealthYnov */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 912BED272003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnov" */;
-            buildPhases = (
-                912BECFB2003B4A200749DEF /* Sources */,
-                912BECFC2003B4A200749DEF /* Frameworks */,
-                912BECFD2003B4A200749DEF /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-            );
-            name = HealthYnov;
-            productName = HealthYnov;
-            productReference = 912BECFF2003B4A200749DEF /* HealthYnov.app */;
-            productType = "com.apple.product-type.application";
-        };
-        912BED122003B4A200749DEF /* HealthYnovTests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 912BED2A2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovTests" */;
-            buildPhases = (
-                912BED0F2003B4A200749DEF /* Sources */,
-                912BED102003B4A200749DEF /* Frameworks */,
-                912BED112003B4A200749DEF /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                912BED152003B4A200749DEF /* PBXTargetDependency */,
-            );
-            name = HealthYnovTests;
-            productName = HealthYnovTests;
-            productReference = 912BED132003B4A200749DEF /* HealthYnovTests.xctest */;
-            productType = "com.apple.product-type.bundle.unit-test";
-        };
-        912BED1D2003B4A200749DEF /* HealthYnovUITests */ = {
-            isa = PBXNativeTarget;
-            buildConfigurationList = 912BED2D2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovUITests" */;
-            buildPhases = (
-                912BED1A2003B4A200749DEF /* Sources */,
-                912BED1B2003B4A200749DEF /* Frameworks */,
-                912BED1C2003B4A200749DEF /* Resources */,
-            );
-            buildRules = (
-            );
-            dependencies = (
-                912BED202003B4A200749DEF /* PBXTargetDependency */,
-            );
-            name = HealthYnovUITests;
-            productName = HealthYnovUITests;
-            productReference = 912BED1E2003B4A200749DEF /* HealthYnovUITests.xctest */;
-            productType = "com.apple.product-type.bundle.ui-testing";
-        };
+		912BECFE2003B4A200749DEF /* HealthYnov */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 912BED272003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnov" */;
+			buildPhases = (
+				912BECFB2003B4A200749DEF /* Sources */,
+				912BECFC2003B4A200749DEF /* Frameworks */,
+				912BECFD2003B4A200749DEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HealthYnov;
+			productName = HealthYnov;
+			productReference = 912BECFF2003B4A200749DEF /* HealthYnov.app */;
+			productType = "com.apple.product-type.application";
+		};
+		912BED122003B4A200749DEF /* HealthYnovTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 912BED2A2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovTests" */;
+			buildPhases = (
+				912BED0F2003B4A200749DEF /* Sources */,
+				912BED102003B4A200749DEF /* Frameworks */,
+				912BED112003B4A200749DEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				912BED152003B4A200749DEF /* PBXTargetDependency */,
+			);
+			name = HealthYnovTests;
+			productName = HealthYnovTests;
+			productReference = 912BED132003B4A200749DEF /* HealthYnovTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		912BED1D2003B4A200749DEF /* HealthYnovUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 912BED2D2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovUITests" */;
+			buildPhases = (
+				912BED1A2003B4A200749DEF /* Sources */,
+				912BED1B2003B4A200749DEF /* Frameworks */,
+				912BED1C2003B4A200749DEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				912BED202003B4A200749DEF /* PBXTargetDependency */,
+			);
+			name = HealthYnovUITests;
+			productName = HealthYnovUITests;
+			productReference = 912BED1E2003B4A200749DEF /* HealthYnovUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-        912BECF72003B4A200749DEF /* Project object */ = {
-            isa = PBXProject;
-            attributes = {
-                LastSwiftUpdateCheck = 0920;
-                LastUpgradeCheck = 0920;
-                ORGANIZATIONNAME = Ynov;
-                TargetAttributes = {
-                    912BECFE2003B4A200749DEF = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                    };
-                    912BED122003B4A200749DEF = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 912BECFE2003B4A200749DEF;
-                    };
-                    912BED1D2003B4A200749DEF = {
-                        CreatedOnToolsVersion = 9.2;
-                        ProvisioningStyle = Automatic;
-                        TestTargetID = 912BECFE2003B4A200749DEF;
-                    };
-                };
-            };
-            buildConfigurationList = 912BECFA2003B4A200749DEF /* Build configuration list for PBXProject "HealthYnov" */;
-            compatibilityVersion = "Xcode 8.0";
-            developmentRegion = en;
-            hasScannedForEncodings = 0;
-            knownRegions = (
-                en,
-                Base,
-            );
-            mainGroup = 912BECF62003B4A200749DEF;
-            productRefGroup = 912BED002003B4A200749DEF /* Products */;
-            projectDirPath = "";
-            projectRoot = "";
-            targets = (
-                912BECFE2003B4A200749DEF /* HealthYnov */,
-                912BED122003B4A200749DEF /* HealthYnovTests */,
-                912BED1D2003B4A200749DEF /* HealthYnovUITests */,
-            );
-        };
+		912BECF72003B4A200749DEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = Ynov;
+				TargetAttributes = {
+					912BECFE2003B4A200749DEF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					912BED122003B4A200749DEF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 912BECFE2003B4A200749DEF;
+					};
+					912BED1D2003B4A200749DEF = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 912BECFE2003B4A200749DEF;
+					};
+				};
+			};
+			buildConfigurationList = 912BECFA2003B4A200749DEF /* Build configuration list for PBXProject "HealthYnov" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 912BECF62003B4A200749DEF;
+			productRefGroup = 912BED002003B4A200749DEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				912BECFE2003B4A200749DEF /* HealthYnov */,
+				912BED122003B4A200749DEF /* HealthYnovTests */,
+				912BED1D2003B4A200749DEF /* HealthYnovUITests */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-        912BECFD2003B4A200749DEF /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                912BED0D2003B4A200749DEF /* LaunchScreen.storyboard in Resources */,
-                912BED0A2003B4A200749DEF /* Assets.xcassets in Resources */,
-                912BED082003B4A200749DEF /* Main.storyboard in Resources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        912BED112003B4A200749DEF /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        912BED1C2003B4A200749DEF /* Resources */ = {
-            isa = PBXResourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		912BECFD2003B4A200749DEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912BED0D2003B4A200749DEF /* LaunchScreen.storyboard in Resources */,
+				912BED0A2003B4A200749DEF /* Assets.xcassets in Resources */,
+				912BED082003B4A200749DEF /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912BED112003B4A200749DEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912BED1C2003B4A200749DEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-        912BECFB2003B4A200749DEF /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                912BED052003B4A200749DEF /* ViewController.swift in Sources */,
-                8B6469C92004D781004006F4 /* DataHelper.swift in Sources */,
-                912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
-                8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */,
-                912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
-                8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        912BED0F2003B4A200749DEF /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */,
-                912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */,
-                912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
-        912BED1A2003B4A200749DEF /* Sources */ = {
-            isa = PBXSourcesBuildPhase;
-            buildActionMask = 2147483647;
-            files = (
-                8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */,
-                912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */,
-                912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
-            );
-            runOnlyForDeploymentPostprocessing = 0;
-        };
+		912BECFB2003B4A200749DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				912BED052003B4A200749DEF /* ViewController.swift in Sources */,
+				8B6469C92004D781004006F4 /* DataHelper.swift in Sources */,
+				912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
+				8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */,
+				8B1775F6200CDD4700D6215D /* SuccessList.swift in Sources */,
+				912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
+				8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912BED0F2003B4A200749DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */,
+				912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */,
+				912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		912BED1A2003B4A200749DEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */,
+				912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */,
+				912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-        912BED152003B4A200749DEF /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 912BECFE2003B4A200749DEF /* HealthYnov */;
-            targetProxy = 912BED142003B4A200749DEF /* PBXContainerItemProxy */;
-        };
-        912BED202003B4A200749DEF /* PBXTargetDependency */ = {
-            isa = PBXTargetDependency;
-            target = 912BECFE2003B4A200749DEF /* HealthYnov */;
-            targetProxy = 912BED1F2003B4A200749DEF /* PBXContainerItemProxy */;
-        };
+		912BED152003B4A200749DEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 912BECFE2003B4A200749DEF /* HealthYnov */;
+			targetProxy = 912BED142003B4A200749DEF /* PBXContainerItemProxy */;
+		};
+		912BED202003B4A200749DEF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 912BECFE2003B4A200749DEF /* HealthYnov */;
+			targetProxy = 912BED1F2003B4A200749DEF /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-        912BED062003B4A200749DEF /* Main.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                912BED072003B4A200749DEF /* Base */,
-            );
-            name = Main.storyboard;
-            sourceTree = "<group>";
-        };
-        912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */ = {
-            isa = PBXVariantGroup;
-            children = (
-                912BED0C2003B4A200749DEF /* Base */,
-            );
-            name = LaunchScreen.storyboard;
-            sourceTree = "<group>";
-        };
+		912BED062003B4A200749DEF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				912BED072003B4A200749DEF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				912BED0C2003B4A200749DEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-        912BED252003B4A200749DEF /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = dwarf;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                ENABLE_TESTABILITY = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_DYNAMIC_NO_PIC = NO;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_OPTIMIZATION_LEVEL = 0;
-                GCC_PREPROCESSOR_DEFINITIONS = (
-                    "DEBUG=1",
-                    "$(inherited)",
-                );
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = YES;
-                ONLY_ACTIVE_ARCH = YES;
-                SDKROOT = iphoneos;
-                SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
-                SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-            };
-            name = Debug;
-        };
-        912BED262003B4A200749DEF /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_SEARCH_USER_PATHS = NO;
-                CLANG_ANALYZER_NONNULL = YES;
-                CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-                CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-                CLANG_CXX_LIBRARY = "libc++";
-                CLANG_ENABLE_MODULES = YES;
-                CLANG_ENABLE_OBJC_ARC = YES;
-                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-                CLANG_WARN_BOOL_CONVERSION = YES;
-                CLANG_WARN_COMMA = YES;
-                CLANG_WARN_CONSTANT_CONVERSION = YES;
-                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-                CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-                CLANG_WARN_EMPTY_BODY = YES;
-                CLANG_WARN_ENUM_CONVERSION = YES;
-                CLANG_WARN_INFINITE_RECURSION = YES;
-                CLANG_WARN_INT_CONVERSION = YES;
-                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-                CLANG_WARN_STRICT_PROTOTYPES = YES;
-                CLANG_WARN_SUSPICIOUS_MOVE = YES;
-                CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-                CLANG_WARN_UNREACHABLE_CODE = YES;
-                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-                CODE_SIGN_IDENTITY = "iPhone Developer";
-                COPY_PHASE_STRIP = NO;
-                DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-                ENABLE_NS_ASSERTIONS = NO;
-                ENABLE_STRICT_OBJC_MSGSEND = YES;
-                GCC_C_LANGUAGE_STANDARD = gnu11;
-                GCC_NO_COMMON_BLOCKS = YES;
-                GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-                GCC_WARN_UNDECLARED_SELECTOR = YES;
-                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-                GCC_WARN_UNUSED_FUNCTION = YES;
-                GCC_WARN_UNUSED_VARIABLE = YES;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.2;
-                MTL_ENABLE_DEBUG_INFO = NO;
-                SDKROOT = iphoneos;
-                SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-                VALIDATE_PRODUCT = YES;
-            };
-            name = Release;
-        };
-        912BED282003B4A200749DEF /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 77J555BJ8F;
-                INFOPLIST_FILE = HealthYnov/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnov;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Debug;
-        };
-        912BED292003B4A200749DEF /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 77J555BJ8F;
-                INFOPLIST_FILE = HealthYnov/Info.plist;
-                IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnov;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-            };
-            name = Release;
-        };
-        912BED2B2003B4A200749DEF /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 77J555BJ8F;
-                INFOPLIST_FILE = HealthYnovTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthYnov.app/HealthYnov";
-            };
-            name = Debug;
-        };
-        912BED2C2003B4A200749DEF /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                BUNDLE_LOADER = "$(TEST_HOST)";
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 77J555BJ8F;
-                INFOPLIST_FILE = HealthYnovTests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovTests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthYnov.app/HealthYnov";
-            };
-            name = Release;
-        };
-        912BED2E2003B4A200749DEF /* Debug */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 77J555BJ8F;
-                INFOPLIST_FILE = HealthYnovUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = HealthYnov;
-            };
-            name = Debug;
-        };
-        912BED2F2003B4A200749DEF /* Release */ = {
-            isa = XCBuildConfiguration;
-            buildSettings = {
-                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-                CODE_SIGN_STYLE = Automatic;
-                DEVELOPMENT_TEAM = 77J555BJ8F;
-                INFOPLIST_FILE = HealthYnovUITests/Info.plist;
-                LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-                PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovUITests;
-                PRODUCT_NAME = "$(TARGET_NAME)";
-                SWIFT_VERSION = 4.0;
-                TARGETED_DEVICE_FAMILY = "1,2";
-                TEST_TARGET_NAME = HealthYnov;
-            };
-            name = Release;
-        };
+		912BED252003B4A200749DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		912BED262003B4A200749DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		912BED282003B4A200749DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77J555BJ8F;
+				INFOPLIST_FILE = HealthYnov/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnov;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		912BED292003B4A200749DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77J555BJ8F;
+				INFOPLIST_FILE = HealthYnov/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnov;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		912BED2B2003B4A200749DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77J555BJ8F;
+				INFOPLIST_FILE = HealthYnovTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthYnov.app/HealthYnov";
+			};
+			name = Debug;
+		};
+		912BED2C2003B4A200749DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77J555BJ8F;
+				INFOPLIST_FILE = HealthYnovTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HealthYnov.app/HealthYnov";
+			};
+			name = Release;
+		};
+		912BED2E2003B4A200749DEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77J555BJ8F;
+				INFOPLIST_FILE = HealthYnovUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HealthYnov;
+			};
+			name = Debug;
+		};
+		912BED2F2003B4A200749DEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 77J555BJ8F;
+				INFOPLIST_FILE = HealthYnovUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HealthYnov;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-        912BECFA2003B4A200749DEF /* Build configuration list for PBXProject "HealthYnov" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                912BED252003B4A200749DEF /* Debug */,
-                912BED262003B4A200749DEF /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        912BED272003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnov" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                912BED282003B4A200749DEF /* Debug */,
-                912BED292003B4A200749DEF /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        912BED2A2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovTests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                912BED2B2003B4A200749DEF /* Debug */,
-                912BED2C2003B4A200749DEF /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
-        912BED2D2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovUITests" */ = {
-            isa = XCConfigurationList;
-            buildConfigurations = (
-                912BED2E2003B4A200749DEF /* Debug */,
-                912BED2F2003B4A200749DEF /* Release */,
-            );
-            defaultConfigurationIsVisible = 0;
-            defaultConfigurationName = Release;
-        };
+		912BECFA2003B4A200749DEF /* Build configuration list for PBXProject "HealthYnov" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				912BED252003B4A200749DEF /* Debug */,
+				912BED262003B4A200749DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		912BED272003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnov" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				912BED282003B4A200749DEF /* Debug */,
+				912BED292003B4A200749DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		912BED2A2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				912BED2B2003B4A200749DEF /* Debug */,
+				912BED2C2003B4A200749DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		912BED2D2003B4A200749DEF /* Build configuration list for PBXNativeTarget "HealthYnovUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				912BED2E2003B4A200749DEF /* Debug */,
+				912BED2F2003B4A200749DEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-        912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */ = {
-            isa = XCVersionGroup;
-            children = (
-                912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */,
-            );
-            currentVersion = 912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */;
-            path = HealthYnov.xcdatamodeld;
-            sourceTree = "<group>";
-            versionGroupType = wrapper.xcdatamodel;
-        };
+		912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */,
+			);
+			currentVersion = 912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */;
+			path = HealthYnov.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
 /* End XCVersionGroup section */
-    };
-    rootObject = 912BECF72003B4A200749DEF /* Project object */;
+	};
+	rootObject = 912BECF72003B4A200749DEF /* Project object */;
 }

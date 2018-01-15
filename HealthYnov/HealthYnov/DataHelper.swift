@@ -25,6 +25,10 @@ public class DataHelper{
         self.context = context
     }
     
+    // List all success
+    
+
+    
     // Fill all tables : this launches all the functions below
     
     public func fillAllTables(){
@@ -40,6 +44,8 @@ public class DataHelper{
     
     public func fillActivity(){
         
+
+        
         let activities = [
             (name: "Running", desc: "Pratice running outdoor or on a machine.", icon: "http://adress/icon.png"),
             (name: "Swimming", desc: "Swimming in an Olympic pool.", icon: "http://adress/icon.png"),
@@ -48,7 +54,7 @@ public class DataHelper{
                         ]
         
         for activity in activities {
-            let newActivity = Activity(context: context)
+            let newActivity = NSEntityDescription.insertNewObject(forEntityName: "Activity", into: context) as! Activity
             newActivity.name = activity.name
             newActivity.desc = activity.desc
             newActivity.icon = activity.icon
@@ -56,8 +62,8 @@ public class DataHelper{
         
         do{
             try context.save()
-        } catch _ {
-        
+        } catch {
+            print(error)
     }
     }
     
