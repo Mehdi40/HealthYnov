@@ -40,12 +40,16 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
 //        cell.detailTextLabel?.text = "Test2"
         
         let suc = success?[indexPath.row]
-
-        
+        let imagePath = suc?.icon
         cell.Title.text = suc?.name
         cell.Desc.text = suc?.desc
-        cell.Picture.image = UIImage(named: "\(suc?.icon)")
+        
+
+        cell.Picture.image = UIImage(named: "\(imagePath ?? "nil")")
+        print(suc!.icon)
+
         return cell
+
     }
 }
 

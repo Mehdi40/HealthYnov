@@ -65,10 +65,10 @@ public class DataHelper{
 
         
         let activities = [
-            (name: "Running", desc: "Pratice running outdoor or on a machine.", icon: "http://adress/icon.png"),
-            (name: "Swimming", desc: "Swimming in an Olympic pool.", icon: "http://adress/icon.png"),
-            (name: "Biking", desc: "Ride a bike in the countryside, or practice spinning in a gym.", icon: "http://adress/icon.png"),
-            (name: "Fitness", desc: "a simple workout training you can do at home.", icon: "http://adress/icon.png")
+            (name: "Running", desc: "Pratice running outdoor or on a machine.", icon: "steps-bronze"),
+            (name: "Swimming", desc: "Swimming in an Olympic pool.", icon: "steps-bronze"),
+            (name: "Biking", desc: "Ride a bike in the countryside, or practice spinning in a gym.", icon: "steps-bronze"),
+            (name: "Fitness", desc: "a simple workout training you can do at home.", icon: "steps-bronze")
                         ]
         
         for activity in activities {
@@ -110,9 +110,9 @@ public class DataHelper{
     public func fillHealthMessages(){
         
         let messages = [
-            (message: "No pain, no gain!", icon: "http://adress/icon.png"),
-            (message: "Eat Train Sleep Repeat!", icon: "http://adress/icon.png"),
-            (message: "Eat 5 fruits and vegetable a day!", icon: "http://adress/icon.png")
+            (message: "No pain, no gain!", icon: "steps-bronze"),
+            (message: "Eat Train Sleep Repeat!", icon: "steps-bronze"),
+            (message: "Eat 5 fruits and vegetable a day!", icon: "steps-bronze")
         ]
         
         for message in messages {
@@ -138,43 +138,43 @@ public class DataHelper{
             
             (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "steps-bronze", requirements: 100),
             (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "steps-silver", requirements: 250),
-            (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "steps-golden", requirements: 500),
+            (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "steps-gold", requirements: 500),
             
             // Success Type : Walking distance
             
-            (name: "Distance - Level 1", desc: "Walk 1 km", icon: "http://adress/icon.png", requirements: 1),
-            (name: "Distance - Level 2", desc: "Walk 5 km", icon: "http://adress/icon.png", requirements: 5),
-            (name: "Distance - Level 3", desc: "Walk 10 km", icon: "http://adress/icon.png", requirements: 10),
+            (name: "Distance - Level 1", desc: "Walk 1 km", icon: "steps-bronze", requirements: 1),
+            (name: "Distance - Level 2", desc: "Walk 5 km", icon: "steps-bronze", requirements: 5),
+            (name: "Distance - Level 3", desc: "Walk 10 km", icon: "steps-bronze", requirements: 10),
             
             // Sucess Type : Climb floors
             
-            (name: "Stairs - Level 1", desc: "Climb 2 floors", icon: "http://adress/icon.png", requirements: 2),
-            (name: "Stairs - Level 2", desc: "Climb 5 floors", icon: "http://adress/icon.png", requirements: 5),
-            (name: "Stairs - Level 3", desc: "Climb 10 floors", icon: "http://adress/icon.png", requirements: 10),
+            (name: "Stairs - Level 1", desc: "Climb 2 floors", icon: "steps-bronze", requirements: 2),
+            (name: "Stairs - Level 2", desc: "Climb 5 floors", icon: "steps-bronze", requirements: 5),
+            (name: "Stairs - Level 3", desc: "Climb 10 floors", icon: "steps-bronze", requirements: 10),
             
             // Success Type : Running
   
-            (name: "Running - Level 1", desc: "Run for a whole km...", icon: "http://adress/icon.png", requirements: 1),
-            (name: "Running - Level 2", desc: "Run for 5 km", icon: "http://adress/icon.png", requirements: 5),
-            (name: "Running - Level 3", desc: "Run for 10 km", icon: "http://adress/icon.png", requirements: 10),
+            (name: "Running - Level 1", desc: "Run for a whole km...", icon: "steps-bronze", requirements: 1),
+            (name: "Running - Level 2", desc: "Run for 5 km", icon: "steps-bronze", requirements: 5),
+            (name: "Running - Level 3", desc: "Run for 10 km", icon: "steps-bronze", requirements: 10),
             
             // Success Type : Swimming
             
-            (name: "Swimming - Level 1", desc: "Swim a lap", icon: "http://adress/icon.png", requirements: 1),
-            (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "http://adress/icon.png", requirements: 5),
-            (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "http://adress/icon.png", requirements: 10),
+            (name: "Swimming - Level 1", desc: "Swim a lap", icon: "steps-bronze", requirements: 1),
+            (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "steps-bronze", requirements: 5),
+            (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "steps-bronze", requirements: 10),
             
             // Success Type : Biking
             
-            (name: "Biking - Level 1", desc: "Ride a bike for a whole km...", icon: "http://adress/icon.png", requirements: 1),
-            (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "http://adress/icon.png", requirements: 5),
-            (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "http://adress/icon.png", requirements: 10),
+            (name: "Biking - Level 1", desc: "Ride a bike for a whole km...", icon: "steps-bronze", requirements: 1),
+            (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "steps-bronze", requirements: 5),
+            (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "steps-bronze", requirements: 10),
             
             // Success Type : Workout
             
-            (name: "Crunch - Level 1", desc: "Do a total of 50 crunchs", icon: "http://adress/icon.png", requirements: 50),
-            (name: "Crunch - Level 2", desc: "Do a total of 500 crunchs", icon: "http://adress/icon.png", requirements: 500),
-            (name: "Crunch - Level 3", desc: "Do a total of 5000 crunchs", icon: "http://adress/icon.png", requirements: 5000)
+            (name: "Crunch - Level 1", desc: "Do a total of 50 crunchs", icon: "steps-bronze", requirements: 50),
+            (name: "Crunch - Level 2", desc: "Do a total of 500 crunchs", icon: "steps-bronze", requirements: 500),
+            (name: "Crunch - Level 3", desc: "Do a total of 5000 crunchs", icon: "steps-bronze", requirements: 5000)
             
         ]
         
@@ -182,6 +182,7 @@ public class DataHelper{
             let newSuccess = Success(context: context)
             newSuccess.name = success.name
             newSuccess.desc = success.desc
+            newSuccess.icon = success.icon
             newSuccess.requirements = Int32(success.requirements)
         
         do{
