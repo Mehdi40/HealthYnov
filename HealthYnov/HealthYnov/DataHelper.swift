@@ -29,7 +29,7 @@ public class DataHelper{
     
 
     
-    // Fill all tables : this launches all the functions below
+    // Fill all tables : this launches all the functions below .... should rename that!
     
     public func fillAllTables(){
         emptySuccess()
@@ -38,6 +38,7 @@ public class DataHelper{
         fillActivity()
         fillHealthMessages()
         fillSuccess()
+        fillGoal()
     }
     
     // Functions for each table
@@ -90,7 +91,7 @@ public class DataHelper{
         
     }
     
-    // Fill the HealthMessages table
+    // Fill the HealthMessage table
 
     public func fillHealthMessages(){
         
@@ -104,6 +105,28 @@ public class DataHelper{
             let newMessage = HealthMessage(context: context)
             newMessage.message = message.message
             newMessage.icon = message.icon
+        }
+        
+        do{
+            try context.save()
+        } catch _ {
+            
+        }
+    }
+    
+    // Fill the Goal table
+    
+    public func fillGoal(){
+        
+        let goals = [
+            (name: "Monter 148 marches", desc: "monter les marches", icon: "cookie")
+        ]
+        
+        for goal in goals {
+            let newGoal = Goal(context: context)
+            newGoal.name = goal.name
+            newGoal.desc = goal.desc
+            newGoal.icon = goal.icon
         }
         
         do{

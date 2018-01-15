@@ -360,6 +360,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62Z-R5-Ne5"/>
                     </view>
+                    <connections>
+                        <outlet property="successListSegment" destination="Qbe-Jo-snH" id="4md-qS-4sB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weD-3d-FBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

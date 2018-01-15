@@ -15,6 +15,8 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
     
     var success: [Success]?
     
+    @IBOutlet weak var successListSegment: UISegmentedControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,19 +36,28 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
         }
         
 
-        
-        //configure cell
-//        cell.textLabel?.text = "Test1"
-//        cell.detailTextLabel?.text = "Test2"
-        
         let suc = success?[indexPath.row]
         let imagePath = suc?.icon
-        cell.Title.text = suc?.name
-        cell.Desc.text = suc?.desc
-        
 
-        cell.Picture.image = UIImage(named: "\(imagePath ?? "nil")")
-        print(suc!.icon)
+        
+        switch(successListSegment.selectedSegmentIndex)
+        {
+        case 0:
+            cell.Picture.image = UIImage(named: "\(imagePath ?? "nil")")
+            cell.Title.text = suc?.name
+            cell.Desc.text = suc?.desc
+            break
+        case 1:
+            cell.Picture.image = UIImage(named: "cookie")
+            cell.Title.text = suc?.name
+            cell.Desc.text = suc?.desc
+            break
+            
+        default:
+            break
+            
+        }
+        
 
         return cell
 
