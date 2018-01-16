@@ -8,7 +8,7 @@
 
 import UIKit
 
-extension UIView {
+extension UIImageView {
     
     func circular(borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.white) {
         let radius = frame.width / 2
