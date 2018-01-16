@@ -258,10 +258,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uaP-OY-qfc"/>
+                    <connections>
+                        <outlet property="AvatarHeader" destination="k4C-xg-nSN" id="qKU-wS-Yzh"/>
+                        <outlet property="Userlevel" destination="pJ5-QH-U4h" id="89l-fM-WsC"/>
+                        <outlet property="Usernamelabel" destination="FXx-uA-tnC" id="9H8-kA-JQ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7.5" y="12.67605633802817"/>
+            <point key="canvasLocation" x="802.5" y="12.67605633802817"/>
         </scene>
         <!--Success List Table View Controller-->
         <scene sceneID="TnL-AK-Rh0">
@@ -286,6 +292,7 @@
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="segmendDidMove:" destination="IyO-HJ-9dR" eventType="editingDidEnd" id="cS4-b0-B7Z"/>
+                                    <action selector="valueChanged:" destination="IyO-HJ-9dR" eventType="valueChanged" id="uNF-0T-jBO"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IlM-Ud-iB7">
@@ -358,13 +365,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62Z-R5-Ne5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7UD-K2-HrB"/>
                     <connections>
                         <outlet property="successListSegment" destination="Qbe-Jo-snH" id="4md-qS-4sB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weD-3d-FBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821.25" y="12.67605633802817"/>
+            <point key="canvasLocation" x="2467.5" y="86.619718309859152"/>
         </scene>
         <!--Welcome Board Controller-->
         <scene sceneID="lEc-C3-QbY">
@@ -540,10 +548,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="CiQ-dw-9v3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="jGb-H7-kLM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTE-YZ-Xzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-789.375" y="12.67605633802817"/>
+            <point key="canvasLocation" x="-290.625" y="4.225352112676056"/>
         </scene>
     </scenes>
 </document>
