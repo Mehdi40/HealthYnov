@@ -261,9 +261,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="uaP-OY-qfc"/>
                     <connections>
-                        <outlet property="AvatarHeader" destination="k4C-xg-nSN" id="qKU-wS-Yzh"/>
-                        <outlet property="Userlevel" destination="pJ5-QH-U4h" id="89l-fM-WsC"/>
-                        <outlet property="Usernamelabel" destination="FXx-uA-tnC" id="9H8-kA-JQ9"/>
+                        <outlet property="avatar" destination="k4C-xg-nSN" id="R0r-Wp-ebW"/>
+                        <outlet property="userlevel" destination="pJ5-QH-U4h" id="fNP-Ex-wxE"/>
+                        <outlet property="username" destination="FXx-uA-tnC" id="aYe-rf-uR0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

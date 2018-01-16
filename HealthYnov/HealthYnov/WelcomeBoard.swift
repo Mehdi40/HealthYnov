@@ -93,8 +93,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
             case 1:
                 var Gender = "F"
                 break
-        default:
-            var Gender = "M"
+            default:
+                var Gender = "M"
             
         }
     }
