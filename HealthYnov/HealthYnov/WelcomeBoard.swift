@@ -66,15 +66,37 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         return nil
     }
     
-
+    public func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        
+        if component == 0 {
+            pickerView.reloadComponent(1)
+            
+        }
+        let heightSelected = heightValues[pickerView.selectedRow(inComponent: 0)]
+        let weightSelected = weightValues[pickerView.selectedRow(inComponent: 1)]
+        
+        print("\(heightSelected), \(weightSelected)")
+        
+    }
     
     @IBAction func SubmitButton(_ sender: Any) {
         
         // send data and indentifi components TODO
         let nicknameUser =  NicknameTF.text
-        var heightSelected = WHPicker(component == 0)
-        var weightSelected = WHPicker(component = 1)
-        var gender = GenderSl
+        //var heightSelected = WHPicker(component == 0)
+        //var weightSelected = WHPicker(component = 1)
+        
+        switch(GenderSl.selectedSegmentIndex) {
+            case 0:
+                var Gender = "M"
+                break
+            case 1:
+                var Gender = "F"
+                break
+        default:
+            var Gender = "M"
+            
+        }
     }
     
     
