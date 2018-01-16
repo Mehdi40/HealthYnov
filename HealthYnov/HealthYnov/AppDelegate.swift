@@ -17,6 +17,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+ 
+        // Adding code to fill and test Core Data
+        
+       //let testcontext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
+        dataHelper.fillAllTables()
+        
+        
         return true
     }
 
@@ -72,6 +81,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
+    
+    // Adding Core Data Stack
+    
+    lazy var applicationDocumentsDirectory: URL = {
+        // The directory the application uses to store the Core Data store file. This code uses a directory named "com.andrewcbancroft.Zootastic" in the application's documents Application Support directory.
+        let urls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return urls[urls.count-1]
+    }()
+
+    // End Adding Core Data Stack
     
     // MARK: - Core Data Saving support
     

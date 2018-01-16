@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8B1775F6200CDD4700D6215D /* SuccessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F5200CDD4700D6215D /* SuccessList.swift */; };
+		8B1775F8200D285500D6215D /* SuccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */; };
+		8B6469C92004D781004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
+		8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
+		8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
+		8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958062004CA6200002EC7 /* RoundedUImage.swift */; };
+		8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958082004EE5500002EC7 /* WelcomeBoard.swift */; };
+		8BDD14C5200DF03F0011CD8F /* CharterGraphique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */; };
 		912BED032003B4A200749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
 		912BED052003B4A200749DEF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED042003B4A200749DEF /* ViewController.swift */; };
 		912BED082003B4A200749DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED062003B4A200749DEF /* Main.storyboard */; };
@@ -56,6 +64,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8B1775F5200CDD4700D6215D /* SuccessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessList.swift; sourceTree = "<group>"; };
+		8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessTableViewCell.swift; sourceTree = "<group>"; };
+		8B6469C82004D781004006F4 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
+		8B9958062004CA6200002EC7 /* RoundedUImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUImage.swift; sourceTree = "<group>"; };
+		8B9958082004EE5500002EC7 /* WelcomeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBoard.swift; sourceTree = "<group>"; };
+		8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharterGraphique.swift; sourceTree = "<group>"; };
 		912BECFF2003B4A200749DEF /* HealthYnov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthYnov.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		912BED022003B4A200749DEF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		912BED042003B4A200749DEF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +144,7 @@
 				9154A36C200DF2A500220F0D /* ProfileTableViewCell.swift */,
 				912BED022003B4A200749DEF /* AppDelegate.swift */,
 				912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
+				912BED022003B4A200749DEF /* AppDelegate.swift */,
 				912BED042003B4A200749DEF /* ViewController.swift */,
 				912BED062003B4A200749DEF /* Main.storyboard */,
 				912BED722004D74A00749DEF /* ProfileViewController.swift */,
@@ -137,6 +152,12 @@
 				912BED092003B4A200749DEF /* Assets.xcassets */,
 				912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */,
 				912BED0E2003B4A200749DEF /* Info.plist */,
+				8B6469C82004D781004006F4 /* DataHelper.swift */,
+				8B9958062004CA6200002EC7 /* RoundedUImage.swift */,
+				8B9958082004EE5500002EC7 /* WelcomeBoard.swift */,
+				8B1775F5200CDD4700D6215D /* SuccessList.swift */,
+				8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */,
+				8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */,
 			);
 			path = HealthYnov;
 			sourceTree = "<group>";
@@ -296,6 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				912BED052003B4A200749DEF /* ViewController.swift in Sources */,
+				8B1775F8200D285500D6215D /* SuccessTableViewCell.swift in Sources */,
+				8B6469C92004D781004006F4 /* DataHelper.swift in Sources */,
 				912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
 				9154A379200E0AEF00220F0D /* User+CoreDataProperties.swift in Sources */,
 				912BED732004D74A00749DEF /* ProfileViewController.swift in Sources */,
@@ -303,6 +326,10 @@
 				9154A365200DE9C300220F0D /* ProfileDataHelper.swift in Sources */,
 				912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 				9154A376200E0AEF00220F0D /* User+CoreDataClass.swift in Sources */,
+				8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */,
+				8B1775F6200CDD4700D6215D /* SuccessList.swift in Sources */,
+				8BDD14C5200DF03F0011CD8F /* CharterGraphique.swift in Sources */,
+				8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +340,7 @@
 				912BED762004EA2600749DEF /* AppDelegate.swift in Sources */,
 				912BED742004D74A00749DEF /* ProfileViewController.swift in Sources */,
 				9154A37A200E0AEF00220F0D /* User+CoreDataProperties.swift in Sources */,
+				8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */,
 				912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */,
 				9154A36E200DF2A500220F0D /* ProfileTableViewCell.swift in Sources */,
 				9154A366200DE9C300220F0D /* ProfileDataHelper.swift in Sources */,
@@ -328,6 +356,7 @@
 				912BED772004EA2700749DEF /* AppDelegate.swift in Sources */,
 				912BED752004D74A00749DEF /* ProfileViewController.swift in Sources */,
 				9154A37B200E0AEF00220F0D /* User+CoreDataProperties.swift in Sources */,
+				8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */,
 				912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */,
 				9154A36F200DF2A500220F0D /* ProfileTableViewCell.swift in Sources */,
 				9154A367200DE9C300220F0D /* ProfileDataHelper.swift in Sources */,
