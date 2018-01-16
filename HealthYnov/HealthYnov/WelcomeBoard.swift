@@ -15,6 +15,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var WHPicker: UIPickerView!
     @IBOutlet weak var GenderSl: UISegmentedControl!
     
+	
     let heightMAX: Double = 2.40
     let weightMAX: Double = 150
     let heightStep: Double = 0.05
