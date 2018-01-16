@@ -6,47 +6,56 @@
 //  Copyright © 2018 Ynov. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import CoreData
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: UIViewController, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 2
+    }
     
-    let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as? ProfileTableViewCell
+            else {
+                fatalError("Wrong cell type")
+            }
+        
+        cell.title.text = "Ta Grand Mère"
+        cell.desc.text = "C'est ta grand-mère"
+        return cell
+    }
     
-    lazy var managedContext : NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-    var user: User!
+    
+    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
+    
+    //lazy var managedContext : NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+    
+    var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    var user: [User]!
     
     @IBOutlet weak var username: UILabel!
-    
     @IBOutlet weak var level: UILabel!
-    
     @IBOutlet weak var age: UILabel!
-    
     @IBOutlet weak var height: UILabel!
-    
     @IBOutlet weak var weight: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fetch: NSFetchRequest<User> = NSFetchRequest(entityName:"User")
-        fetch.fetchLimit = 1
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        user = try? context.fetch(fetchRequest)
         
-        let result = try? managedContext.fetch(fetch)
-        user = result!.first!
+        //let result = try? managedContext.fetch(fetch)
+        //user = result!.first!
         
-        level.text =
-        
-        if let user = user {
-            print(user.username ?? "No Name")
-            print(user.age)
+        print(user)
         }
         
 //        username.text = String(user.username)
         
         
         // Do any additional setup after loading the view.
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
