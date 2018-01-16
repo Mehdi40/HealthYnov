@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IyO-HJ-9dR">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -265,10 +265,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="uaP-OY-qfc"/>
+                    <connections>
+                        <outlet property="AvatarHeader" destination="k4C-xg-nSN" id="qKU-wS-Yzh"/>
+                        <outlet property="Userlevel" destination="pJ5-QH-U4h" id="89l-fM-WsC"/>
+                        <outlet property="Usernamelabel" destination="FXx-uA-tnC" id="9H8-kA-JQ9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7.5" y="12.67605633802817"/>
+            <point key="canvasLocation" x="802.5" y="12.67605633802817"/>
         </scene>
         <!--Success List Table View Controller-->
         <scene sceneID="TnL-AK-Rh0">
@@ -293,6 +299,7 @@
                                 <color key="tintColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="segmendDidMove:" destination="IyO-HJ-9dR" eventType="editingDidEnd" id="cS4-b0-B7Z"/>
+                                    <action selector="valueChanged:" destination="IyO-HJ-9dR" eventType="valueChanged" id="uNF-0T-jBO"/>
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IlM-Ud-iB7">
@@ -365,13 +372,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62Z-R5-Ne5"/>
                     </view>
+                    <navigationItem key="navigationItem" id="7UD-K2-HrB"/>
                     <connections>
                         <outlet property="successListSegment" destination="Qbe-Jo-snH" id="4md-qS-4sB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="weD-3d-FBq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="821.25" y="12.67605633802817"/>
+            <point key="canvasLocation" x="2467.5" y="86.619718309859152"/>
         </scene>
         <!--Welcome Board Controller-->
         <scene sceneID="lEc-C3-QbY">
@@ -718,10 +726,11 @@
                         <outlet property="username" destination="wMU-P6-Ndq" id="1JQ-gD-bsA"/>
                         <outlet property="weight" destination="E0B-Iv-IfY" id="8Mo-VA-gOy"/>
                     </connections>
+                    <navigationItem key="navigationItem" id="jGb-H7-kLM"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aTE-YZ-Xzn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-791.25" y="11.619718309859156"/>
+            <point key="canvasLocation" x="-290.625" y="4.225352112676056"/>
         </scene>
     </scenes>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
