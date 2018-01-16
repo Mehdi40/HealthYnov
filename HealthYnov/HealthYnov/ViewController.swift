@@ -14,8 +14,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-
-
+    @IBOutlet weak var username: UILabel!
+    @IBOutlet weak var avatar: UIImageView!
+    @IBOutlet weak var userlevel: UILabel!
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
