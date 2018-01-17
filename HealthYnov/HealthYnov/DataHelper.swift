@@ -25,10 +25,6 @@ public class DataHelper{
         self.context = context
     }
     
-    // List all success
-    
-
-    
     // Fill all tables : this launches all the functions below .... should rename that!
     
     public func fillAllTables(){
@@ -47,9 +43,7 @@ public class DataHelper{
     // Fill the Activity table
     
     public func fillActivity(){
-        
-
-        
+  
         let activities = [
             (name: "Running", desc: "Pratice running outdoor or on a machine.", icon: "steps-bronze"),
             (name: "Swimming", desc: "Swimming in an Olympic pool.", icon: "steps-bronze"),
@@ -69,6 +63,28 @@ public class DataHelper{
         } catch {
             print(error)
     }
+    }
+    
+    // Create a user
+    
+    public func CreateJohnDoe(){
+        
+        let users = [
+            (username: "JohnDoe", age: "20", weight: "50")
+            ]
+        
+        for user in users {
+            let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
+            newUser.username = user.username
+            newUser.age = Int16(user.age)!
+            newUser.weight = Int16(user.weight)!
+        }
+        do{
+            try context.save()
+        } catch {
+            print(error)
+        }
+        
     }
     
     // Print the Activities on the console : just to be sure that Core Data is setting up ✌️
