@@ -64,7 +64,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         
         //let result = try? managedContext.fetch(fetch)
         //user = result!.first!
-        
+        UserExists()
         print(user)
         }
         
