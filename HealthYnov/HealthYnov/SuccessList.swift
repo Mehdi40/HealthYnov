@@ -11,33 +11,32 @@ import CoreData
 
 class SuccessListTableViewController: UIViewController, UITableViewDataSource {
 
-    var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    // Creating a context for accessing Core Data 🤝
     
+    var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var success: [Success]?
     var goal: [Goal]?
     
+    // Segments allows to switch from Success List to Achievement List
+    
     @IBOutlet weak var successListSegment: UISegmentedControl!
+    
+    // viewDidLoad => we call the 2 tables
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         let fetchRequest: NSFetchRequest<Success> = Success.fetchRequest()
         success = try? context.fetch(fetchRequest)
-        
-
         let fetchRequestGoals: NSFetchRequest<Goal> = Goal.fetchRequest()
         goal = try? context.fetch(fetchRequestGoals)
-        
         print(success)
     }
     
+    // Here is the switch for the segment
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
 
-        
-        
-        
         let selectedIndex = self.successListSegment.selectedSegmentIndex
         switch selectedIndex
         {
@@ -49,11 +48,9 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
         default:
             return 0
         }
-        
-        
     }
     
-    // Cell
+    // Cell properties
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
@@ -82,8 +79,9 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
         return cell
     }
     
+    // Reload data on segment changes (doesn't work actually)
+    
     @IBOutlet private weak var tableView: UITableView!
-
     
     @IBAction func valueChanged(_ sender: Any) {
 //                self.tableView?.reloadData()

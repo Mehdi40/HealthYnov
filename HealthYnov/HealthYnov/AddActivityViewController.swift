@@ -10,24 +10,24 @@ import UIKit
 
 class AddActivityViewController: UIViewController {
 
+    // This view permits to manually add activity : Workout, Biking, Swimming and Running
+    
     @IBOutlet weak var workoutButton: UIButton!
-    
     @IBOutlet weak var bikeButton: UIButton!
-    
     @IBOutlet weak var swimButton: UIButton!
-    
     @IBOutlet weak var runButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    // Segue for the next view (AddDetailsActivityViewController)
+    // Even if all the options go to the same view, it customises the label and save the activity in the right place
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -63,15 +63,5 @@ class AddActivityViewController: UIViewController {
             
         }
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
