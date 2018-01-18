@@ -30,7 +30,7 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource {
         success = try? context.fetch(fetchRequest)
         let fetchRequestGoals: NSFetchRequest<Goal> = Goal.fetchRequest()
         goal = try? context.fetch(fetchRequestGoals)
-        print(success)
+//        print(success)
     }
     
     // Here is the switch for the segment
