@@ -34,6 +34,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var user: [User]!
     
+    @IBOutlet weak var NavBarCustom: UINavigationBar!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var level: UILabel!
     @IBOutlet weak var age: UILabel!

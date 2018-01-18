@@ -11,6 +11,7 @@
 		8B143DF4200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B143DF3200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift */; };
 		8B1775F6200CDD4700D6215D /* SuccessList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F5200CDD4700D6215D /* SuccessList.swift */; };
 		8B1775F8200D285500D6215D /* SuccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */; };
+		8B3F092220112D5A00C95B5B /* NavigationDBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F092120112D5A00C95B5B /* NavigationDBar.swift */; };
 		8B6469C92004D781004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
 		8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
 		8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
@@ -65,6 +66,7 @@
 		8B143DF3200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDetailsActivityViewController.swift; sourceTree = "<group>"; };
 		8B1775F5200CDD4700D6215D /* SuccessList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessList.swift; sourceTree = "<group>"; };
 		8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessTableViewCell.swift; sourceTree = "<group>"; };
+		8B3F092120112D5A00C95B5B /* NavigationDBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationDBar.swift; sourceTree = "<group>"; };
 		8B6469C82004D781004006F4 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		8B9958062004CA6200002EC7 /* RoundedUImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUImage.swift; sourceTree = "<group>"; };
 		8B9958082004EE5500002EC7 /* WelcomeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBoard.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				8B143DF1200FCE7A007F0AA7 /* AddActivityViewController.swift */,
 				8B143DF3200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift */,
 				8BB78806200FE75300D6CBB2 /* WebFAQViewController.swift */,
+				8B3F092120112D5A00C95B5B /* NavigationDBar.swift */,
 			);
 			path = HealthYnov;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				912BED732004D74A00749DEF /* ProfileViewController.swift in Sources */,
 				9154A36D200DF2A500220F0D /* ProfileTableViewCell.swift in Sources */,
 				9154A365200DE9C300220F0D /* ProfileDataHelper.swift in Sources */,
+				8B3F092220112D5A00C95B5B /* NavigationDBar.swift in Sources */,
 				912BED6F2004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 				8B143DF4200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift in Sources */,
 				8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */,
