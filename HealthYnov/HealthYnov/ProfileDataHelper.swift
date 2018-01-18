@@ -17,14 +17,14 @@ public class ProfileDataHelper {
     }
     
     public func fillAllTables(){
-        emptyUser()
-        fillUser()
+      //  emptyUser()
+      //  fillUser()
     }
     
     public func fillUser(){
         
-        let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
-        newUser.username = "Mehdi"
+   //     let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
+     //   newUser.username = "Mehdi"
     
     do{
         try context.save()
@@ -33,16 +33,16 @@ public class ProfileDataHelper {
     }
 }
     
-    public func emptyUser(){
-        let userFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
-        let primarySortDescriptor = NSSortDescriptor(key: "username", ascending: true)
+  //  public func emptyUser(){
+    //    let userFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+      //  let primarySortDescriptor = NSSortDescriptor(key: "username", ascending: true)
         
-        userFetchRequest.sortDescriptors = [primarySortDescriptor]
+     //   userFetchRequest.sortDescriptors = [primarySortDescriptor]
         
-        let allUser = (try! context.fetch(userFetchRequest)) as! [User]
+     //   let allUser = (try! context.fetch(userFetchRequest)) as! [User]
         
-        for user in allUser {
-            context.delete(user)
-        }
-    }
+      //  for user in allUser {
+       //     context.delete(user)
+      //  }
+  //  }
 }

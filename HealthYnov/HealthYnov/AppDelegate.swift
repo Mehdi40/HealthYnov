@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        //let testcontext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
-        dataHelper.fillAllTables()
+        dataHelper.setTables()
         
         
         return true

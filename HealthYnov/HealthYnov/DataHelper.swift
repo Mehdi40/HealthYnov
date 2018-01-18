@@ -8,6 +8,7 @@
 
 import Foundation
 import CoreData
+import UIKit
 
 
 public class DataHelper{
@@ -31,61 +32,177 @@ public class DataHelper{
         emptySuccess()
         emptyActivity()
         emptyHealthMessages()
-        fillActivity()
-        fillHealthMessages()
-        fillSuccess()
-        fillGoal()
+
     }
     
     // Functions for each table
     
+    
+    // Pre-fill user activity at first launch
+    
+    //public func fillUserActivityMerguez(){
+       // let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
+     //   let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+   //     user = try? context.fetch(fetchRequest)
+        
+        
+        
+ //       let isIndexValid = user.indices.contains(0)
+        
+      //  if !isIndexValid {
+        //    dataHelper.CreateJohnDoe()
+    //    }
+        
+   // }
+    
 
-    // Fill the Activity table
     
-    public func fillActivity(){
-  
-        let activities = [
-            (name: "Running", desc: "Pratice running outdoor or on a machine.", icon: "steps-bronze"),
-            (name: "Swimming", desc: "Swimming in an Olympic pool.", icon: "steps-bronze"),
-            (name: "Biking", desc: "Ride a bike in the countryside, or practice spinning in a gym.", icon: "steps-bronze"),
-            (name: "Fitness", desc: "a simple workout training you can do at home.", icon: "steps-bronze")
-                        ]
-        
-        for activity in activities {
-            let newActivity = NSEntityDescription.insertNewObject(forEntityName: "Activity", into: context) as! Activity
-            newActivity.name = activity.name
-            newActivity.desc = activity.desc
-            newActivity.icon = activity.icon
-        }
-        
-        do{
-            try context.save()
-        } catch {
-            print(error)
-    }
-    }
     
-    // Create a user
-    
-    public func CreateJohnDoe(){
+    public func setTables(){
         
-        let users = [
-            (username: "JohnDoe", age: "20", weight: "50")
+        // Execute this function only if an user does not exist
+        
+        // /!\ Don't forget to clean db
+        
+        emptyAllTables()
+        
+        var user: [User]!
+        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+        user = try? context.fetch(fetchRequest)
+        let isIndexValid = user.indices.contains(0)
+        if !isIndexValid {
+            
+            guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
+            let context = appDelegate.persistentContainer.viewContext
+            
+            // Create a JohnDoe user who is 50kg
+            
+            let userEntity = NSEntityDescription.entity(forEntityName: "User", in: context)!
+            let user = NSManagedObject(entity: userEntity, insertInto: context)
+            user.setValue("JohnDoe", forKey: "username")
+            user.setValue(50, forKey: "weight")
+            
+            // Create activities
+            
+            let activities = [
+                (name: "Running", desc: "Pratice running outdoor or on a machine."),
+                (name: "Swimming", desc: "Swimming in an Olympic pool."),
+                (name: "Biking", desc: "Ride a bike in the countryside, or practice spinning in a gym."),
+                (name: "Fitness", desc: "A simple workout training you can do at home."),
+                (name: "Stairs", desc: "Climb some floors!"),
+                (name: "Steps", desc: "All the steps you did"),
+                (name: "Walking distance", desc: "All the km you walked")
             ]
-        
-        for user in users {
-            let newUser = NSEntityDescription.insertNewObject(forEntityName: "User", into: context) as! User
-            newUser.username = user.username
-            newUser.age = Int16(user.age)!
-            newUser.weight = Int16(user.weight)!
+            
+            // For each activity, create a userActivity score with the user we defined before, and the current activity
+            
+            for activity in activities {
+                let newActivity = NSEntityDescription.insertNewObject(forEntityName: "Activity", into: context) as! Activity
+                newActivity.name = activity.name
+                newActivity.desc = activity.desc
+                
+                let newUserActivity = NSEntityDescription.insertNewObject(forEntityName: "UserActivity", into: context) as! UserActivity
+                newUserActivity.score = 0
+                newUserActivity.user = user as? User
+                newUserActivity.activity = newActivity
+            }
+            
+            // Create successes
+            
+            let successes = [
+                
+                // Success Type : Steps
+                
+                (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "steps-bronze", requirements: 100),
+                (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "steps-silver", requirements: 250),
+                (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "steps-gold", requirements: 500),
+                
+                // Success Type : Walking distance
+                
+                (name: "Distance - Level 1", desc: "Walk 1 km", icon: "distance-bronze", requirements: 1),
+                (name: "Distance - Level 2", desc: "Walk 5 km", icon: "distance-silver", requirements: 5),
+                (name: "Distance - Level 3", desc: "Walk 10 km", icon: "distance-gold", requirements: 10),
+                
+                // Sucess Type : Climb floors
+                
+                (name: "Stairs - Level 1", desc: "Climb 2 floors", icon: "stairs-bronze", requirements: 2),
+                (name: "Stairs - Level 2", desc: "Climb 5 floors", icon: "stairs-silver", requirements: 5),
+                (name: "Stairs - Level 3", desc: "Climb 10 floors", icon: "stairs-gold", requirements: 10),
+                
+                // Success Type : Running
+                
+                (name: "Running - Level 1", desc: "Run for a whole km...", icon: "running-bronze", requirements: 1),
+                (name: "Running - Level 2", desc: "Run for 5 km", icon: "running-silver", requirements: 5),
+                (name: "Running - Level 3", desc: "Run for 10 km", icon: "running-gold", requirements: 10),
+                
+                // Success Type : Swimming
+                
+                (name: "Swimming - Level 1", desc: "Swim a lap", icon: "swimming-bronze", requirements: 1),
+                (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "swimming-silver", requirements: 5),
+                (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "swimming-gold", requirements: 10),
+                
+                // Success Type : Biking
+                
+                (name: "Biking - Level 1", desc: "Ride a bike for a whole km...", icon: "biking-bronze", requirements: 1),
+                (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "biking-silver", requirements: 5),
+                (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "biking-gold", requirements: 10),
+                
+                // Success Type : Workout
+                
+                (name: "Crunch - Level 1", desc: "Do a total of 50 crunchs", icon: "workout-bronze", requirements: 50),
+                (name: "Crunch - Level 2", desc: "Do a total of 500 crunchs", icon: "workout-silver", requirements: 500),
+                (name: "Crunch - Level 3", desc: "Do a total of 5000 crunchs", icon: "workout-gold", requirements: 5000)
+                
+            ]
+            
+            for success in successes {
+                let newSuccess = Success(context: context)
+                newSuccess.name = success.name
+                newSuccess.desc = success.desc
+                newSuccess.icon = success.icon
+                newSuccess.requirements = Int32(success.requirements)
+                
+            // Create goals
+                    
+                let goals = [
+                    (name: "Monter 148 marches", desc: "monter les marches", icon: "cookie")
+                ]
+                
+                for goal in goals {
+                    let newGoal = Goal(context: context)
+                    newGoal.name = goal.name
+                    newGoal.desc = goal.desc
+                    newGoal.icon = goal.icon
+                }
+                
+            // Create HealthMessages which can be randomly displayed if we have time to do this afterwards... (we won't 😩)
+                
+                let messages = [
+                    (message: "No pain, no gain!", icon: "steps-bronze"),
+                    (message: "Eat Train Sleep Repeat!", icon: "steps-bronze"),
+                    (message: "Eat 5 fruits and vegetable a day!", icon: "steps-bronze")
+                ]
+                
+                for message in messages {
+                    let newMessage = HealthMessage(context: context)
+                    newMessage.message = message.message
+                    newMessage.icon = message.icon
+                }
+            
+            
+            
+            // Save it
+            
+            do {
+                try context.save()
+            } catch let error as NSError {
+                print("Could not save. \(error), \(error.userInfo)")
+            }
+                
         }
-        do{
-            try context.save()
-        } catch {
-            print(error)
         }
-        
-    }
+        }
+
     
     // Print the Activities on the console : just to be sure that Core Data is setting up ✌️
     
@@ -106,119 +223,16 @@ public class DataHelper{
         print("Test")
         
     }
-    
-    // Fill the HealthMessage table
 
-    public func fillHealthMessages(){
-        
-        let messages = [
-            (message: "No pain, no gain!", icon: "steps-bronze"),
-            (message: "Eat Train Sleep Repeat!", icon: "steps-bronze"),
-            (message: "Eat 5 fruits and vegetable a day!", icon: "steps-bronze")
-        ]
-        
-        for message in messages {
-            let newMessage = HealthMessage(context: context)
-            newMessage.message = message.message
-            newMessage.icon = message.icon
-        }
-        
-        do{
-            try context.save()
-        } catch _ {
-            
-        }
-    }
-    
-    // Fill the Goal table
-    
-    public func fillGoal(){
-        
-        let goals = [
-            (name: "Monter 148 marches", desc: "monter les marches", icon: "cookie")
-        ]
-        
-        for goal in goals {
-            let newGoal = Goal(context: context)
-            newGoal.name = goal.name
-            newGoal.desc = goal.desc
-            newGoal.icon = goal.icon
-        }
-        
-        do{
-            try context.save()
-        } catch _ {
-            
-        }
-    }
-    
-    // Fill the Success table
-
-    public func fillSuccess(){
-        
-        let successes = [
-            
-            // Success Type : Steps
-            
-            (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "steps-bronze", requirements: 100),
-            (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "steps-silver", requirements: 250),
-            (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "steps-gold", requirements: 500),
-            
-            // Success Type : Walking distance
-            
-            (name: "Distance - Level 1", desc: "Walk 1 km", icon: "distance-bronze", requirements: 1),
-            (name: "Distance - Level 2", desc: "Walk 5 km", icon: "distance-silver", requirements: 5),
-            (name: "Distance - Level 3", desc: "Walk 10 km", icon: "distance-gold", requirements: 10),
-            
-            // Sucess Type : Climb floors
-            
-            (name: "Stairs - Level 1", desc: "Climb 2 floors", icon: "stairs-bronze", requirements: 2),
-            (name: "Stairs - Level 2", desc: "Climb 5 floors", icon: "stairs-silver", requirements: 5),
-            (name: "Stairs - Level 3", desc: "Climb 10 floors", icon: "stairs-gold", requirements: 10),
-            
-            // Success Type : Running
-  
-            (name: "Running - Level 1", desc: "Run for a whole km...", icon: "running-bronze", requirements: 1),
-            (name: "Running - Level 2", desc: "Run for 5 km", icon: "running-silver", requirements: 5),
-            (name: "Running - Level 3", desc: "Run for 10 km", icon: "running-gold", requirements: 10),
-            
-            // Success Type : Swimming
-            
-            (name: "Swimming - Level 1", desc: "Swim a lap", icon: "swimming-bronze", requirements: 1),
-            (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "swimming-silver", requirements: 5),
-            (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "swimming-gold", requirements: 10),
-            
-            // Success Type : Biking
-            
-            (name: "Biking - Level 1", desc: "Ride a bike for a whole km...", icon: "biking-bronze", requirements: 1),
-            (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "biking-silver", requirements: 5),
-            (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "biking-gold", requirements: 10),
-            
-            // Success Type : Workout
-            
-            (name: "Crunch - Level 1", desc: "Do a total of 50 crunchs", icon: "workout-bronze", requirements: 50),
-            (name: "Crunch - Level 2", desc: "Do a total of 500 crunchs", icon: "workout-silver", requirements: 500),
-            (name: "Crunch - Level 3", desc: "Do a total of 5000 crunchs", icon: "workout-gold", requirements: 5000)
-            
-        ]
-        
-        for success in successes {
-            let newSuccess = Success(context: context)
-            newSuccess.name = success.name
-            newSuccess.desc = success.desc
-            newSuccess.icon = success.icon
-            newSuccess.requirements = Int32(success.requirements)
-        
-        do{
-            try context.save()
-        } catch _ {
-            
-        }
-    }
-    
-}
-    
     // Empty tables
+    
+    public func emptyAllTables(){
+        emptySuccess()
+        emptyUser()
+        emptyActivity()
+        emptyUserActivity()
+        emptyHealthMessages()
+    }
     
     // Empty Success
     
@@ -254,6 +268,40 @@ public class DataHelper{
         
     }
     
+    // Empty User
+    
+    public func emptyUser(){
+        
+        let userFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        let primarySortDescriptor = NSSortDescriptor(key: "username", ascending: true)
+        
+        userFetchRequest.sortDescriptors = [primarySortDescriptor]
+        
+        let allUsers = (try! context.fetch(userFetchRequest)) as! [User]
+        
+        for user in allUsers {
+            context.delete(user)
+        }
+        
+    }
+    
+    // Empty UserActivity
+    
+    public func emptyUserActivity(){
+
+        let userActivityFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
+        let primarySortDescriptor = NSSortDescriptor(key: "score", ascending: true)
+        
+        userActivityFetchRequest.sortDescriptors = [primarySortDescriptor]
+        
+        let allUserActivity = (try! context.fetch(userActivityFetchRequest)) as! [UserActivity]
+        
+        for userActivity in allUserActivity {
+            context.delete(userActivity)
+        }
+
+    }
+    
     // Empty Health Messages
     
     public func emptyHealthMessages(){
@@ -273,3 +321,4 @@ public class DataHelper{
     
     
 }
+

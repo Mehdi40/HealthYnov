@@ -43,18 +43,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     // Check if an user exists, or create it 😇
     // Hi Mehdi I just decided to put this func in your part so deal with it
     
-    public func UserExists(){
-        let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
-        let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-        user = try? context.fetch(fetchRequest)
+ //   public func UserExists(){
+   //     let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
+     //   let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
+       // user = try? context.fetch(fetchRequest)
         
-        let isIndexValid = user.indices.contains(0)
+        //let isIndexValid = user.indices.contains(0)
         
-        if !isIndexValid {
-            dataHelper.CreateJohnDoe()
-        }
+      //  if !isIndexValid {
+        //    dataHelper.CreateJohnDoe()
+        //}
         
-    }
+   // }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,7 +64,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         
         //let result = try? managedContext.fetch(fetch)
         //user = result!.first!
-        UserExists()
+     //   UserExists()
         print(user)
         }
         
