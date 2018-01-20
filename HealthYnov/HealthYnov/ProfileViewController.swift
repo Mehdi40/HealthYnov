@@ -21,8 +21,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
                 fatalError("Wrong cell type")
             }
         
-        cell.title.text = "Ta Grand Mère"
-        cell.desc.text = "C'est ta grand-mère"
+        let suc = success?[0]
+        cell.title.text = suc?.name
+        cell.desc.text = suc?.desc
+        print(suc?.name)
+        print(suc?.desc)
         return cell
     }
     
@@ -33,6 +36,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     
     var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var user: [User]!
+    var success: [Success]?
+    var goal: [Goal]?
     
     @IBOutlet weak var NavBarCustom: UINavigationBar!
     @IBOutlet weak var username: UILabel!
@@ -60,16 +65,24 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let fetchRequestSuccess: NSFetchRequest<Success> = Success.fetchRequest()
+        success = try? context.fetch(fetchRequestSuccess)
+        let fetchRequestGoals: NSFetchRequest<Goal> = Goal.fetchRequest()
+        goal = try? context.fetch(fetchRequestGoals)
+        
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         user = try? context.fetch(fetchRequest)
-        
-        //let result = try? managedContext.fetch(fetch)
-        //user = result!.first!
+
      //   UserExists()
-        print(user)
-        }
+        let realUser = user?[0]
         
-//        username.text = String(user.username)
+        username.text = String(realUser!.username!)
+        age.text = String(realUser!.age)
+        height.text = String(realUser!.height)
+        weight.text = String(realUser!.weight)
+        let userLevel = Int(realUser!.experience) / 1000
+        level.text = String(userLevel)
+    }
         
         
         // Do any additional setup after loading the view.

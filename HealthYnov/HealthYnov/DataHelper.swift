@@ -80,7 +80,10 @@ public class DataHelper{
             let userEntity = NSEntityDescription.entity(forEntityName: "User", in: context)!
             let user = NSManagedObject(entity: userEntity, insertInto: context)
             user.setValue("JohnDoe", forKey: "username")
-            user.setValue(50, forKey: "weight")
+            user.setValue(65, forKey: "weight")
+            user.setValue(175, forKey: "height")
+            user.setValue(22, forKey: "age")
+            user.setValue(28000, forKey: "experience")
             
             // Create activities
             
