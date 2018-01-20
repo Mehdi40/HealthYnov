@@ -80,7 +80,10 @@ public class DataHelper{
             let userEntity = NSEntityDescription.entity(forEntityName: "User", in: context)!
             let user = NSManagedObject(entity: userEntity, insertInto: context)
             user.setValue("JohnDoe", forKey: "username")
-            user.setValue(50, forKey: "weight")
+            user.setValue(65, forKey: "weight")
+            user.setValue(175, forKey: "height")
+            user.setValue(22, forKey: "age")
+            user.setValue(28000, forKey: "experience")
             
             // Create activities
             
@@ -98,13 +101,15 @@ public class DataHelper{
             
             for activity in activities {
                 let newActivity = NSEntityDescription.insertNewObject(forEntityName: "Activity", into: context) as! Activity
-                newActivity.name = activity.name
-                newActivity.desc = activity.desc
+                newActivity.setValue(activity.name, forKey: "name")
+                newActivity.setValue(activity.desc, forKey: "desc")
                 
                 let newUserActivity = NSEntityDescription.insertNewObject(forEntityName: "UserActivity", into: context) as! UserActivity
-                newUserActivity.score = 0
-                newUserActivity.user = user as? User
-                newUserActivity.activity = newActivity
+                newUserActivity.setValue(0, forKey: "score")
+                newUserActivity.setValue(user, forKey: "user")
+                newUserActivity.setValue(newActivity, forKey: "activity")
+                newActivity.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
+                user.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
             }
             
             // Create successes
