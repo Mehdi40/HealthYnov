@@ -17,16 +17,32 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileCell", for: indexPath) as? ProfileTableViewCell
+          else {
+              fatalError("Wrong cell type")
+            }
+        
+        if let suc = lastItems[0] as? Success {
+            cell.successTitle.text = suc.name
+            cell.successDesc.text = suc.desc
+        }
+        
+        guard let cellGoal = tableView.dequeueReusableCell(withIdentifier: "ProfileGoalCell", for: indexPath) as? ProfileGoalTableViewCell
             else {
                 fatalError("Wrong cell type")
             }
         
-        let suc = success?[0]
-        cell.title.text = suc?.name
-        cell.desc.text = suc?.desc
-        print(suc?.name)
-        print(suc?.desc)
+        if let goa = lastItems[1] as? Goal {
+            cellGoal.goalTitle.text = goa.name
+            cellGoal.goalDesc.text = goa.desc
+        }
+
+        if indexPath.row == 0 {
+            return cell
+        } else if indexPath.row == 1 {
+            return cellGoal
+        }
         return cell
+        
     }
     
     
@@ -36,8 +52,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     
     var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var user: [User]!
-    var success: [Success]?
-    var goal: [Goal]?
+    var success: [Success]!
+    var goal: [Goal]!
+    var lastItems = [AnyObject]()
     
     @IBOutlet weak var NavBarCustom: UINavigationBar!
     @IBOutlet weak var username: UILabel!
@@ -69,6 +86,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         success = try? context.fetch(fetchRequestSuccess)
         let fetchRequestGoals: NSFetchRequest<Goal> = Goal.fetchRequest()
         goal = try? context.fetch(fetchRequestGoals)
+        
+        lastItems.append(success[0])
+        lastItems.append(goal[0])
         
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         user = try? context.fetch(fetchRequest)

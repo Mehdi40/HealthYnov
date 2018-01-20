@@ -170,7 +170,11 @@ public class DataHelper{
             // Create goals
                     
                 let goals = [
-                    (name: "Monter 148 marches", desc: "monter les marches", icon: "cookie")
+                    (name: "Monter 148 marches", desc: "monter les marches", icon: "cookie"),
+                    (name: "Monter 12123 marches", desc: "monter toutes les marches", icon: "cookie"),
+                    (name: "Dormir 3 nuits", desc: "3 nuits par semaines", icon: "cookie"),
+                    (name: "Trouver un partenaire", desc: "un partenaire particulier", icon: "cookie"),
+                    (name: "Devenir un aventurier", desc: "Comme Bob", icon: "cookie")
                 ]
                 
                 for goal in goals {
