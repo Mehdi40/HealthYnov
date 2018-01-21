@@ -91,7 +91,7 @@ public class DataHelper{
                 (name: "Running", desc: "Pratice running outdoor or on a machine."),
                 (name: "Swimming", desc: "Swimming in an Olympic pool."),
                 (name: "Biking", desc: "Ride a bike in the countryside, or practice spinning in a gym."),
-                (name: "Fitness", desc: "A simple workout training you can do at home."),
+                (name: "Pushup", desc: "A simple pushup routine you can do at home."),
                 (name: "Stairs", desc: "Climb some floors!"),
                 (name: "Steps", desc: "All the steps you did"),
                 (name: "Walking distance", desc: "All the km you walked")

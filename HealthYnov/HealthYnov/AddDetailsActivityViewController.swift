@@ -62,7 +62,7 @@ class AddDetailsActivityViewController: UIViewController {
                 let userActivityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
                 userActivityFetch.fetchLimit = 1
                 userActivityFetch.sortDescriptors = [NSSortDescriptor.init(key: "score", ascending: true)]
-                userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Workout")
+                userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Pushup")
                 let userActivities = try! context.fetch(userActivityFetch)
                 let currentUserActivity: UserActivity = userActivities.first as! UserActivity
                 currentUserActivity.setValue(addToUserActivity, forKey: "experience")
