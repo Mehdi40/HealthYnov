@@ -28,7 +28,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         super.viewDidLoad()
         
 
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         while heightValues.last! < heightMAX {
@@ -38,11 +38,13 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         while weightValues.last! < weightMAX {
             weightValues.append(weightValues.last! + weightStep)
         }
+        
+        
     }
     
 // Function for removing the Keyboard after typing
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
