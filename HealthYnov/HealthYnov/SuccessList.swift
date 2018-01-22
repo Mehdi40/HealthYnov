@@ -59,7 +59,7 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource, U
         override var preferredStatusBarStyle: UIStatusBarStyle {
             return .lightContent
         }
-        
+
         
         func position(for bar: UIBarPositioning) -> UIBarPosition {
             return .topAttached

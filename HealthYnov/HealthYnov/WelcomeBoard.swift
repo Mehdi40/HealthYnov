@@ -14,6 +14,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var NicknameTF: UITextField!
     @IBOutlet weak var WHPicker: UIPickerView!
     @IBOutlet weak var GenderSl: UISegmentedControl!
+    @IBOutlet weak var ageField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
     
     let heightMAX: Double = 2.20
@@ -92,7 +93,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBAction func SubmitButton(_ sender: Any) {
   
         let nicknameUser =  NicknameTF.text
-print(nicknameUser)
+        let userAge = Int16(ageField.text!)
+        
         if nicknameUser != nil {
         var gender : String
         
@@ -124,6 +126,8 @@ print(nicknameUser)
         
         currentUser.setValue(heightSelected, forKey: "height")
         currentUser.setValue(weightSelected, forKey: "weight")
+            currentUser.setValue(userAge, forKey: "age")
+        
         
         do {
             try context.save()

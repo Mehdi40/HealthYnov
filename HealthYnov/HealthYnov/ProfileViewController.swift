@@ -10,7 +10,8 @@ import Foundation
 import UIKit
 import CoreData
 
-class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UINavigationBarDelegate, UIBarPositioningDelegate {
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -62,6 +63,9 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var addActivityButton: UIButton!
+    @IBOutlet weak var gotoTrophies: UIButton!
+    
+
     
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -180,9 +184,20 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
         controller.allowsEditing = true
         present(controller, animated: true, completion: nil)
     }
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
+    
+    func position(for bar: UIBarPositioning) -> UIBarPosition {
+        return .topAttached
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+
         
         // We're going to fetch the last success which has been unlocked
         let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
@@ -222,15 +237,17 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
         height.text = String(realUser!.height)
         weight.text = String(realUser!.weight)
         let userLevel = Int(realUser!.experience) / 1000
-        level.text = String(userLevel)
+//        level.text = String(userLevel)
         profilePic.image = UIImage(named: "Avatar")
         
-        progressbar.progress = Float(30)
-        progressbar.transform = progressbar.transform.scaledBy(x: 1, y: 5)
+ //       progressbar.progress = Float(30)
+ //       progressbar.transform = progressbar.transform.scaledBy(x: 1, y: 5)
         
         gotYourInformations()
         addActivityButton.backgroundColor = UIColor.YnovGreen
         addActivityButton.layer.cornerRadius = 5
+        gotoTrophies.backgroundColor = UIColor.YnovRed
+        gotoTrophies.layer.cornerRadius = 5
     }
     
         // Do any additional setup after loading the view.
