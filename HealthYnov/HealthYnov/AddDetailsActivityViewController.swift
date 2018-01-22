@@ -167,6 +167,8 @@ class AddDetailsActivityViewController: UIViewController {
                 activity.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
+                print(newUserActivity)
+                
                 let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
                 successFetch.fetchLimit = 1
                 successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]

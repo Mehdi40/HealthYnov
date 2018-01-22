@@ -94,21 +94,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
     public func gotYourInformations(){
         let userTest = user?[0].username
         let userTest2 = ("\(userTest ?? "nil")")
+        print("mdr")
         print(userTest2)
-        if userTest2 == "JohnDoe" {
-        
-  //          performSegue(withIdentifier: "goFillInfos", sender: Any?.self)
-            
-    print("gg lol")
-            
-
-            DispatchQueue.main.async {
-                
-                
-                [unowned self] in
-                self.performSegue(withIdentifier: "firstConnexion", sender: self)
-            }
-    }
+        //if userTest2 == "JohnDoe" {
+            //DispatchQueue.main.async {
+              //  [unowned self] in
+                //self.performSegue(withIdentifier: "firstConnexion", sender: self)
+            //}
+        //}
     }
     
     func ResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
@@ -157,10 +150,18 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
         
         let ticks = NSDate().timeIntervalSince1970
         
-        if let profilePic = UIImage(named: "picture_" + String(ticks) + ".jpg") {
-            if let data = UIImagePNGRepresentation(profilePic) {
+        if let profilePic = UIImage(named: "picture_" + String(ticks)) {
+            if let data = UIImageJPEGRepresentation(profilePic, 1.0) {
                 let filename = getDocumentsDirectory().appendingPathComponent("picture_" + String(ticks) + ".jpg")
                 try? data.write(to: filename)
+                
+                let usersFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+                usersFetch.fetchLimit = 1
+                let users = try! context.fetch(usersFetch)
+                let user = users.first as? User
+                
+                user!.setValue(profilePic, forKey: "image")
+                context.save();
             }
         }
         
