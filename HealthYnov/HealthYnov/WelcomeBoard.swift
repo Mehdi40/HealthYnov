@@ -21,8 +21,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     let weightStep: Double = 0.5
     var heightValues: [Double] = [1.0]
     var weightValues: [Double] = [30]
-    let heightUnit: String = "m"
-    let weightUnit: String = "kg"
+    let heightUnit: String = " m"
+    let weightUnit: String = " kg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +55,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         if component == 0 {
             return heightValues.count
         }
-        // add unit TODO
+
         if component == 1 {
             return weightValues.count
         }
@@ -66,11 +66,11 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if component == 0 {
-            return String(heightValues[row]) + "m"
+            return String(heightValues[row]) + heightUnit
         }
         
         if component == 1 {
-            return String(weightValues[row]) + "kg"
+            return String(weightValues[row]) + weightUnit
         }
         
         return nil
