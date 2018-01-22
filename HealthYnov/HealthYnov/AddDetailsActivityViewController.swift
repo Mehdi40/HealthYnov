@@ -61,16 +61,6 @@ class AddDetailsActivityViewController: UIViewController {
   
                 // Note : have to handle the relationship in the NSPredicate to avoid crash
                 
-                //let userActivityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
-                //userActivityFetch.fetchLimit = 1
-                //userActivityFetch.sortDescriptors = [NSSortDescriptor.init(key: "score", ascending: true)]
-                //userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Biking")
-                //let userActivities = try! context.fetch(userActivityFetch)
-                //let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                //currentUserActivity.setValue(addToUserActivity, forKey: "score")
-                //let experienceToAdd = Int32(addToUserActivity!) * 10
-                //currentUserActivity.setValue(experienceToAdd, forKey: "experience")
-                
                 let activityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
                 activityFetch.fetchLimit = 1
                 activityFetch.predicate = NSPredicate(format: "self.name = %@", "Biking")
@@ -100,16 +90,6 @@ class AddDetailsActivityViewController: UIViewController {
                     break
             
             case "Congrats for workout!"? :
-                
-                //let userActivityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
-                //userActivityFetch.fetchLimit = 1
-                //userActivityFetch.sortDescriptors = [NSSortDescriptor.init(key: "score", ascending: true)]
-                //userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Pushup")
-                //let userActivities = try! context.fetch(userActivityFetch)
-                //let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                //currentUserActivity.setValue(addToUserActivity, forKey: "score")
-                //let experienceToAdd = Int32(addToUserActivity! * 10)
-                //currentUserActivity.setValue(experienceToAdd, forKey: "experience")
                 
                 let activityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
                 activityFetch.fetchLimit = 1
@@ -142,16 +122,6 @@ class AddDetailsActivityViewController: UIViewController {
             
             case "Congrats for swimming!"? :
                 
-                //let userActivityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
-                //userActivityFetch.fetchLimit = 1
-                //userActivityFetch.sortDescriptors = [NSSortDescriptor.init(key: "score", ascending: true)]
-                //userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Swimming")
-                //let userActivities = try! context.fetch(userActivityFetch)
-                //let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                //currentUserActivity.setValue(addToUserActivity, forKey: "score")
-                //let experienceToAdd = Int32(addToUserActivity! * 10)
-                //currentUserActivity.setValue(experienceToAdd, forKey: "experience")
-                
                 let activityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
                 activityFetch.fetchLimit = 1
                 activityFetch.predicate = NSPredicate(format: "self.name = %@", "Swimming")
@@ -182,16 +152,6 @@ class AddDetailsActivityViewController: UIViewController {
                     break
             
             case "Congrats for running!"? :
-                
-                //let userActivityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
-                //userActivityFetch.fetchLimit = 1
-                //userActivityFetch.sortDescriptors = [NSSortDescriptor.init(key: "score", ascending: true)]
-                //userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Running")
-                //let userActivities = try! context.fetch(userActivityFetch)
-                //let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                //currentUserActivity.setValue(addToUserActivity, forKey: "score")
-                //let experienceToAdd = Int32(addToUserActivity! * 10)
-                //currentUserActivity.setValue(experienceToAdd, forKey: "experience")
                 
                 let activityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Activity")
                 activityFetch.fetchLimit = 1
