@@ -21,25 +21,42 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
               fatalError("Wrong cell type")
             }
         
-        if let suc = lastItems[0] as? Success {
-            cell.successTitle.text = suc.name
-            cell.successDesc.text = suc.desc
-        }
+        //if let suc = lastItems[0] as? Success {
+        //    cell.successTitle.text = suc.name
+        //    cell.successDesc.text = suc.desc
+        //} else {
+        //    cell.successTitle.text = "Pas de succès"
+        //    cell.successDesc.text = "Débloquez des succès."
+        //}
         
-        guard let cellGoal = tableView.dequeueReusableCell(withIdentifier: "ProfileGoalCell", for: indexPath) as? ProfileGoalTableViewCell
-            else {
-                fatalError("Wrong cell type")
-            }
-        
-        if let goa = lastItems[1] as? Goal {
-            cellGoal.goalTitle.text = goa.name
-            cellGoal.goalDesc.text = goa.desc
-        }
+        //if let goa = lastItems[1] as? Goal {
+        //    cellGoal.goalTitle.text = goa.name
+        //    cellGoal.goalDesc.text = goa.desc
+        //} else {
+        //    cellGoal.goalTitle.text = "Pas d'objectif"
+        //   cellGoal.goalDesc.text = "Débloquez des objectifs."
+        //}
 
         if indexPath.row == 0 {
+            if let suc = lastItems[0] as? Success {
+                cell.title.text = suc.name
+                cell.desc.text = suc.desc
+            } else {
+                cell.title.text = "Pas de succès"
+                cell.desc.text = "Débloquez des succès."
+            }
+            
             return cell
         } else if indexPath.row == 1 {
-            return cellGoal
+            if let goa = lastItems[1] as? Goal {
+                cell.title.text = goa.name
+                cell.desc.text = goa.desc
+            } else {
+                cell.title.text = "Pas d'objectif"
+                cell.desc.text = "Débloquez des objectifs."
+            }
+            
+            return cell
         }
         return cell
         
@@ -54,7 +71,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     var user: [User]!
     var success: [Success]!
     var goal: [Goal]!
-    var lastItems = [AnyObject]()
+    var lastItems = [Any]()
     
     @IBOutlet weak var NavBarCustom: UINavigationBar!
     @IBOutlet weak var username: UILabel!
@@ -104,13 +121,33 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let fetchRequestSuccess: NSFetchRequest<Success> = Success.fetchRequest()
-        success = try? context.fetch(fetchRequestSuccess)
-        let fetchRequestGoals: NSFetchRequest<Goal> = Goal.fetchRequest()
-        goal = try? context.fetch(fetchRequestGoals)
+        // We're going to fetch the last success which has been unlocked
+        let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
+        successFetch.fetchLimit = 1
+        successFetch.sortDescriptors = [NSSortDescriptor.init(key: "dateUnlock", ascending: false)]
+        successFetch.predicate = NSPredicate(format: "self.unlocked == %@", NSNumber(booleanLiteral: true))
+        let userSuccesses = try! context.fetch(successFetch)
+        let userSuccess = userSuccesses.first
         
-        lastItems.append(success[0])
-        lastItems.append(goal[0])
+        // We're going to fetch the last goal which has been unlocked
+        let goalFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
+        goalFetch.fetchLimit = 1
+        goalFetch.sortDescriptors = [NSSortDescriptor.init(key: "dateUnlock", ascending: false)]
+        goalFetch.predicate = NSPredicate(format: "self.unlocked == %@", NSNumber(booleanLiteral: true))
+        let userGoals = try! context.fetch(goalFetch)
+        let userGoal = userGoals.first
+        
+        if let suc = userSuccess as? Success {
+            lastItems.append(suc)
+        } else {
+            lastItems.append("No")
+        }
+        
+        if let goa = userGoal as? Goal {
+            lastItems.append(goa)
+        } else {
+            lastItems.append("No")
+        }
         
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         user = try? context.fetch(fetchRequest)

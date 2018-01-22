@@ -16,7 +16,7 @@ class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositionin
     @IBOutlet weak var avatar: UIImageView!
     @IBOutlet weak var userlevel: UILabel!
     
-        override func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
 
         NavBarCustom.delegate = self

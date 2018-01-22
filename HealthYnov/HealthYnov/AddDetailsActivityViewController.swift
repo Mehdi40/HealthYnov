@@ -30,7 +30,7 @@ class AddDetailsActivityViewController: UIViewController {
 
     @IBAction func clickedSave(_ sender: Any) {
         
-        let addToUserActivity = Int32(activityUnit.text!)
+        let addToUserActivity = Int16(activityUnit.text!)
   
         var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
@@ -52,9 +52,22 @@ class AddDetailsActivityViewController: UIViewController {
                 userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Biking")
                 let userActivities = try! context.fetch(userActivityFetch)
                 let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                currentUserActivity.setValue(addToUserActivity, forKey: "experience")
-                print(currentUserActivity.experience)
+                currentUserActivity.setValue(addToUserActivity, forKey: "score")
+                let experienceToAdd = Int32(addToUserActivity!) * 10
+                currentUserActivity.setValue(experienceToAdd, forKey: "experience")
                 
+                let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
+                successFetch.fetchLimit = 1
+                let activityPredicate = NSPredicate(format: "self.activity == %@", "biking")
+                let formatPredicate = NSPredicate(format: "self.requirements >= %d", Int32(addToUserActivity!))
+                let andPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [activityPredicate, formatPredicate])
+                successFetch.predicate = andPredicate
+                successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
+                let userSuccesses = try! context.fetch(successFetch) as! [Success]
+                
+                for success in userSuccesses {
+                    success.unlocked = true
+                }
                     break
             
             case "Congrats for workout!"? :
@@ -65,9 +78,22 @@ class AddDetailsActivityViewController: UIViewController {
                 userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Pushup")
                 let userActivities = try! context.fetch(userActivityFetch)
                 let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                currentUserActivity.setValue(addToUserActivity, forKey: "experience")
-                print(currentUserActivity.experience)
+                currentUserActivity.setValue(addToUserActivity, forKey: "score")
+                let experienceToAdd = Int32(addToUserActivity! * 10)
+                currentUserActivity.setValue(experienceToAdd, forKey: "experience")
                 
+                let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
+                successFetch.fetchLimit = 1
+                successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
+                let activityPredicate = NSPredicate(format: "self.activity == %@", "pushup")
+                let formatPredicate = NSPredicate(format: "self.requirements >= %@", addToUserActivity!)
+                let andPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [activityPredicate, formatPredicate])
+                successFetch.predicate = andPredicate
+                let userSuccesses = try! context.fetch(successFetch)
+                
+                for success in userSuccesses {
+                    //success.unlocked = true
+                }
                     break
             
             case "Congrats for swimming!"? :
@@ -78,9 +104,22 @@ class AddDetailsActivityViewController: UIViewController {
                 userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Swimming")
                 let userActivities = try! context.fetch(userActivityFetch)
                 let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                currentUserActivity.setValue(addToUserActivity, forKey: "experience")
-                print(currentUserActivity.experience)
+                currentUserActivity.setValue(addToUserActivity, forKey: "score")
+                let experienceToAdd = Int32(addToUserActivity! * 10)
+                currentUserActivity.setValue(experienceToAdd, forKey: "experience")
                 
+                let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
+                successFetch.fetchLimit = 1
+                successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
+                let activityPredicate = NSPredicate(format: "self.activity == %@", "swimming")
+                let formatPredicate = NSPredicate(format: "self.requirements >= %@", addToUserActivity!)
+                let andPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [activityPredicate, formatPredicate])
+                successFetch.predicate = andPredicate
+                let userSuccesses = try! context.fetch(successFetch)
+                
+                for success in userSuccesses {
+                    //success.unlocked = true
+                }
                     break
             
             case "Congrats for running!"? :
@@ -97,9 +136,22 @@ class AddDetailsActivityViewController: UIViewController {
                 userActivityFetch.predicate = NSPredicate(format: "self.activity.name = %@", "Running")
                 let userActivities = try! context.fetch(userActivityFetch)
                 let currentUserActivity: UserActivity = userActivities.first as! UserActivity
-                currentUserActivity.setValue(addToUserActivity, forKey: "experience")
-                print(currentUserActivity.experience)
+                currentUserActivity.setValue(addToUserActivity, forKey: "score")
+                let experienceToAdd = Int32(addToUserActivity! * 10)
+                currentUserActivity.setValue(experienceToAdd, forKey: "experience")
                 
+                let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
+                successFetch.fetchLimit = 1
+                successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
+                let activityPredicate = NSPredicate(format: "self.activity == %@", "running")
+                let formatPredicate = NSPredicate(format: "self.requirements >= %@", addToUserActivity!)
+                let andPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [activityPredicate, formatPredicate])
+                successFetch.predicate = andPredicate
+                let userSuccesses = try! context.fetch(successFetch)
+                
+                for success in userSuccesses {
+                    //success.unlocked = true
+                }
                 break
             
             default:

@@ -117,45 +117,45 @@ public class DataHelper{
                 
                 // Success Type : Steps
                 
-                (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "steps-bronze", requirements: 100),
-                (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "steps-silver", requirements: 250),
-                (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "steps-gold", requirements: 500),
+                (name: "Steps - Level 1", desc : "Walk for 100 steps", icon: "steps-bronze", requirements: 100, activity: "steps"),
+                (name: "Steps - Level 2", desc : "Walk for 250 steps", icon: "steps-silver", requirements: 250, activity: "steps"),
+                (name: "Steps - Level 3", desc : "Walk for 500 steps", icon: "steps-gold", requirements: 500, activity: "steps"),
                 
                 // Success Type : Walking distance
                 
-                (name: "Distance - Level 1", desc: "Walk 1 km", icon: "distance-bronze", requirements: 1),
-                (name: "Distance - Level 2", desc: "Walk 5 km", icon: "distance-silver", requirements: 5),
-                (name: "Distance - Level 3", desc: "Walk 10 km", icon: "distance-gold", requirements: 10),
+                (name: "Distance - Level 1", desc: "Walk 1 km", icon: "distance-bronze", requirements: 1, activity: "distance"),
+                (name: "Distance - Level 2", desc: "Walk 5 km", icon: "distance-silver", requirements: 5, activity: "distance"),
+                (name: "Distance - Level 3", desc: "Walk 10 km", icon: "distance-gold", requirements: 10, activity: "distance"),
                 
                 // Sucess Type : Climb floors
                 
-                (name: "Stairs - Level 1", desc: "Climb 2 floors", icon: "stairs-bronze", requirements: 2),
-                (name: "Stairs - Level 2", desc: "Climb 5 floors", icon: "stairs-silver", requirements: 5),
-                (name: "Stairs - Level 3", desc: "Climb 10 floors", icon: "stairs-gold", requirements: 10),
+                (name: "Stairs - Level 1", desc: "Climb 2 floors", icon: "stairs-bronze", requirements: 2, activity: "stairs"),
+                (name: "Stairs - Level 2", desc: "Climb 5 floors", icon: "stairs-silver", requirements: 5, activity: "stairs"),
+                (name: "Stairs - Level 3", desc: "Climb 10 floors", icon: "stairs-gold", requirements: 10, activity: "stairs"),
                 
                 // Success Type : Running
                 
-                (name: "Running - Level 1", desc: "Run for a whole km...", icon: "running-bronze", requirements: 1),
-                (name: "Running - Level 2", desc: "Run for 5 km", icon: "running-silver", requirements: 5),
-                (name: "Running - Level 3", desc: "Run for 10 km", icon: "running-gold", requirements: 10),
+                (name: "Running - Level 1", desc: "Run for a whole km...", icon: "running-bronze", requirements: 1, activity: "running"),
+                (name: "Running - Level 2", desc: "Run for 5 km", icon: "running-silver", requirements: 5, activity: "running"),
+                (name: "Running - Level 3", desc: "Run for 10 km", icon: "running-gold", requirements: 10, activity: "running"),
                 
                 // Success Type : Swimming
                 
-                (name: "Swimming - Level 1", desc: "Swim a lap", icon: "swimming-bronze", requirements: 1),
-                (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "swimming-silver", requirements: 5),
-                (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "swimming-gold", requirements: 10),
+                (name: "Swimming - Level 1", desc: "Swim a lap", icon: "swimming-bronze", requirements: 1, activity: "swimming"),
+                (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "swimming-silver", requirements: 5, activity: "swimming"),
+                (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "swimming-gold", requirements: 10, activity: "swimming"),
                 
                 // Success Type : Biking
                 
-                (name: "Biking - Level 1", desc: "Ride a bike for a whole km...", icon: "biking-bronze", requirements: 1),
-                (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "biking-silver", requirements: 5),
-                (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "biking-gold", requirements: 10),
+                (name: "Biking - Level 1", desc: "Ride a bike for a whole km...", icon: "biking-bronze", requirements: 1, activity: "biking"),
+                (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "biking-silver", requirements: 5, activity: "biking"),
+                (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "biking-gold", requirements: 10, activity: "biking"),
                 
                 // Success Type : Workout
                 
-                (name: "Crunch - Level 1", desc: "Do a total of 50 crunchs", icon: "workout-bronze", requirements: 50),
-                (name: "Crunch - Level 2", desc: "Do a total of 500 crunchs", icon: "workout-silver", requirements: 500),
-                (name: "Crunch - Level 3", desc: "Do a total of 5000 crunchs", icon: "workout-gold", requirements: 5000)
+                (name: "Pushup - Level 1", desc: "Do a total of 50 crunchs", icon: "workout-bronze", requirements: 50, activity: "pushup"),
+                (name: "Pushup - Level 2", desc: "Do a total of 500 crunchs", icon: "workout-silver", requirements: 500, activity: "pushup"),
+                (name: "Pushup - Level 3", desc: "Do a total of 5000 crunchs", icon: "workout-gold", requirements: 5000, activity: "pushup")
                 
             ]
             
@@ -164,16 +164,19 @@ public class DataHelper{
                 newSuccess.name = success.name
                 newSuccess.desc = success.desc
                 newSuccess.icon = success.icon
+                newSuccess.activity = success.activity
+                newSuccess.unlocked = false
+                newSuccess.dateUnlock = Date()
                 newSuccess.requirements = Int32(success.requirements)
                 
             // Create goals
                     
                 let goals = [
-                    (name: "Monter 148 marches", desc: "monter les marches", icon: "cookie"),
-                    (name: "Monter 12123 marches", desc: "monter toutes les marches", icon: "cookie"),
-                    (name: "Dormir 3 nuits", desc: "3 nuits par semaines", icon: "cookie"),
-                    (name: "Trouver un partenaire", desc: "un partenaire particulier", icon: "cookie"),
-                    (name: "Devenir un aventurier", desc: "Comme Bob", icon: "cookie")
+                    (name: "Monter 148 marches", desc: "monter les marches", icon: "cookie", requirements: 148),
+                    (name: "Monter 12123 marches", desc: "monter toutes les marches", icon: "cookie", requirements: 12123),
+                    (name: "Dormir 3 nuits", desc: "3 nuits par semaines", icon: "cookie", requirements: 30),
+                    (name: "Trouver un partenaire", desc: "un partenaire particulier", icon: "cookie", requirements: 10000),
+                    (name: "Devenir un aventurier", desc: "Comme Bob", icon: "cookie", requirements: 50000)
                 ]
                 
                 for goal in goals {
@@ -181,6 +184,10 @@ public class DataHelper{
                     newGoal.name = goal.name
                     newGoal.desc = goal.desc
                     newGoal.icon = goal.icon
+                    newGoal.unlocked = false
+                    newGoal.dateUnlock = Date()
+                    newGoal.requirements = Int32(goal.requirements)
+                    newGoal.experience = Int32(goal.requirements)
                 }
                 
             // Create HealthMessages which can be randomly displayed if we have time to do this afterwards... (we won't 😩)
