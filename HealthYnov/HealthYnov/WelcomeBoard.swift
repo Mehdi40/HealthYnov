@@ -66,11 +66,11 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if component == 0 {
-            return String(heightValues[row])
+            return String(heightValues[row]) + "m"
         }
         
         if component == 1 {
-            return String(weightValues[row])
+            return String(weightValues[row]) + "kg"
         }
         
         return nil
@@ -82,10 +82,6 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
             pickerView.reloadComponent(1)
             
         }
-        let heightSelected = heightValues[pickerView.selectedRow(inComponent: 0)]
-        let weightSelected = weightValues[pickerView.selectedRow(inComponent: 1)]
-        
-        print("\(heightSelected), \(weightSelected)")
         
     }
     
@@ -118,9 +114,11 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         let currentUser: User = userList.first as! User
         currentUser.setValue(gender, forKey: "genre")
         currentUser.setValue(nicknameUser, forKey: "username")
-//currentUser.setValue(heightSelected, forKey: "height")
-//currentUser.setValue(weightSelected, forKey: "weight")
+        let heightSelected = heightValues[WHPicker.selectedRow(inComponent: 0)]
+        let weightSelected = weightValues[WHPicker.selectedRow(inComponent: 1)]
         
+        currentUser.setValue(heightSelected, forKey: "height")
+        currentUser.setValue(weightSelected, forKey: "weight")
         
         do {
             try context.save()
