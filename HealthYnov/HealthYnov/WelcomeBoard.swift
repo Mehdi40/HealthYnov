@@ -118,8 +118,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         let currentUser: User = userList.first as! User
         currentUser.setValue(gender, forKey: "genre")
         currentUser.setValue(nicknameUser, forKey: "username")
- //       currentUser.setValue(heightSelected, forKey: "height")
- //       currentUser.setValue(weightSelected, forKey: "weight")
+//currentUser.setValue(heightSelected, forKey: "height")
+//currentUser.setValue(weightSelected, forKey: "weight")
         
         
         do {

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GPx-gU-DKy">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GPx-gU-DKy">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
@@ -847,9 +847,8 @@
                                     <navigationItem title="HealthYnov" id="jns-jh-Ae8"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-GU-W4U">
-                                <rect key="frame" x="34" y="491" width="247" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-GU-W4U">
+                                <rect key="frame" x="20" y="506" width="280" height="34"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add an activity"/>
                                 <connections>
@@ -863,9 +862,12 @@
                             <constraint firstItem="12D-ME-7Ij" firstAttribute="top" secondItem="EX0-3B-rTg" secondAttribute="bottom" constant="20" id="Be0-ol-1SX"/>
                             <constraint firstItem="CiQ-dw-9v3" firstAttribute="trailing" secondItem="EX0-3B-rTg" secondAttribute="trailing" id="Hj1-nP-LNH"/>
                             <constraint firstItem="daD-As-DP3" firstAttribute="top" secondItem="12D-ME-7Ij" secondAttribute="bottom" constant="40" id="Nrg-Yz-qlA"/>
+                            <constraint firstItem="CiQ-dw-9v3" firstAttribute="trailing" secondItem="dtA-GU-W4U" secondAttribute="trailing" constant="20" id="SBq-nY-qyk"/>
                             <constraint firstItem="EX0-3B-rTg" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" id="V05-G6-7gy"/>
                             <constraint firstItem="12D-ME-7Ij" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" constant="20" id="c5U-cH-kla"/>
                             <constraint firstItem="daD-As-DP3" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" constant="20" id="hC2-Ii-Zw5"/>
+                            <constraint firstItem="CiQ-dw-9v3" firstAttribute="bottom" secondItem="dtA-GU-W4U" secondAttribute="bottom" constant="28" id="jeU-QS-Wqs"/>
+                            <constraint firstItem="dtA-GU-W4U" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" constant="20" id="kPT-OG-fmk"/>
                             <constraint firstItem="EX0-3B-rTg" firstAttribute="top" secondItem="Oxa-sA-RqA" secondAttribute="top" id="sih-07-HUw"/>
                             <constraint firstItem="CiQ-dw-9v3" firstAttribute="trailing" secondItem="12D-ME-7Ij" secondAttribute="trailing" constant="20" id="xxZ-sA-dOt"/>
                         </constraints>
