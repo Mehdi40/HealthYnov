@@ -107,12 +107,12 @@ public class DataHelper{
                 newActivity.setValue(activity.name, forKey: "name")
                 newActivity.setValue(activity.desc, forKey: "desc")
                 
-                let newUserActivity = NSEntityDescription.insertNewObject(forEntityName: "UserActivity", into: context) as! UserActivity
-                newUserActivity.setValue(0, forKey: "score")
-                newUserActivity.setValue(user, forKey: "user")
-                newUserActivity.setValue(newActivity, forKey: "activity")
-                newActivity.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
-                user.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
+                //let newUserActivity = NSEntityDescription.insertNewObject(forEntityName: "UserActivity", into: context) as! UserActivity
+                //newUserActivity.setValue(0, forKey: "score")
+                //newUserActivity.setValue(user, forKey: "user")
+                //newUserActivity.setValue(newActivity, forKey: "activity")
+                //newActivity.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
+                //user.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
             }
             
             // Create successes
