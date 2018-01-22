@@ -12,7 +12,9 @@ import HealthKit
 
 class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositioningDelegate {
     
-
+    
+    @IBOutlet weak var activityTypeLabel: UILabel!
+    @IBOutlet weak var steps: UILabel!
     @IBOutlet weak var NavBarCustom: UINavigationBar!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var avatar: UIImageView!
@@ -26,13 +28,11 @@ class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositionin
         
         NavBarCustom.delegate = self
         
-        self.navigationItem.title = "HealthYnov"
-
+        super.viewDidLoad()
         
-        getTodaysSteps { (completion) in
-            
-        }
     }
+    
+    // Fonction statut de l'utilisateur, commentaire à effacer
 
     func startTrackingActivityType() {
         activityManager.startActivityUpdates(to: OperationQueue.main) {
