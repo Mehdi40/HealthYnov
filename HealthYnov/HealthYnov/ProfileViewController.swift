@@ -111,25 +111,72 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
     }
     }
     
-    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
-    {
-        //let profilePic = tapGestureRecognizer.view as! UIImageView
+    func ResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
         
-        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = .savedPhotosAlbum;
-            imagePicker.allowsEditing = true
-            self.present(imagePicker, animated: true, completion: nil)
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            //newSize = CGSizeMake(size.width * heightRatio, size.height * heightRatio)
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            //newSize = CGSizeMake(size.width * widthRatio, size.height * widthRatio)
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
         }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(origin: .zero, size: CGSize(width: newSize.width, height: newSize.height))
+        //let rect = CGRectMake(0, 0, newSize.width, newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let newImage = self.ResizeImage(image: image, targetSize: CGSize(width: 135, height: 135))
+
+        profilePic.image = newImage
+        
+        let ticks = NSDate().timeIntervalSince1970
+        
+        if let profilePic = UIImage(named: "picture_" + String(ticks) + ".jpg") {
+            if let data = UIImagePNGRepresentation(profilePic) {
+                let filename = getDocumentsDirectory().appendingPathComponent("picture_" + String(ticks) + ".jpg")
+                try? data.write(to: filename)
+            }
+        }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let controller = UIImagePickerController()
+        controller.delegate = self
+        controller.sourceType = .savedPhotosAlbum
+        controller.allowsEditing = true
+        present(controller, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
-        profilePic.isUserInteractionEnabled = true
-        profilePic.addGestureRecognizer(tapGestureRecognizer)
         
         // We're going to fetch the last success which has been unlocked
         let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")

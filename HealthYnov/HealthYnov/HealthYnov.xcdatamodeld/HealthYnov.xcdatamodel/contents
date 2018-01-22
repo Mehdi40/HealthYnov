@@ -33,7 +33,7 @@
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="experience" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastConnectionDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="profile" optional="YES" attributeType="String" syncable="YES"/>
@@ -53,7 +53,7 @@
         <element name="Goal" positionX="-155" positionY="-45" width="128" height="150"/>
         <element name="HealthMessage" positionX="-335" positionY="261" width="128" height="73"/>
         <element name="Success" positionX="-153" positionY="-198" width="128" height="150"/>
-        <element name="User" positionX="-630" positionY="-297" width="128" height="208"/>
+        <element name="User" positionX="-630" positionY="-297" width="128" height="210"/>
         <element name="UserActivity" positionX="-486" positionY="-0" width="128" height="118"/>
     </elements>
 </model>
