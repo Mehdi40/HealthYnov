@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="17C88" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="13772" systemVersion="16G29" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Activity" representedClassName="Activity" syncable="YES" codeGenerationType="class">
         <attribute name="desc" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="icon" optional="YES" attributeType="String" syncable="YES"/>
@@ -33,12 +33,12 @@
         <attribute name="creationDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="experience" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="genre" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="height" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="height" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="image" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="lastConnectionDate" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="profile" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="username" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="weight" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="weight" optional="YES" attributeType="Double" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <relationship name="userActivity" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="UserActivity" inverseName="user" inverseEntity="UserActivity" syncable="YES"/>
     </entity>
     <entity name="UserActivity" representedClassName="UserActivity" syncable="YES" codeGenerationType="class">
@@ -53,7 +53,7 @@
         <element name="Goal" positionX="-155" positionY="-45" width="128" height="150"/>
         <element name="HealthMessage" positionX="-335" positionY="261" width="128" height="73"/>
         <element name="Success" positionX="-153" positionY="-198" width="128" height="150"/>
-        <element name="User" positionX="-630" positionY="-297" width="128" height="208"/>
+        <element name="User" positionX="-630" positionY="-297" width="128" height="210"/>
         <element name="UserActivity" positionX="-486" positionY="-0" width="128" height="118"/>
     </elements>
 </model>

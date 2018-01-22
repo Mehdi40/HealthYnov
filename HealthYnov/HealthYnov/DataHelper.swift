@@ -9,6 +9,7 @@
 import Foundation
 import CoreData
 import UIKit
+import HealthKit
 
 public class DataHelper{
     
@@ -65,6 +66,9 @@ public class DataHelper{
         
         emptyAllTables()
         
+        let stepsCount = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)
+        print(stepsCount)
+        
         var user: [User]!
         let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
         user = try? context.fetch(fetchRequest)
@@ -74,7 +78,7 @@ public class DataHelper{
             guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
             let context = appDelegate.persistentContainer.viewContext
             
-            // Create a JohnDoe user who is 50kg
+            // Create a JohnDoe user 
             
             let userEntity = NSEntityDescription.entity(forEntityName: "User", in: context)!
             let user = NSManagedObject(entity: userEntity, insertInto: context)
@@ -103,12 +107,12 @@ public class DataHelper{
                 newActivity.setValue(activity.name, forKey: "name")
                 newActivity.setValue(activity.desc, forKey: "desc")
                 
-                let newUserActivity = NSEntityDescription.insertNewObject(forEntityName: "UserActivity", into: context) as! UserActivity
-                newUserActivity.setValue(0, forKey: "score")
-                newUserActivity.setValue(user, forKey: "user")
-                newUserActivity.setValue(newActivity, forKey: "activity")
-                newActivity.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
-                user.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
+                //let newUserActivity = NSEntityDescription.insertNewObject(forEntityName: "UserActivity", into: context) as! UserActivity
+                //newUserActivity.setValue(0, forKey: "score")
+                //newUserActivity.setValue(user, forKey: "user")
+                //newUserActivity.setValue(newActivity, forKey: "activity")
+                //newActivity.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
+                //user.setValue(NSSet(object: newUserActivity), forKey: "userActivity")
             }
             
             // Create successes
@@ -332,6 +336,27 @@ public class DataHelper{
             context.delete(healthmessage)
         }
         
+    }
+    
+    func retrieveStepCount(completion: @escaping (_ stepRetrieved: Double) -> Void) {
+        
+        //   Define the Step Quantity Type
+        let stepsCount = HKQuantityType.quantityType(forIdentifier: HKQuantityTypeIdentifier.stepCount)
+        
+        //   Get the start of the day
+        let date = Date()
+        let cal = Calendar(identifier: Calendar.Identifier.gregorian)
+        let newDate = cal.startOfDay(for: date)
+        
+        //  Set the Predicates & Interval
+        let predicate = HKQuery.predicateForSamples(withStart: newDate, end: Date(), options: .strictStartDate)
+        var interval = DateComponents()
+        interval.day = 1
+        
+        //  Perform the Query
+        let query = HKStatisticsCollectionQuery(quantityType: stepsCount!, quantitySamplePredicate: predicate, options: [.cumulativeSum], anchorDate: newDate as Date, intervalComponents:interval)
+  
+        print(stepsCount)
     }
 
     

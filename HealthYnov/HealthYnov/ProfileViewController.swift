@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class ProfileViewController: UIViewController, UITableViewDataSource {
+class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -20,22 +20,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
           else {
               fatalError("Wrong cell type")
             }
-        
-        //if let suc = lastItems[0] as? Success {
-        //    cell.successTitle.text = suc.name
-        //    cell.successDesc.text = suc.desc
-        //} else {
-        //    cell.successTitle.text = "Pas de succès"
-        //    cell.successDesc.text = "Débloquez des succès."
-        //}
-        
-        //if let goa = lastItems[1] as? Goal {
-        //    cellGoal.goalTitle.text = goa.name
-        //    cellGoal.goalDesc.text = goa.desc
-        //} else {
-        //    cellGoal.goalTitle.text = "Pas d'objectif"
-        //   cellGoal.goalDesc.text = "Débloquez des objectifs."
-        //}
 
         if indexPath.row == 0 {
             if let suc = lastItems[0] as? Success {
@@ -48,12 +32,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
             
             return cell
         } else if indexPath.row == 1 {
-            if let goa = lastItems[1] as? Goal {
-                cell.title.text = goa.name
-                cell.desc.text = goa.desc
+            if let act = lastItems[1] as? UserActivity {
+                cell.title.text = act.activity!.name
+                cell.desc.text = String(act.score)
             } else {
-                cell.title.text = "Pas d'objectif"
-                cell.desc.text = "Débloquez des objectifs."
+                cell.title.text = "Pas d'activité"
+                cell.desc.text = "Bougez-vous un peu sérieux"
             }
             
             return cell
@@ -62,15 +46,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         
     }
     
-    
-    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    //lazy var managedContext : NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-    
     var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var user: [User]!
     var success: [Success]!
     var goal: [Goal]!
+    var userAct: [UserActivity]!
     var lastItems = [Any]()
     
     @IBOutlet weak var NavBarCustom: UINavigationBar!
@@ -82,6 +62,16 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var addActivityButton: UIButton!
+    
+    @IBAction func openCameraButton(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
     
     // Check if an user exists, or create it 😇
     // Hi Mehdi I just decided to put this func in your part so deal with it
@@ -121,21 +111,68 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        picker.dismiss(animated: true, completion: nil)
+    func ResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
+        let size = image.size
         
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        profilePic.image = image
+        let widthRatio  = targetSize.width  / image.size.width
+        let heightRatio = targetSize.height / image.size.height
+        
+        // Figure out what our orientation is, and use that to form the rectangle
+        var newSize: CGSize
+        if(widthRatio > heightRatio) {
+            //newSize = CGSizeMake(size.width * heightRatio, size.height * heightRatio)
+            newSize = CGSize(width: size.width * heightRatio, height: size.height * heightRatio)
+        } else {
+            //newSize = CGSizeMake(size.width * widthRatio, size.height * widthRatio)
+            newSize = CGSize(width: size.width * widthRatio, height: size.height * widthRatio)
+        }
+        
+        // This is the rect that we've calculated out and this is what is actually used below
+        let rect = CGRect(origin: .zero, size: CGSize(width: newSize.width, height: newSize.height))
+        //let rect = CGRectMake(0, 0, newSize.width, newSize.height)
+        
+        // Actually do the resizing to the rect using the ImageContext stuff
+        UIGraphicsBeginImageContextWithOptions(newSize, false, 1.0)
+        image.draw(in: rect)
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage!
     }
     
-    @objc func tappedImage(_ sender: UITapGestureRecognizer) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
-            imagePicker.sourceType = .camera
-            imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func getDocumentsDirectory() -> URL {
+        let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
+        return paths[0]
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        let newImage = self.ResizeImage(image: image, targetSize: CGSize(width: 135, height: 135))
+
+        profilePic.image = newImage
+        
+        let ticks = NSDate().timeIntervalSince1970
+        
+        if let profilePic = UIImage(named: "picture_" + String(ticks) + ".jpg") {
+            if let data = UIImagePNGRepresentation(profilePic) {
+                let filename = getDocumentsDirectory().appendingPathComponent("picture_" + String(ticks) + ".jpg")
+                try? data.write(to: filename)
+            }
         }
+        
+        dismiss(animated: true, completion: nil)
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let controller = UIImagePickerController()
+        controller.delegate = self
+        controller.sourceType = .savedPhotosAlbum
+        controller.allowsEditing = true
+        present(controller, animated: true, completion: nil)
     }
 
     override func viewDidLoad() {
@@ -150,12 +187,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         let userSuccess = userSuccesses.first
         
         // We're going to fetch the last goal which has been unlocked
-        let goalFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
-        goalFetch.fetchLimit = 1
-        goalFetch.sortDescriptors = [NSSortDescriptor.init(key: "dateUnlock", ascending: false)]
-        goalFetch.predicate = NSPredicate(format: "self.unlocked == %@", NSNumber(booleanLiteral: true))
-        let userGoals = try! context.fetch(goalFetch)
-        let userGoal = userGoals.first
+        let userActivityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
+        userActivityFetch.fetchLimit = 1
+        userActivityFetch.sortDescriptors = [NSSortDescriptor.init(key: "dateCreation", ascending: false)]
+        let userActivities = try! context.fetch(userActivityFetch)
+        let userActivity = userActivities.first
         
         if let suc = userSuccess as? Success {
             lastItems.append(suc)
@@ -163,8 +199,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
             lastItems.append("No")
         }
         
-        if let goa = userGoal as? Goal {
-            lastItems.append(goa)
+        if let act = userActivity as? UserActivity {
+            lastItems.append(act)
         } else {
             lastItems.append("No")
         }
@@ -181,21 +217,16 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         weight.text = String(realUser!.weight)
         let userLevel = Int(realUser!.experience) / 1000
         level.text = String(userLevel)
-        profilePic.image = UIImage(named: "biking-bronze")
+        profilePic.image = UIImage(named: "Avatar")
         
         progressbar.progress = Float(30)
         progressbar.transform = progressbar.transform.scaledBy(x: 1, y: 5)
-        
-        let tapImage = UITapGestureRecognizer(target: self, action: #selector(tappedImage))
-        profilePic.addGestureRecognizer(tapImage)
-        profilePic.tag = 1
         
         gotYourInformations()
         addActivityButton.backgroundColor = UIColor.YnovGreen
         addActivityButton.layer.cornerRadius = 5
     }
-        
-        
+    
         // Do any additional setup after loading the view.
     
     override func didReceiveMemoryWarning() {
