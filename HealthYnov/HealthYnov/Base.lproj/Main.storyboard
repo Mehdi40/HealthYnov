@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -537,7 +538,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4da-iq-hmj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1522.5" y="786.97183098591552"/>
+            <point key="canvasLocation" x="1496" y="967"/>
         </scene>
         <!--Success List Table View Controller-->
         <scene sceneID="TnL-AK-Rh0">
@@ -1014,7 +1015,7 @@
         <image name="Pill" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="zc0-sl-vXc"/>
+        <segue reference="Buq-9P-u7O"/>
         <segue reference="4hs-zA-7ao"/>
         <segue reference="KQo-l2-3SM"/>
     </inferredMetricsTieBreakers>
