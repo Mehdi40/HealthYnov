@@ -192,6 +192,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         
         gotYourInformations()
         addActivityButton.backgroundColor = UIColor.YnovGreen
+        addActivityButton.layer.cornerRadius = 5
     }
         
         

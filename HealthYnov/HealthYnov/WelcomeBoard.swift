@@ -14,6 +14,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var NicknameTF: UITextField!
     @IBOutlet weak var WHPicker: UIPickerView!
     @IBOutlet weak var GenderSl: UISegmentedControl!
+    @IBOutlet weak var submitButton: UIButton!
     
     let heightMAX: Double = 2.20
     let weightMAX: Double = 150
@@ -39,7 +40,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
             weightValues.append(weightValues.last! + weightStep)
         }
         
-        
+        submitButton.backgroundColor = UIColor.YnovRed
+        submitButton.layer.cornerRadius = 5
     }
     
 // Function for removing the Keyboard after typing
@@ -90,7 +92,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBAction func SubmitButton(_ sender: Any) {
   
         let nicknameUser =  NicknameTF.text
-
+print(nicknameUser)
+        if nicknameUser != nil {
         var gender : String
         
         switch(GenderSl.selectedSegmentIndex) {
@@ -132,7 +135,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
 
 //        var heightSelected = WHPicker(component == 0)
 //        var weightSelected = WHPicker(component == 1)
-        
+        }
 
     }
     
