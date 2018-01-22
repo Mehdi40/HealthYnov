@@ -20,4 +20,15 @@ extension UIColor {
         {
             return UIColor(red: 204/255, green: 204/255, blue: 204/255, alpha: 1.0)
         }
+    
+        public class var YnovGreen : UIColor
+        {
+            return UIColor(red: 17/255, green: 165/255, blue: 143/255, alpha: 1.0)
+        }
+ 
+        public class var YnovRed : UIColor
+        {
+            return UIColor(red: 231/255, green: 48/255, blue: 88/255, alpha: 1.0)
+        }
+    
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbw-OR-0GI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="GPx-gU-DKy">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -243,7 +243,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VLd-EH-dg6" secondAttribute="trailing" constant="20" id="1AD-qO-Mus"/>
                             <constraint firstItem="VLd-EH-dg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="70Q-5E-R8t"/>
@@ -315,7 +315,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="8bA-ek-io6" firstAttribute="top" secondItem="gjZ-k4-6RR" secondAttribute="bottom" constant="42" id="3iw-A7-KA0"/>
                             <constraint firstItem="mvz-IN-xQB" firstAttribute="trailing" secondItem="8jw-gJ-bP4" secondAttribute="trailing" constant="43" id="AUL-FF-eIu"/>
@@ -390,7 +390,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zn1-oj-7ds" firstAttribute="top" secondItem="8Ih-qA-zY8" secondAttribute="bottom" constant="32" id="2iY-aj-kqQ"/>
                             <constraint firstItem="nSe-UN-OUX" firstAttribute="trailing" secondItem="uoe-7I-8sF" secondAttribute="trailing" constant="36" id="B0q-53-slF"/>
@@ -437,7 +437,7 @@
                                 </wkWebViewConfiguration>
                             </wkWebView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="690-Jm-PU8" firstAttribute="bottom" secondItem="Z5l-yf-uJn" secondAttribute="bottom" constant="20" id="aiI-9u-QOs"/>
                             <constraint firstItem="Z5l-yf-uJn" firstAttribute="leading" secondItem="690-Jm-PU8" secondAttribute="leading" constant="16" id="f1O-bC-1Dj"/>
@@ -534,7 +534,7 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qbe-Jo-snH" firstAttribute="leading" secondItem="62Z-R5-Ne5" secondAttribute="leading" constant="16" id="ERX-LB-9Ch"/>
                             <constraint firstItem="62Z-R5-Ne5" firstAttribute="trailing" secondItem="Qbe-Jo-snH" secondAttribute="trailing" constant="16" id="JVo-jg-XCK"/>
@@ -623,7 +623,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.95377266839378239" green="0.95377266839378239" blue="0.95377266839378239" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="OEN-b8-uFm" firstAttribute="top" secondItem="fI5-wg-YFD" secondAttribute="topMargin" constant="75" id="ALk-Cq-tCD"/>
                             <constraint firstItem="OEN-b8-uFm" firstAttribute="leading" secondItem="6dn-IK-oFd" secondAttribute="leading" constant="20" id="FMe-84-Sxi"/>
@@ -847,9 +847,8 @@
                                     <navigationItem title="HealthYnov" id="jns-jh-Ae8"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-GU-W4U">
-                                <rect key="frame" x="34" y="491" width="247" height="49"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dtA-GU-W4U">
+                                <rect key="frame" x="20" y="506" width="280" height="34"/>
                                 <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Add an activity"/>
                                 <connections>
@@ -857,15 +856,18 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="CiQ-dw-9v3" firstAttribute="trailing" secondItem="daD-As-DP3" secondAttribute="trailing" constant="20" id="A4h-ny-q3A"/>
                             <constraint firstItem="12D-ME-7Ij" firstAttribute="top" secondItem="EX0-3B-rTg" secondAttribute="bottom" constant="20" id="Be0-ol-1SX"/>
                             <constraint firstItem="CiQ-dw-9v3" firstAttribute="trailing" secondItem="EX0-3B-rTg" secondAttribute="trailing" id="Hj1-nP-LNH"/>
                             <constraint firstItem="daD-As-DP3" firstAttribute="top" secondItem="12D-ME-7Ij" secondAttribute="bottom" constant="40" id="Nrg-Yz-qlA"/>
+                            <constraint firstItem="CiQ-dw-9v3" firstAttribute="trailing" secondItem="dtA-GU-W4U" secondAttribute="trailing" constant="20" id="SBq-nY-qyk"/>
                             <constraint firstItem="EX0-3B-rTg" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" id="V05-G6-7gy"/>
                             <constraint firstItem="12D-ME-7Ij" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" constant="20" id="c5U-cH-kla"/>
                             <constraint firstItem="daD-As-DP3" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" constant="20" id="hC2-Ii-Zw5"/>
+                            <constraint firstItem="CiQ-dw-9v3" firstAttribute="bottom" secondItem="dtA-GU-W4U" secondAttribute="bottom" constant="28" id="jeU-QS-Wqs"/>
+                            <constraint firstItem="dtA-GU-W4U" firstAttribute="leading" secondItem="CiQ-dw-9v3" secondAttribute="leading" constant="20" id="kPT-OG-fmk"/>
                             <constraint firstItem="EX0-3B-rTg" firstAttribute="top" secondItem="Oxa-sA-RqA" secondAttribute="top" id="sih-07-HUw"/>
                             <constraint firstItem="CiQ-dw-9v3" firstAttribute="trailing" secondItem="12D-ME-7Ij" secondAttribute="trailing" constant="20" id="xxZ-sA-dOt"/>
                         </constraints>
@@ -889,7 +891,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="laM-ge-CV6"/>
+        <segue reference="Kg3-vB-isy"/>
         <segue reference="KQo-l2-3SM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>

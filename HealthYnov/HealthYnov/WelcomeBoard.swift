@@ -17,7 +17,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     
     let heightMAX: Double = 2.40
     let weightMAX: Double = 150
-    let heightStep: Double = 0.05
+    let heightStep: Double = 0.01
     let weightStep: Double = 0.5
     var heightValues: [Double] = [1.0]
     var weightValues: [Double] = [30]
@@ -76,7 +76,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         return nil
     }
     
-    public func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
         if component == 0 {
             pickerView.reloadComponent(1)
@@ -107,7 +107,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
             
         }
         
-        var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        let context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
         var user: [User]!
         
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
@@ -117,8 +118,8 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         let currentUser: User = userList.first as! User
         currentUser.setValue(gender, forKey: "genre")
         currentUser.setValue(nicknameUser, forKey: "username")
- //       currentUser.setValue(heightSelected, forKey: "height")
- //       currentUser.setValue(weightSelected, forKey: "weight")
+//currentUser.setValue(heightSelected, forKey: "height")
+//currentUser.setValue(weightSelected, forKey: "weight")
         
         
         do {

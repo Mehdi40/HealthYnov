@@ -27,6 +27,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
         dataHelper.setTables()
         
+        Thread.sleep(forTimeInterval: 1.5)
+
         
         return true
     }
