@@ -279,7 +279,9 @@
                     <navigationItem key="navigationItem" id="uaP-OY-qfc"/>
                     <connections>
                         <outlet property="NavBarCustom" destination="sTf-le-UVs" id="Er7-ZH-fpB"/>
+                        <outlet property="activityTypeLabel" destination="9GB-Hl-Jgu" id="nCn-7P-CK2"/>
                         <outlet property="avatar" destination="k4C-xg-nSN" id="R0r-Wp-ebW"/>
+                        <outlet property="steps" destination="BZJ-sV-1FU" id="5X8-dL-PaC"/>
                         <outlet property="userlevel" destination="pJ5-QH-U4h" id="fNP-Ex-wxE"/>
                         <outlet property="username" destination="FXx-uA-tnC" id="aYe-rf-uR0"/>
                     </connections>
