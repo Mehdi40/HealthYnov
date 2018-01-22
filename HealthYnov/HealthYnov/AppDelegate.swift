@@ -30,8 +30,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             dataHelper.setTables()
         } else {
             DispatchQueue.main.async {
-                [unowned self] in
-                ProfileViewController.performSegue(withIdentifier: "firstConnexion", sender: self)
+    //            [unowned self] in
+  //              ProfileViewController.performSegue(withIdentifier: "firstConnexion", sender: self)
+                
+                
+//                self.performSegue(withIdentifier: "firstConnexion", sender: self)
             }
         }
         
