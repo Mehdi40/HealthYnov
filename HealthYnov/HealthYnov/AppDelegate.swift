@@ -28,7 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         dataHelper.setTables()
         
         Thread.sleep(forTimeInterval: 1.5)
+        
 
+        
         
         return true
     }

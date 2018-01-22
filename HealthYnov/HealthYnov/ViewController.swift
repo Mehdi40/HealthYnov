@@ -11,7 +11,7 @@ import HealthKit
 
 class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositioningDelegate {
     
-    
+
     @IBOutlet weak var NavBarCustom: UINavigationBar!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var avatar: UIImageView!
@@ -22,6 +22,9 @@ class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositionin
         super.viewDidLoad()
 
         NavBarCustom.delegate = self
+        
+        self.navigationItem.title = "HealthYnov"
+
         
         getTodaysSteps { (completion) in
             
