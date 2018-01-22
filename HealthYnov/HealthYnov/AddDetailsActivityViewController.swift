@@ -16,6 +16,8 @@ class AddDetailsActivityViewController: UIViewController {
     @IBOutlet weak var activityTitle: UILabel!
     @IBOutlet weak var activityDetails: UILabel!
     @IBOutlet weak var activityUnit: UITextField!
+    @IBOutlet weak var sendButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var chosenAct : String?
     var chosenActDetails : String?
@@ -23,9 +25,22 @@ class AddDetailsActivityViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
         activityTitle.text = chosenAct
         activityDetails.text = chosenActDetails
         
+        sendButton.backgroundColor = UIColor.YnovGreen
+        cancelButton.backgroundColor = UIColor.YnovRed
+        
+        sendButton.layer.cornerRadius = 5
+        cancelButton.layer.cornerRadius = 5
+        
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 
     @IBAction func clickedSave(_ sender: Any) {
