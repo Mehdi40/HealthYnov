@@ -96,12 +96,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
         let userTest2 = ("\(userTest ?? "nil")")
         print("mdr")
         print(userTest2)
-        //if userTest2 == "JohnDoe" {
-            //DispatchQueue.main.async {
-              //  [unowned self] in
-                //self.performSegue(withIdentifier: "firstConnexion", sender: self)
-            //}
-        //}
+        if userTest2 == "JohnDoe" {
+            DispatchQueue.main.async {
+                [unowned self] in
+                self.performSegue(withIdentifier: "firstConnexion", sender: self)
+            }
+        }
     }
     
     func ResizeImage(image: UIImage, targetSize: CGSize) -> UIImage {
@@ -161,7 +161,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
                 let user = users.first as? User
                 
                 user!.setValue(profilePic, forKey: "image")
-                context.save();
+                
+                do {
+                    try context.save()
+                } catch let error as NSError {
+                    print("Could not save. \(error), \(error.userInfo)")
+                }
             }
         }
         

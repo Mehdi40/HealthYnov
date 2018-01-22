@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IyO-HJ-9dR">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,32 +20,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UYb-kP-d0q">
-                                <rect key="frame" x="193" y="22" width="47" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sTf-le-UVs">
-                                <rect key="frame" x="0.0" y="20" width="320" height="37"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="barTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
-                                <textAttributes key="titleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <textAttributes key="largeTitleTextAttributes">
-                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </textAttributes>
-                                <items>
-                                    <navigationItem title="Title" id="gU6-ub-hN3">
-                                        <barButtonItem key="leftBarButtonItem" title="Item" image="HeaderTrophy" id="hO8-W3-RxL">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Item" image="HeaderHelp" id="io9-Is-VFE">
-                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="VLd-EH-dg6">
                                 <rect key="frame" x="20" y="72" width="280" height="496"/>
                                 <subviews>
@@ -262,6 +236,28 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTf-le-UVs">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Title" id="gU6-ub-hN3">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="HeaderTrophy" id="hO8-W3-RxL">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="HeaderHelp" id="io9-Is-VFE">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -518,14 +514,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="4Q2-Zv-1Mo">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                                <items>
-                                    <navigationItem title="HealthYnov" id="ed6-71-fDg"/>
-                                </items>
-                            </navigationBar>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qbe-Jo-snH">
-                                <rect key="frame" x="16" y="60" width="288" height="29"/>
+                                <rect key="frame" x="16" y="127" width="288" height="29"/>
                                 <segments>
                                     <segment title="Achievements"/>
                                     <segment title="Goals"/>
@@ -537,7 +527,7 @@
                                 </connections>
                             </segmentedControl>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IlM-Ud-iB7">
-                                <rect key="frame" x="16" y="136" width="288" height="432"/>
+                                <rect key="frame" x="16" y="203" width="288" height="365"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" rowHeight="100" id="v2A-kj-cvR" customClass="SuccessTableViewCell" customModule="HealthYnov" customModuleProvider="target">
@@ -589,25 +579,49 @@
                                     <outlet property="delegate" destination="IyO-HJ-9dR" id="4aZ-1N-73T"/>
                                 </connections>
                             </tableView>
+                            <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pzy-y9-tLA">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="barTintColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="HealthYnov" id="2Vm-Pp-6G5">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="HeaderTrophy" id="iN1-GG-R45">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="HeaderHelp" id="nvB-63-A6o">
+                                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Qbe-Jo-snH" firstAttribute="leading" secondItem="62Z-R5-Ne5" secondAttribute="leading" constant="16" id="ERX-LB-9Ch"/>
+                            <constraint firstItem="pzy-y9-tLA" firstAttribute="trailing" secondItem="62Z-R5-Ne5" secondAttribute="trailing" id="Hhk-QE-chR"/>
                             <constraint firstItem="62Z-R5-Ne5" firstAttribute="trailing" secondItem="Qbe-Jo-snH" secondAttribute="trailing" constant="16" id="JVo-jg-XCK"/>
-                            <constraint firstItem="Qbe-Jo-snH" firstAttribute="top" secondItem="4Q2-Zv-1Mo" secondAttribute="bottom" constant="16" id="UKc-HD-8se"/>
-                            <constraint firstItem="4Q2-Zv-1Mo" firstAttribute="trailing" secondItem="62Z-R5-Ne5" secondAttribute="trailing" id="V6C-Xw-Xrj"/>
+                            <constraint firstItem="pzy-y9-tLA" firstAttribute="top" secondItem="c08-sZ-GVT" secondAttribute="top" constant="20" id="NFe-F5-gM0"/>
                             <constraint firstItem="IlM-Ud-iB7" firstAttribute="leading" secondItem="62Z-R5-Ne5" secondAttribute="leading" constant="16" id="XQ9-mV-xEU"/>
                             <constraint firstItem="IlM-Ud-iB7" firstAttribute="top" secondItem="Qbe-Jo-snH" secondAttribute="bottom" constant="48" id="bAU-ba-msm"/>
+                            <constraint firstItem="pzy-y9-tLA" firstAttribute="top" secondItem="62Z-R5-Ne5" secondAttribute="top" id="fKj-cz-Smj"/>
                             <constraint firstItem="62Z-R5-Ne5" firstAttribute="trailing" secondItem="IlM-Ud-iB7" secondAttribute="trailing" constant="16" id="hbM-Dj-KdJ"/>
-                            <constraint firstItem="4Q2-Zv-1Mo" firstAttribute="top" secondItem="c08-sZ-GVT" secondAttribute="top" id="kmB-7k-KZw"/>
-                            <constraint firstItem="4Q2-Zv-1Mo" firstAttribute="leading" secondItem="62Z-R5-Ne5" secondAttribute="leading" id="pm9-TK-BAs"/>
                             <constraint firstItem="62Z-R5-Ne5" firstAttribute="bottom" secondItem="IlM-Ud-iB7" secondAttribute="bottom" id="sVD-Ye-bxw"/>
+                            <constraint firstItem="Qbe-Jo-snH" firstAttribute="top" secondItem="pzy-y9-tLA" secondAttribute="bottom" constant="63" id="xP4-2T-fNx"/>
+                            <constraint firstItem="pzy-y9-tLA" firstAttribute="leading" secondItem="62Z-R5-Ne5" secondAttribute="leading" id="yqj-7q-ul5"/>
                             <constraint firstItem="IlM-Ud-iB7" firstAttribute="top" secondItem="Qbe-Jo-snH" secondAttribute="bottom" constant="48" id="zxg-R9-9Aj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="62Z-R5-Ne5"/>
                     </view>
                     <navigationItem key="navigationItem" id="7UD-K2-HrB"/>
                     <connections>
+                        <outlet property="NavBarCustom" destination="pzy-y9-tLA" id="v0I-MJ-rMb"/>
                         <outlet property="successListSegment" destination="Qbe-Jo-snH" id="4md-qS-4sB"/>
                     </connections>
                 </viewController>

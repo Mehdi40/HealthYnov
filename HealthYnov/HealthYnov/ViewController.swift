@@ -27,9 +27,24 @@ class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositionin
         super.viewDidLoad()
         
         NavBarCustom.delegate = self
+        addLogoHeader()
         
-        super.viewDidLoad()
+
         
+ //       super.viewDidLoad()
+        
+    }
+    
+    func addLogoHeader(){
+    
+        let logo = UIImage(named: "Pill")
+        let imageView = UIImageView(image:logo)
+        imageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
+        imageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
+        imageView.contentMode = .scaleAspectFit
+        self.navigationItem.titleView = imageView
+        
+    
     }
     
     // Fonction statut de l'utilisateur, commentaire à effacer
