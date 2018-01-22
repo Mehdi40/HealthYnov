@@ -25,7 +25,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        //let testcontext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
         
         let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
-        dataHelper.setTables()
+        
+        if dataHelper.isUser() {
+            dataHelper.setTables()
+        } else {
+            DispatchQueue.main.async {
+                [unowned self] in
+                ProfileViewController.performSegue(withIdentifier: "firstConnexion", sender: self)
+            }
+        }
         
         Thread.sleep(forTimeInterval: 1.5)
         

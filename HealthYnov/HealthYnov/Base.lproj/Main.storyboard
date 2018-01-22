@@ -987,7 +987,8 @@
         <image name="Pill" width="50" height="50"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Kg3-vB-isy"/>
+        <segue reference="m8B-s9-id0"/>
+        <segue reference="JLv-BH-YUk"/>
         <segue reference="KQo-l2-3SM"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>

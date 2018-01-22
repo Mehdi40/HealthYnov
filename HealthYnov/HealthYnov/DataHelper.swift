@@ -32,7 +32,6 @@ public class DataHelper{
         emptySuccess()
         emptyActivity()
         emptyHealthMessages()
-
     }
     
     // Functions for each table
@@ -55,7 +54,18 @@ public class DataHelper{
         
    // }
     
-
+    public func isUser() -> Bool {
+        let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        userFetch.fetchLimit = 1
+        let users = try! context.fetch(userFetch) as! [User]
+        let user = users.first as? User
+        
+        if user!.username! == "JohnDoe" {
+            return false
+        }
+        
+        return true
+    }
     
     
     public func setTables(){
