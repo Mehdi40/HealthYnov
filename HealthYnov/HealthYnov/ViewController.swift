@@ -91,23 +91,21 @@ class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositionin
                 fatalError("*** An error occurred while calculating the statistics:  ***")
             }
             
-            let endDate = NSDate()
+            let endDate = Date()
             
-//            guard let startDate = calendar.dateByAddingUnit(.Month, value: -3, toDate: endDate, options: []) else {
-//                fatalError("*** Unable to calculate the start date ***")
-//            }
+            guard let startDate = calendar.date(byAdding: .month, value: -3, to: endDate ) else {
+                fatalError("*** Unable to calculate the start date ***")
+            }
             
-            // Plot the weekly step counts over the past 3 months
-//            statsCollection.enumerateStatisticsFromDate(startDate, toDate: endDate) { [unowned self] statistics, stop in
-//
-//                if let quantity = statistics.sumQuantity() {
-//                    let date = statistics.startDate
-//                    let value = quantity.doubleValueForUnit(HKUnit.countUnit())
-//
-//                    // Call a custom method to plot each data point.
-//                    self.plotWeeklyStepCount(value, forDate: date)
-//                }
-//            }
+             //Plot the weekly step counts over the past 3 months
+            statsCollection.enumerateStatistics(from: startDate, to: endDate) { [unowned self] statistics, stop in
+               if let quantity = statistics.sumQuantity() {
+                    let date = statistics.startDate
+                let value = quantity.doubleValue(for: HKUnit.count())
+                   // Call a custom method to plot each data point.
+                   self.plotWeeklyStepCount(value, forDate: date)
+                }
+            }
         }
         
         var statisticsUpdateHandler: ((HKStatisticsCollectionQuery, HKStatistics?, HKStatisticsCollection?, Error?) -> Void)?
