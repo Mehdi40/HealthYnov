@@ -10,6 +10,8 @@ import UIKit
 
 extension UIImageView {
     
+    // Rounded corners functionalities
+    
     func circular(borderWidth: CGFloat = 0, borderColor: UIColor = UIColor.white) {
         let radius = frame.width / 2
         self.layer.cornerRadius = radius

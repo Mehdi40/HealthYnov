@@ -13,36 +13,22 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-
-
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
- 
-        // Adding code to fill and test Core Data
-        
-       //let testcontext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+
+ // DataHelper instance for using all Data Core features
         
         let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
         
         if dataHelper.isUser() {
-            dataHelper.setTables()
-        } else {
-            DispatchQueue.main.async {
-    //            [unowned self] in
-  //              ProfileViewController.performSegue(withIdentifier: "firstConnexion", sender: self)
-                
-                
-//                self.performSegue(withIdentifier: "firstConnexion", sender: self)
+                dataHelper.setTables()
+            } else {
+                DispatchQueue.main.async {
+                }
             }
-        }
-        
-        Thread.sleep(forTimeInterval: 1.5)
-        
 
-        
-        
+// Slow the app launch 1.5 sec to show the launchscreen
+        Thread.sleep(forTimeInterval: 1.5)
         return true
     }
 

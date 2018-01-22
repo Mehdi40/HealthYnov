@@ -11,11 +11,15 @@ import CoreData
 
 class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
     
+    // All outlets
+    
     @IBOutlet weak var NicknameTF: UITextField!
     @IBOutlet weak var WHPicker: UIPickerView!
     @IBOutlet weak var GenderSl: UISegmentedControl!
     @IBOutlet weak var ageField: UITextField!
     @IBOutlet weak var submitButton: UIButton!
+    
+    // Settings for selector
     
     let heightMAX: Double = 2.20
     let weightMAX: Double = 150

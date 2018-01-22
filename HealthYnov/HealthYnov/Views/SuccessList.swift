@@ -28,31 +28,13 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource, U
         super.viewDidLoad()
         
         NavBarCustom.delegate = self
-
-
-        
-  //      let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 25, //height: 25))
-      //  imageView.contentMode = .scaleAspectFit
-        //imageView.image = #imageLiteral(resourceName: "Pill")
-       // navigationItem.titleView = imageView
-        
-
-        
-        let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 25, height: 25))
-        imageView.image = UIImage(named: "Pill")
-        
-        let customView = UIView(frame: CGRect(x: 0, y: 0, width: self.view.frame.width - 80, height: 30))
-        customView.addSubview(imageView)
-
-        self.navigationItem.titleView = customView
-        
-        
+    
         
         let fetchRequest: NSFetchRequest<Success> = Success.fetchRequest()
         success = try? context.fetch(fetchRequest)
         let fetchRequestGoals: NSFetchRequest<Goal> = Goal.fetchRequest()
         goal = try? context.fetch(fetchRequestGoals)
-//        print(success)
+
     }
     
 

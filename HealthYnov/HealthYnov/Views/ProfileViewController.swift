@@ -77,22 +77,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
         }
     }
     
-    // Check if an user exists, or create it 😇
-    // Hi Mehdi I just decided to put this func in your part so deal with it
-    
- //   public func UserExists(){
-   //     let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
-     //   let fetchRequest: NSFetchRequest<User> = User.fetchRequest()
-       // user = try? context.fetch(fetchRequest)
-        
-        //let isIndexValid = user.indices.contains(0)
-        
-      //  if !isIndexValid {
-        //    dataHelper.CreateJohnDoe()
-        //}
-        
-   // }
-    
     // These function checks if the user info is already filled. If not, we're asking some more!
     
     public func gotYourInformations(){

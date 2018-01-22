@@ -11,7 +11,8 @@ import CoreMotion
 import HealthKit
 
 class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositioningDelegate {
-    
+ 
+    // All outlets + HealthKit stuff
     
     @IBOutlet weak var activityTypeLabel: UILabel!
     @IBOutlet weak var steps: UILabel!
@@ -25,29 +26,14 @@ class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositionin
     
     override func viewDidLoad() {
         super.viewDidLoad()
+   
+    // Tests
         
         NavBarCustom.delegate = self
-        addLogoHeader()
-        
-
-        
- //       super.viewDidLoad()
-        
+ 
     }
     
-    func addLogoHeader(){
-    
-        let logo = UIImage(named: "Pill")
-        let imageView = UIImageView(image:logo)
-        imageView.widthAnchor.constraint(equalToConstant: 25).isActive = true
-        imageView.heightAnchor.constraint(equalToConstant: 25).isActive = true
-        imageView.contentMode = .scaleAspectFit
-        self.navigationItem.titleView = imageView
-        
-    
-    }
-    
-    // Fonction statut de l'utilisateur, commentaire à effacer
+    // User status
 
     func startTrackingActivityType() {
         activityManager.startActivityUpdates(to: OperationQueue.main) {
@@ -180,6 +166,3 @@ func position(for bar: UIBarPositioning) -> UIBarPosition {
 }
 }
 
-// Comment appeler le contexte (BDD) : 
-// let appDel = UIApplication.shared.delegate as! AppDelegate
-// appDel.persistentContainer.viewContext

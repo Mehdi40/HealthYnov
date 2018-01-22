@@ -10,6 +10,7 @@ import UIKit
 
 class CustomTitleView: UIView {
     
+    
     override var intrinsicContentSize: CGSize {
         return UILayoutFittingExpandedSize
     }

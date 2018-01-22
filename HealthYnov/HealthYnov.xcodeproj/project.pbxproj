@@ -16,6 +16,18 @@
 		8B6469C92004D781004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
 		8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
 		8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
+		8B978D542016ADA000FD34FD /* HealthKitDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */; };
+		8B978D552016ADA000FD34FD /* HealthKitDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */; };
+		8B978D562016ADA200FD34FD /* NavigationDBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F092120112D5A00C95B5B /* NavigationDBar.swift */; };
+		8B978D572016ADA200FD34FD /* NavigationDBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F092120112D5A00C95B5B /* NavigationDBar.swift */; };
+		8B978D582016ADA300FD34FD /* CustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F956920167C76006EBA9C /* CustomTitleView.swift */; };
+		8B978D592016ADA300FD34FD /* CustomTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B3F956920167C76006EBA9C /* CustomTitleView.swift */; };
+		8B978D5A2016ADA700FD34FD /* CharterGraphique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */; };
+		8B978D5B2016ADA700FD34FD /* CharterGraphique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */; };
+		8B978D5C2016ADAA00FD34FD /* RoundedUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958062004CA6200002EC7 /* RoundedUImage.swift */; };
+		8B978D5D2016ADAA00FD34FD /* RoundedUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958062004CA6200002EC7 /* RoundedUImage.swift */; };
+		8B978D5E2016ADAC00FD34FD /* SuccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */; };
+		8B978D5F2016ADAC00FD34FD /* SuccessTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */; };
 		8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958062004CA6200002EC7 /* RoundedUImage.swift */; };
 		8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958082004EE5500002EC7 /* WelcomeBoard.swift */; };
 		8BA3D1352014EF1E00CC825B /* HealthKitDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */; };
@@ -33,8 +45,6 @@
 		912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
 		912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */; };
 		912BED732004D74A00749DEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED722004D74A00749DEF /* ProfileViewController.swift */; };
-		912BED742004D74A00749DEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED722004D74A00749DEF /* ProfileViewController.swift */; };
-		912BED752004D74A00749DEF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED722004D74A00749DEF /* ProfileViewController.swift */; };
 		912BED762004EA2600749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
 		912BED772004EA2700749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
 		912BED782004EA3D00749DEF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 912BED062003B4A200749DEF /* Main.storyboard */; };
@@ -95,7 +105,7 @@
 		912BED6E2004AF2300749DEF /* HealthYnov.xcdatamodel */ = {isa = PBXFileReference; explicitFileType = wrapper.xcdatamodel; path = HealthYnov.xcdatamodel; sourceTree = "<group>"; };
 		912BED722004D74A00749DEF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		9154A364200DE9C300220F0D /* ProfileDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDataHelper.swift; sourceTree = "<group>"; };
-		9154A36C200DF2A500220F0D /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ProfileTableViewCell.swift; path = ../ProfileTableViewCell.swift; sourceTree = "<group>"; };
+		9154A36C200DF2A500220F0D /* ProfileTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +134,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8B978D512016AD4A00FD34FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				912BED042003B4A200749DEF /* ViewController.swift */,
+				912BED722004D74A00749DEF /* ProfileViewController.swift */,
+				8B1775F5200CDD4700D6215D /* SuccessList.swift */,
+				8B9958082004EE5500002EC7 /* WelcomeBoard.swift */,
+				8BB78806200FE75300D6CBB2 /* WebFAQViewController.swift */,
+				8B143DF1200FCE7A007F0AA7 /* AddActivityViewController.swift */,
+				8B143DF3200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8B978D522016AD7600FD34FD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				912BED0E2003B4A200749DEF /* Info.plist */,
+				9154A36C200DF2A500220F0D /* ProfileTableViewCell.swift */,
+				912BED022003B4A200749DEF /* AppDelegate.swift */,
+				8B9958062004CA6200002EC7 /* RoundedUImage.swift */,
+				8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */,
+				9154A364200DE9C300220F0D /* ProfileDataHelper.swift */,
+				8B6469C82004D781004006F4 /* DataHelper.swift */,
+				8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */,
+				8B3F092120112D5A00C95B5B /* NavigationDBar.swift */,
+				8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */,
+				8B3F956920167C76006EBA9C /* CustomTitleView.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8B978D532016AD8700FD34FD /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		8B978D602016ADB600FD34FD /* LaunchScreen */ = {
+			isa = PBXGroup;
+			children = (
+				912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */,
+			);
+			path = LaunchScreen;
+			sourceTree = "<group>";
+		};
 		8BA3D1372014F96A00CC825B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,29 +214,13 @@
 		912BED012003B4A200749DEF /* HealthYnov */ = {
 			isa = PBXGroup;
 			children = (
+				8B978D512016AD4A00FD34FD /* Views */,
 				8BA3D1362014F96900CC825B /* HealthYnov.entitlements */,
-				9154A36C200DF2A500220F0D /* ProfileTableViewCell.swift */,
-				912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
-				912BED022003B4A200749DEF /* AppDelegate.swift */,
-				912BED042003B4A200749DEF /* ViewController.swift */,
 				912BED062003B4A200749DEF /* Main.storyboard */,
-				912BED722004D74A00749DEF /* ProfileViewController.swift */,
-				9154A364200DE9C300220F0D /* ProfileDataHelper.swift */,
 				912BED092003B4A200749DEF /* Assets.xcassets */,
-				912BED0B2003B4A200749DEF /* LaunchScreen.storyboard */,
-				912BED0E2003B4A200749DEF /* Info.plist */,
-				8B6469C82004D781004006F4 /* DataHelper.swift */,
-				8B9958062004CA6200002EC7 /* RoundedUImage.swift */,
-				8B9958082004EE5500002EC7 /* WelcomeBoard.swift */,
-				8B1775F5200CDD4700D6215D /* SuccessList.swift */,
-				8B1775F7200D285500D6215D /* SuccessTableViewCell.swift */,
-				8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */,
-				8B143DF1200FCE7A007F0AA7 /* AddActivityViewController.swift */,
-				8B143DF3200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift */,
-				8BB78806200FE75300D6CBB2 /* WebFAQViewController.swift */,
-				8B3F092120112D5A00C95B5B /* NavigationDBar.swift */,
-				8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */,
-				8B3F956920167C76006EBA9C /* CustomTitleView.swift */,
+				8B978D532016AD8700FD34FD /* CoreData */,
+				8B978D602016ADB600FD34FD /* LaunchScreen */,
+				8B978D522016AD7600FD34FD /* Utilities */,
 			);
 			path = HealthYnov;
 			sourceTree = "<group>";
@@ -367,11 +409,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B978D572016ADA200FD34FD /* NavigationDBar.swift in Sources */,
+				8B978D5F2016ADAC00FD34FD /* SuccessTableViewCell.swift in Sources */,
 				912BED762004EA2600749DEF /* AppDelegate.swift in Sources */,
-				912BED742004D74A00749DEF /* ProfileViewController.swift in Sources */,
+				8B978D5D2016ADAA00FD34FD /* RoundedUImage.swift in Sources */,
 				8B6469CA2004EA49004006F4 /* DataHelper.swift in Sources */,
+				8B978D552016ADA000FD34FD /* HealthKitDataHelper.swift in Sources */,
+				8B978D5B2016ADA700FD34FD /* CharterGraphique.swift in Sources */,
 				912BED182003B4A200749DEF /* HealthYnovTests.swift in Sources */,
 				9154A36E200DF2A500220F0D /* ProfileTableViewCell.swift in Sources */,
+				8B978D592016ADA300FD34FD /* CustomTitleView.swift in Sources */,
 				9154A366200DE9C300220F0D /* ProfileDataHelper.swift in Sources */,
 				912BED702004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
@@ -381,11 +428,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B978D562016ADA200FD34FD /* NavigationDBar.swift in Sources */,
+				8B978D5E2016ADAC00FD34FD /* SuccessTableViewCell.swift in Sources */,
 				912BED772004EA2700749DEF /* AppDelegate.swift in Sources */,
-				912BED752004D74A00749DEF /* ProfileViewController.swift in Sources */,
+				8B978D5C2016ADAA00FD34FD /* RoundedUImage.swift in Sources */,
 				8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */,
+				8B978D542016ADA000FD34FD /* HealthKitDataHelper.swift in Sources */,
+				8B978D5A2016ADA700FD34FD /* CharterGraphique.swift in Sources */,
 				912BED232003B4A200749DEF /* HealthYnovUITests.swift in Sources */,
 				9154A36F200DF2A500220F0D /* ProfileTableViewCell.swift in Sources */,
+				8B978D582016ADA300FD34FD /* CustomTitleView.swift in Sources */,
 				9154A367200DE9C300220F0D /* ProfileDataHelper.swift in Sources */,
 				912BED712004AF2300749DEF /* HealthYnov.xcdatamodeld in Sources */,
 			);
@@ -540,7 +592,7 @@
 				CODE_SIGN_ENTITLEMENTS = HealthYnov/HealthYnov.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XZV4AE25BV;
+				DEVELOPMENT_TEAM = 7Q62LQSQP5;
 				INFOPLIST_FILE = HealthYnov/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -559,7 +611,7 @@
 				CODE_SIGN_ENTITLEMENTS = HealthYnov/HealthYnov.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = XZV4AE25BV;
+				DEVELOPMENT_TEAM = 7Q62LQSQP5;
 				INFOPLIST_FILE = HealthYnov/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
