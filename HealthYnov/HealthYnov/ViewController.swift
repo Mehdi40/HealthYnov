@@ -31,6 +31,8 @@ class ViewController: UIViewController, UINavigationBarDelegate, UIBarPositionin
         super.viewDidLoad()
         
     }
+    
+    // Fonction statut de l'utilisateur, commentaire à effacer
 
     func startTrackingActivityType() {
         activityManager.startActivityUpdates(to: OperationQueue.main) {

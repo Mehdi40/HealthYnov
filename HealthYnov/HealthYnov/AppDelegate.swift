@@ -36,7 +36,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         Thread.sleep(forTimeInterval: 1.5)
+        
 
+        
         
         return true
     }
