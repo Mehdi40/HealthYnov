@@ -38,7 +38,7 @@ class AddActivityViewController: UIViewController {
             case "gotoDetailsWorkout"? :
                 chosenActivity = "workout"
                 goToDetails.chosenAct = "Congrats for workout!"
-                goToDetails.chosenActDetails = "How many crunchs did you do?"
+                goToDetails.chosenActDetails = "How many push-ups did you do?"
                 break
             case "gotoDetailsBike"? :
                 chosenActivity = "bike"
