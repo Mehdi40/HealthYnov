@@ -27,6 +27,10 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     override func viewDidLoad() {
         super.viewDidLoad()
         
+
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))        
+        view.addGestureRecognizer(tap)
+        
         while heightValues.last! < heightMAX {
             heightValues.append(heightValues.last! + heightStep)
         }
@@ -34,6 +38,12 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         while weightValues.last! < weightMAX {
             weightValues.append(weightValues.last! + weightStep)
         }
+    }
+    
+// Function for removing the Keyboard after typing
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -80,23 +90,49 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     }
     
     @IBAction func SubmitButton(_ sender: Any) {
-        
-        // send data and indentifi components TODO
+  
         let nicknameUser =  NicknameTF.text
-        //var heightSelected = WHPicker(component == 0)
-        //var weightSelected = WHPicker(component = 1)
+
+        var gender : String
         
         switch(GenderSl.selectedSegmentIndex) {
-            case 0:
-                var Gender = "M"
-                break
-            case 1:
-                var Gender = "F"
-                break
-            default:
-                var Gender = "M"
+        case 0:
+            gender = "M"
+            break
+        case 1:
+            gender = "F"
+            break
+        default:
+            gender = "M"
             
         }
+        
+        var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        var user: [User]!
+        
+        let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
+        userFetch.fetchLimit = 1
+        userFetch.sortDescriptors = [NSSortDescriptor.init(key: "username", ascending: true)]
+        let userList = try! context.fetch(userFetch)
+        let currentUser: User = userList.first as! User
+        currentUser.setValue(gender, forKey: "genre")
+        currentUser.setValue(nicknameUser, forKey: "username")
+ //       currentUser.setValue(heightSelected, forKey: "height")
+ //       currentUser.setValue(weightSelected, forKey: "weight")
+        
+        
+        do {
+            try context.save()
+        } catch let error as NSError {
+            print("Could not save. \(error), \(error.userInfo)")
+        }
+        
+        // send data and indentifi components TODO
+
+//        var heightSelected = WHPicker(component == 0)
+//        var weightSelected = WHPicker(component == 1)
+        
+
     }
     
     

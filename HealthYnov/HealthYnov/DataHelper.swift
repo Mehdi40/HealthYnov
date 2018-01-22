@@ -10,7 +10,6 @@ import Foundation
 import CoreData
 import UIKit
 
-
 public class DataHelper{
     
     // Ludovic's code, not compiling
@@ -327,7 +326,7 @@ public class DataHelper{
         }
         
     }
-    
+
     
 }
 

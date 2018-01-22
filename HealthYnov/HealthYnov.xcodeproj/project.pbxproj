@@ -17,6 +17,8 @@
 		8B6469CB2004EA4A004006F4 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6469C82004D781004006F4 /* DataHelper.swift */; };
 		8B9958072004CA6200002EC7 /* RoundedUImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958062004CA6200002EC7 /* RoundedUImage.swift */; };
 		8B9958092004EE5500002EC7 /* WelcomeBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9958082004EE5500002EC7 /* WelcomeBoard.swift */; };
+		8BA3D1352014EF1E00CC825B /* HealthKitDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */; };
+		8BA3D1392014F96A00CC825B /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8BA3D1382014F96A00CC825B /* HealthKit.framework */; };
 		8BB78807200FE75300D6CBB2 /* WebFAQViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BB78806200FE75300D6CBB2 /* WebFAQViewController.swift */; };
 		8BDD14C5200DF03F0011CD8F /* CharterGraphique.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */; };
 		912BED032003B4A200749DEF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 912BED022003B4A200749DEF /* AppDelegate.swift */; };
@@ -73,6 +75,9 @@
 		8B6469C82004D781004006F4 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		8B9958062004CA6200002EC7 /* RoundedUImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedUImage.swift; sourceTree = "<group>"; };
 		8B9958082004EE5500002EC7 /* WelcomeBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeBoard.swift; sourceTree = "<group>"; };
+		8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitDataHelper.swift; sourceTree = "<group>"; };
+		8BA3D1362014F96900CC825B /* HealthYnov.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HealthYnov.entitlements; sourceTree = "<group>"; };
+		8BA3D1382014F96A00CC825B /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		8BB78806200FE75300D6CBB2 /* WebFAQViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebFAQViewController.swift; sourceTree = "<group>"; };
 		8BDD14C4200DF03F0011CD8F /* CharterGraphique.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharterGraphique.swift; sourceTree = "<group>"; };
 		912BECFF2003B4A200749DEF /* HealthYnov.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HealthYnov.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -100,6 +105,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8BA3D1392014F96A00CC825B /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +126,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8BA3D1372014F96A00CC825B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8BA3D1382014F96A00CC825B /* HealthKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		912BECF62003B4A200749DEF = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +141,7 @@
 				912BED162003B4A200749DEF /* HealthYnovTests */,
 				912BED212003B4A200749DEF /* HealthYnovUITests */,
 				912BED002003B4A200749DEF /* Products */,
+				8BA3D1372014F96A00CC825B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +158,7 @@
 		912BED012003B4A200749DEF /* HealthYnov */ = {
 			isa = PBXGroup;
 			children = (
+				8BA3D1362014F96900CC825B /* HealthYnov.entitlements */,
 				9154A36C200DF2A500220F0D /* ProfileTableViewCell.swift */,
 				919760732012D34A0003CFAD /* ProfileGoalTableViewCell.swift */,
 				912BED6D2004AF2300749DEF /* HealthYnov.xcdatamodeld */,
@@ -164,6 +180,7 @@
 				8B143DF3200FD0B1007F0AA7 /* AddDetailsActivityViewController.swift */,
 				8BB78806200FE75300D6CBB2 /* WebFAQViewController.swift */,
 				8B3F092120112D5A00C95B5B /* NavigationDBar.swift */,
+				8BA3D1342014EF1E00CC825B /* HealthKitDataHelper.swift */,
 			);
 			path = HealthYnov;
 			sourceTree = "<group>";
@@ -255,6 +272,11 @@
 					912BECFE2003B4A200749DEF = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit = {
+								enabled = 1;
+							};
+						};
 					};
 					912BED122003B4A200749DEF = {
 						CreatedOnToolsVersion = 9.2;
@@ -328,6 +350,7 @@
 				8B1775F8200D285500D6215D /* SuccessTableViewCell.swift in Sources */,
 				8B6469C92004D781004006F4 /* DataHelper.swift in Sources */,
 				912BED032003B4A200749DEF /* AppDelegate.swift in Sources */,
+				8BA3D1352014EF1E00CC825B /* HealthKitDataHelper.swift in Sources */,
 				912BED732004D74A00749DEF /* ProfileViewController.swift in Sources */,
 				9154A36D200DF2A500220F0D /* ProfileTableViewCell.swift in Sources */,
 				9154A365200DE9C300220F0D /* ProfileDataHelper.swift in Sources */,
@@ -518,15 +541,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthYnov/HealthYnov.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77J555BJ8F;
+				DEVELOPMENT_TEAM = 7Q62LQSQP5;
 				INFOPLIST_FILE = HealthYnov/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnov;
+				PRODUCT_BUNDLE_IDENTIFIER = HealthYnov;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -534,15 +560,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HealthYnov/HealthYnov.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77J555BJ8F;
+				DEVELOPMENT_TEAM = 7Q62LQSQP5;
 				INFOPLIST_FILE = HealthYnov/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnov;
+				PRODUCT_BUNDLE_IDENTIFIER = HealthYnov;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -585,7 +614,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77J555BJ8F;
+				DEVELOPMENT_TEAM = 7Q62LQSQP5;
 				INFOPLIST_FILE = HealthYnovUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovUITests;
@@ -601,7 +630,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 77J555BJ8F;
+				DEVELOPMENT_TEAM = 7Q62LQSQP5;
 				INFOPLIST_FILE = HealthYnovUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ynov.HealthYnovUITests;

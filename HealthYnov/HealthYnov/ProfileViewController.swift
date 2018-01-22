@@ -79,6 +79,28 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         
    // }
     
+    // These function checks if the user info is already filled. If not, we're asking some more!
+    
+    public func gotYourInformations(){
+        let userTest = user?[0].username
+        let userTest2 = ("\(userTest ?? "nil")")
+        print(userTest2)
+        if userTest2 == "JohnDoe" {
+        
+  //          performSegue(withIdentifier: "goFillInfos", sender: Any?.self)
+            
+    print("gg lol")
+            
+
+            DispatchQueue.main.async {
+                
+                
+                [unowned self] in
+                self.performSegue(withIdentifier: "firstConnexion", sender: self)
+            }
+    }
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -102,6 +124,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         weight.text = String(realUser!.weight)
         let userLevel = Int(realUser!.experience) / 1000
         level.text = String(userLevel)
+        
+        gotYourInformations()
     }
         
         
