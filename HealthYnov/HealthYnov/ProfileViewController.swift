@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import CoreData
 
-class ProfileViewController: UIViewController, UITableViewDataSource {
+class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 2
     }
@@ -20,22 +20,6 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
           else {
               fatalError("Wrong cell type")
             }
-        
-        //if let suc = lastItems[0] as? Success {
-        //    cell.successTitle.text = suc.name
-        //    cell.successDesc.text = suc.desc
-        //} else {
-        //    cell.successTitle.text = "Pas de succès"
-        //    cell.successDesc.text = "Débloquez des succès."
-        //}
-        
-        //if let goa = lastItems[1] as? Goal {
-        //    cellGoal.goalTitle.text = goa.name
-        //    cellGoal.goalDesc.text = goa.desc
-        //} else {
-        //    cellGoal.goalTitle.text = "Pas d'objectif"
-        //   cellGoal.goalDesc.text = "Débloquez des objectifs."
-        //}
 
         if indexPath.row == 0 {
             if let suc = lastItems[0] as? Success {
@@ -48,12 +32,12 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
             
             return cell
         } else if indexPath.row == 1 {
-            if let goa = lastItems[1] as? Goal {
-                cell.title.text = goa.name
-                cell.desc.text = goa.desc
+            if let act = lastItems[1] as? UserActivity {
+                cell.title.text = act.activity!.name
+                cell.desc.text = String(act.score)
             } else {
-                cell.title.text = "Pas d'objectif"
-                cell.desc.text = "Débloquez des objectifs."
+                cell.title.text = "Pas d'activité"
+                cell.desc.text = "Bougez-vous un peu sérieux"
             }
             
             return cell
@@ -62,15 +46,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         
     }
     
-    
-    //let appDelegate = UIApplication.shared.delegate as! AppDelegate
-    
-    //lazy var managedContext : NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-    
     var context: NSManagedObjectContext = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var user: [User]!
     var success: [Success]!
     var goal: [Goal]!
+    var userAct: [UserActivity]!
     var lastItems = [Any]()
     
     @IBOutlet weak var NavBarCustom: UINavigationBar!
@@ -81,6 +61,16 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
+    
+    @IBAction func openCameraButton(sender: AnyObject) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = .camera;
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+    }
     
     // Check if an user exists, or create it 😇
     // Hi Mehdi I just decided to put this func in your part so deal with it
@@ -120,25 +110,25 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     }
     }
     
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
-        picker.dismiss(animated: true, completion: nil)
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+        //let profilePic = tapGestureRecognizer.view as! UIImageView
         
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
-        profilePic.image = image
-    }
-    
-    @objc func tappedImage(_ sender: UITapGestureRecognizer) {
-        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+        if UIImagePickerController.isSourceTypeAvailable(.savedPhotosAlbum) {
             let imagePicker = UIImagePickerController()
-            imagePicker.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
-            imagePicker.sourceType = .camera
-            imagePicker.allowsEditing = false
+            imagePicker.delegate = self
+            imagePicker.sourceType = .savedPhotosAlbum;
+            imagePicker.allowsEditing = true
             self.present(imagePicker, animated: true, completion: nil)
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        profilePic.isUserInteractionEnabled = true
+        profilePic.addGestureRecognizer(tapGestureRecognizer)
         
         // We're going to fetch the last success which has been unlocked
         let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
@@ -149,12 +139,11 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         let userSuccess = userSuccesses.first
         
         // We're going to fetch the last goal which has been unlocked
-        let goalFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Goal")
-        goalFetch.fetchLimit = 1
-        goalFetch.sortDescriptors = [NSSortDescriptor.init(key: "dateUnlock", ascending: false)]
-        goalFetch.predicate = NSPredicate(format: "self.unlocked == %@", NSNumber(booleanLiteral: true))
-        let userGoals = try! context.fetch(goalFetch)
-        let userGoal = userGoals.first
+        let userActivityFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "UserActivity")
+        userActivityFetch.fetchLimit = 1
+        userActivityFetch.sortDescriptors = [NSSortDescriptor.init(key: "dateCreation", ascending: false)]
+        let userActivities = try! context.fetch(userActivityFetch)
+        let userActivity = userActivities.first
         
         if let suc = userSuccess as? Success {
             lastItems.append(suc)
@@ -162,8 +151,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
             lastItems.append("No")
         }
         
-        if let goa = userGoal as? Goal {
-            lastItems.append(goa)
+        if let act = userActivity as? UserActivity {
+            lastItems.append(act)
         } else {
             lastItems.append("No")
         }
@@ -180,19 +169,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         weight.text = String(realUser!.weight)
         let userLevel = Int(realUser!.experience) / 1000
         level.text = String(userLevel)
-        profilePic.image = UIImage(named: "biking-bronze")
+        profilePic.image = UIImage(named: "Avatar")
         
         progressbar.progress = Float(30)
         progressbar.transform = progressbar.transform.scaledBy(x: 1, y: 5)
         
-        let tapImage = UITapGestureRecognizer(target: self, action: #selector(tappedImage))
-        profilePic.addGestureRecognizer(tapImage)
-        profilePic.tag = 1
-        
         gotYourInformations()
     }
-        
-        
+    
         // Do any additional setup after loading the view.
     
     override func didReceiveMemoryWarning() {
