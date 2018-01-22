@@ -74,11 +74,13 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     var lastItems = [Any]()
     
     @IBOutlet weak var NavBarCustom: UINavigationBar!
+    @IBOutlet weak var progressbar: UIProgressView!
     @IBOutlet weak var username: UILabel!
     @IBOutlet weak var level: UILabel!
     @IBOutlet weak var age: UILabel!
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
+    @IBOutlet weak var profilePic: UIImageView!
     
     // Check if an user exists, or create it 😇
     // Hi Mehdi I just decided to put this func in your part so deal with it
@@ -116,6 +118,23 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
                 self.performSegue(withIdentifier: "firstConnexion", sender: self)
             }
     }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String: Any]) {
+        picker.dismiss(animated: true, completion: nil)
+        
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        profilePic.image = image
+    }
+    
+    @objc func tappedImage(_ sender: UITapGestureRecognizer) {
+        if UIImagePickerController.isSourceTypeAvailable(.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = (self as! UIImagePickerControllerDelegate & UINavigationControllerDelegate)
+            imagePicker.sourceType = .camera
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
     }
 
     override func viewDidLoad() {
@@ -161,6 +180,14 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         weight.text = String(realUser!.weight)
         let userLevel = Int(realUser!.experience) / 1000
         level.text = String(userLevel)
+        profilePic.image = UIImage(named: "biking-bronze")
+        
+        progressbar.progress = Float(30)
+        progressbar.transform = progressbar.transform.scaledBy(x: 1, y: 5)
+        
+        let tapImage = UITapGestureRecognizer(target: self, action: #selector(tappedImage))
+        profilePic.addGestureRecognizer(tapImage)
+        profilePic.tag = 1
         
         gotYourInformations()
     }
