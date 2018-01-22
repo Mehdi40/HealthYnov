@@ -81,6 +81,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var addActivityButton: UIButton!
     
     // Check if an user exists, or create it 😇
     // Hi Mehdi I just decided to put this func in your part so deal with it
@@ -190,6 +191,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource {
         profilePic.tag = 1
         
         gotYourInformations()
+        addActivityButton.backgroundColor = UIColor.YnovGreen
     }
         
         
