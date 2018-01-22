@@ -61,6 +61,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
     @IBOutlet weak var height: UILabel!
     @IBOutlet weak var weight: UILabel!
     @IBOutlet weak var profilePic: UIImageView!
+    @IBOutlet weak var addActivityButton: UIButton!
     
     @IBAction func openCameraButton(sender: AnyObject) {
         if UIImagePickerController.isSourceTypeAvailable(.camera) {
@@ -175,6 +176,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
         progressbar.transform = progressbar.transform.scaledBy(x: 1, y: 5)
         
         gotYourInformations()
+        addActivityButton.backgroundColor = UIColor.YnovGreen
+        addActivityButton.layer.cornerRadius = 5
     }
     
         // Do any additional setup after loading the view.

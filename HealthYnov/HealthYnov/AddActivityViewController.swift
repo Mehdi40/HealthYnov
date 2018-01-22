@@ -17,9 +17,19 @@ class AddActivityViewController: UIViewController {
     @IBOutlet weak var swimButton: UIButton!
     @IBOutlet weak var runButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        workoutButton.backgroundColor = UIColor.YnovGreen
+        bikeButton.backgroundColor = UIColor.YnovRed
+        swimButton.backgroundColor = UIColor.YnovGreen
+        runButton.backgroundColor = UIColor.YnovRed
+        
+        workoutButton.layer.cornerRadius = 5
+        bikeButton.layer.cornerRadius = 5
+        swimButton.layer.cornerRadius = 5
+        runButton.layer.cornerRadius = 5
     }
 
     override func didReceiveMemoryWarning() {

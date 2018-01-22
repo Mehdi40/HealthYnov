@@ -14,21 +14,22 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     @IBOutlet weak var NicknameTF: UITextField!
     @IBOutlet weak var WHPicker: UIPickerView!
     @IBOutlet weak var GenderSl: UISegmentedControl!
+    @IBOutlet weak var submitButton: UIButton!
     
-    let heightMAX: Double = 2.40
+    let heightMAX: Double = 2.20
     let weightMAX: Double = 150
     let heightStep: Double = 0.01
     let weightStep: Double = 0.5
     var heightValues: [Double] = [1.0]
     var weightValues: [Double] = [30]
-    let heightUnit: String = "m"
-    let weightUnit: String = "kg"
+    let heightUnit: String = " m"
+    let weightUnit: String = " kg"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
 
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
         view.addGestureRecognizer(tap)
         
         while heightValues.last! < heightMAX {
@@ -38,11 +39,14 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         while weightValues.last! < weightMAX {
             weightValues.append(weightValues.last! + weightStep)
         }
+        
+        submitButton.backgroundColor = UIColor.YnovRed
+        submitButton.layer.cornerRadius = 5
     }
     
 // Function for removing the Keyboard after typing
     
-    func dismissKeyboard() {
+    @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
@@ -55,7 +59,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         if component == 0 {
             return heightValues.count
         }
-        // add unit TODO
+
         if component == 1 {
             return weightValues.count
         }
@@ -66,11 +70,11 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         
         if component == 0 {
-            return String(heightValues[row])
+            return String(heightValues[row]) + heightUnit
         }
         
         if component == 1 {
-            return String(weightValues[row])
+            return String(weightValues[row]) + weightUnit
         }
         
         return nil
@@ -82,17 +86,14 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
             pickerView.reloadComponent(1)
             
         }
-        let heightSelected = heightValues[pickerView.selectedRow(inComponent: 0)]
-        let weightSelected = weightValues[pickerView.selectedRow(inComponent: 1)]
-        
-        print("\(heightSelected), \(weightSelected)")
         
     }
     
     @IBAction func SubmitButton(_ sender: Any) {
   
         let nicknameUser =  NicknameTF.text
-
+print(nicknameUser)
+        if nicknameUser != nil {
         var gender : String
         
         switch(GenderSl.selectedSegmentIndex) {
@@ -118,9 +119,11 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
         let currentUser: User = userList.first as! User
         currentUser.setValue(gender, forKey: "genre")
         currentUser.setValue(nicknameUser, forKey: "username")
-//currentUser.setValue(heightSelected, forKey: "height")
-//currentUser.setValue(weightSelected, forKey: "weight")
+        let heightSelected = heightValues[WHPicker.selectedRow(inComponent: 0)]
+        let weightSelected = weightValues[WHPicker.selectedRow(inComponent: 1)]
         
+        currentUser.setValue(heightSelected, forKey: "height")
+        currentUser.setValue(weightSelected, forKey: "weight")
         
         do {
             try context.save()
@@ -132,7 +135,7 @@ class WelcomeBoardController: UIViewController, UIPickerViewDataSource, UIPicker
 
 //        var heightSelected = WHPicker(component == 0)
 //        var weightSelected = WHPicker(component == 1)
-        
+        }
 
     }
     
