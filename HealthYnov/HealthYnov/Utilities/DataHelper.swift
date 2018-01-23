@@ -60,7 +60,7 @@ public class DataHelper{
         let users = try! context.fetch(userFetch) as! [User]
         let user = users.first as! User
         
-        if user?.username == "JohnDoe" {
+        if user.username == "JohnDoe" {
             return false
         }
         
