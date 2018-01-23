@@ -150,20 +150,20 @@ public class DataHelper{
                 // Success Type : Running
                 
                 (name: "Running - Level 1", desc: "Run for a whole km...", icon: "running-bronze", requirements: 1, activity: "running"),
-                (name: "Running - Level 2", desc: "Run for 5 km", icon: "running-silver", requirements: 100, activity: "running"),
-                (name: "Running - Level 3", desc: "Run for 10 km", icon: "running-gold", requirements: 1000, activity: "running"),
+                (name: "Running - Level 2", desc: "Run for 5 km", icon: "running-silver", requirements: 5, activity: "running"),
+                (name: "Running - Level 3", desc: "Run for 10 km", icon: "running-gold", requirements: 10, activity: "running"),
                 
                 // Success Type : Swimming
                 
                 (name: "Swimming - Level 1", desc: "Swim a lap", icon: "swimming-bronze", requirements: 1, activity: "swimming"),
-                (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "swimming-silver", requirements: 50, activity: "swimming"),
-                (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "swimming-gold", requirements: 100, activity: "swimming"),
+                (name: "Swimming - Level 2", desc: "Swim 5 laps", icon: "swimming-silver", requirements: 5, activity: "swimming"),
+                (name: "Swimming - Level 3", desc: "Swim 10 laps", icon: "swimming-gold", requirements: 10, activity: "swimming"),
                 
                 // Success Type : Biking
                 
                 (name: "Biking - Level 1", desc: "Ride a bike for a whole km...", icon: "biking-bronze", requirements: 1, activity: "biking"),
-                (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "biking-silver", requirements: 50, activity: "biking"),
-                (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "biking-gold", requirements: 100, activity: "biking"),
+                (name: "Biking - Level 2", desc: "Ride a bike for 5 km", icon: "biking-silver", requirements: 5, activity: "biking"),
+                (name: "Biking - Level 3", desc: "Ride a bike for 10 km", icon: "biking-gold", requirements: 10, activity: "biking"),
                 
                 // Success Type : Workout
                 

@@ -78,12 +78,22 @@ class SuccessListTableViewController: UIViewController, UITableViewDataSource, U
                 cell.Picture.image = UIImage(named: "\(imagePath ?? "nil")")
                 cell.Title.text = suc?.name
                 cell.Desc.text = suc?.desc
+                if (suc?.unlocked)! {
+                    cell.contentView.backgroundColor = UIColor.white
+                } else {
+                    cell.contentView.backgroundColor = UIColor.gray
+                }
                 break
             case 1:
                 let goa = goal?[indexPath.row]
                 cell.Picture.image = UIImage(named: "cookie")
                 cell.Title.text = goa?.name
                 cell.Desc.text = goa?.desc
+                if (goa?.unlocked)! {
+                    cell.contentView.backgroundColor = UIColor.white
+                } else {
+                    cell.contentView.backgroundColor = UIColor.gray
+                }
                 break
                 
             //Add other cases here

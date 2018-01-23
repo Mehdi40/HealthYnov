@@ -77,10 +77,9 @@ class AddDetailsActivityViewController: UIViewController {
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
                 let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
-                successFetch.fetchLimit = 1
                 let activityPredicate = NSPredicate(format: "self.activity == %@", "biking")
                 let formatPredicate = NSPredicate(format: "self.requirements <= %d", Int32(addToUserActivity!))
-                let andPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [activityPredicate, formatPredicate])
+                let andPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [activityPredicate, formatPredicate])
                 successFetch.predicate = andPredicate
                 successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
                 let userSuccesses = try! context.fetch(successFetch) as! [Success]
@@ -108,11 +107,9 @@ class AddDetailsActivityViewController: UIViewController {
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
                 let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
-                successFetch.fetchLimit = 1
-                successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
                 let activityPredicate = NSPredicate(format: "self.activity == %@", "pushup")
                 let formatPredicate = NSPredicate(format: "self.requirements <= %d", Int32(addToUserActivity!))
-                let andPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [activityPredicate, formatPredicate])
+                let andPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [activityPredicate, formatPredicate])
                 successFetch.predicate = andPredicate
                 successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
                 let userSuccesses = try! context.fetch(successFetch) as! [Success]
@@ -140,11 +137,9 @@ class AddDetailsActivityViewController: UIViewController {
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
                 let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
-                successFetch.fetchLimit = 1
-                successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
                 let activityPredicate = NSPredicate(format: "self.activity == %@", "swimming")
                 let formatPredicate = NSPredicate(format: "self.requirements <= %d", Int32(addToUserActivity!))
-                let andPredicate = NSCompoundPredicate(orPredicateWithSubpredicates: [activityPredicate, formatPredicate])
+                let andPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [activityPredicate, formatPredicate])
                 successFetch.predicate = andPredicate
                 successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
                 let userSuccesses = try! context.fetch(successFetch) as! [Success]
@@ -171,17 +166,12 @@ class AddDetailsActivityViewController: UIViewController {
                 activity.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
-                print(newUserActivity)
-                
                 let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
-                successFetch.fetchLimit = 1
-                successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
                 let activityPredicate = NSPredicate(format: "self.activity == %@", "running")
                 let formatPredicate = NSPredicate(format: "self.requirements <= %d", Int32(addToUserActivity!))
                 let andPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [activityPredicate, formatPredicate])
                 successFetch.predicate = andPredicate
                 successFetch.sortDescriptors = [NSSortDescriptor.init(key: "requirements", ascending: false)]
-                print(successFetch)
                 let userSuccesses = try! context.fetch(successFetch) as! [Success]
                 
                 for success in userSuccesses {
