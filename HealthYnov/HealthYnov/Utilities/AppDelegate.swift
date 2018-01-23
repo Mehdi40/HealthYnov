@@ -20,13 +20,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let dataHelper = DataHelper(context: self.persistentContainer.viewContext)
         
-        if dataHelper.isUser() {
-                dataHelper.setTables()
-            } else {
-                DispatchQueue.main.async {
-                }
-            }
-
+        //if dataHelper.isUser() {
+          //      dataHelper.setTables()
+            //} else {
+              //  DispatchQueue.main.async {
+        //}
+          //  }
+dataHelper.setTables()
 // Slow the app launch 1.5 sec to show the launchscreen
         Thread.sleep(forTimeInterval: 1.5)
         return true

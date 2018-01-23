@@ -72,6 +72,7 @@ class AddDetailsActivityViewController: UIViewController {
                 newUserActivity.setValue(currentUser, forKey: "user")
                 newUserActivity.setValue(activity, forKey: "activity")
                 newUserActivity.setValue(Int32(addToUserActivity! * 10), forKey: "experience")
+                newUserActivity.setValue(Date(), forKey: "dateCreation")
                 activity.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
@@ -102,6 +103,7 @@ class AddDetailsActivityViewController: UIViewController {
                 newUserActivity.setValue(currentUser, forKey: "user")
                 newUserActivity.setValue(activity, forKey: "activity")
                 newUserActivity.setValue(Int32(addToUserActivity! * 10), forKey: "experience")
+                newUserActivity.setValue(Date(), forKey: "dateCreation")
                 activity.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
@@ -133,6 +135,7 @@ class AddDetailsActivityViewController: UIViewController {
                 newUserActivity.setValue(currentUser, forKey: "user")
                 newUserActivity.setValue(activity, forKey: "activity")
                 newUserActivity.setValue(Int32(addToUserActivity! * 10), forKey: "experience")
+                newUserActivity.setValue(Date(), forKey: "dateCreation")
                 activity.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
@@ -164,6 +167,7 @@ class AddDetailsActivityViewController: UIViewController {
                 newUserActivity.setValue(currentUser, forKey: "user")
                 newUserActivity.setValue(activity, forKey: "activity")
                 newUserActivity.setValue(Int32(addToUserActivity! * 10), forKey: "experience")
+                newUserActivity.setValue(Date(), forKey: "dateCreation")
                 activity.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 currentUser.setValue(NSSet(object: newUserActivity), forKey: "UserActivity")
                 
