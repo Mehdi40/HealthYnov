@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jbw-OR-0GI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -106,7 +106,7 @@
                                                     <constraint firstItem="fLz-xL-T8C" firstAttribute="top" secondItem="wBo-xO-0FO" secondAttribute="top" constant="114" id="zNl-cu-uNh"/>
                                                 </constraints>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9pz-gE-xff">
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="9pz-gE-xff">
                                                 <rect key="frame" x="137" y="0.0" width="137" height="327"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vr3-dj-2JZ">
@@ -165,12 +165,26 @@
                                                     </view>
                                                 </subviews>
                                                 <constraints>
+                                                    <constraint firstAttribute="bottom" secondItem="vr3-dj-2JZ" secondAttribute="bottom" constant="213" id="Ljd-ql-gYp"/>
+                                                    <constraint firstItem="W2X-Wk-HP9" firstAttribute="top" secondItem="vr3-dj-2JZ" secondAttribute="bottom" id="fsR-QE-hqB"/>
                                                     <constraint firstItem="W2X-Wk-HP9" firstAttribute="top" secondItem="9pz-gE-xff" secondAttribute="top" constant="114" id="jh0-kx-4JE"/>
+                                                    <constraint firstItem="vr3-dj-2JZ" firstAttribute="top" secondItem="9pz-gE-xff" secondAttribute="top" id="utp-ij-qoG"/>
                                                 </constraints>
                                             </stackView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="wBo-xO-0FO" firstAttribute="leading" secondItem="F5A-hm-Bme" secondAttribute="leading" id="9WF-21-78m"/>
+                                            <constraint firstItem="9pz-gE-xff" firstAttribute="top" secondItem="F5A-hm-Bme" secondAttribute="top" id="Gvq-Xh-L6h"/>
+                                            <constraint firstAttribute="trailing" secondItem="9pz-gE-xff" secondAttribute="trailing" id="bEk-tW-JBZ"/>
+                                            <constraint firstItem="wBo-xO-0FO" firstAttribute="top" secondItem="F5A-hm-Bme" secondAttribute="top" id="dky-df-mS5"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="F5A-hm-Bme" firstAttribute="top" secondItem="pJ5-QH-U4h" secondAttribute="bottom" constant="10" id="KiA-WT-CtL"/>
+                                    <constraint firstAttribute="trailing" secondItem="F5A-hm-Bme" secondAttribute="trailing" constant="3" id="PgP-JU-NkF"/>
+                                    <constraint firstItem="F5A-hm-Bme" firstAttribute="leading" secondItem="VLd-EH-dg6" secondAttribute="leading" constant="3" id="rZB-Gu-9rb"/>
+                                </constraints>
                             </stackView>
                             <navigationBar contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sTf-le-UVs">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="37"/>
@@ -218,7 +232,9 @@
                         <outlet property="NavBarCustom" destination="sTf-le-UVs" id="Er7-ZH-fpB"/>
                         <outlet property="activityTypeLabel" destination="9GB-Hl-Jgu" id="nCn-7P-CK2"/>
                         <outlet property="avatar" destination="k4C-xg-nSN" id="R0r-Wp-ebW"/>
-                        <outlet property="steps" destination="BZJ-sV-1FU" id="5X8-dL-PaC"/>
+                        <outlet property="userMoths" destination="4zu-Gf-zy6" id="Aw6-TN-svO"/>
+                        <outlet property="userSteps" destination="JMA-kf-sAY" id="ufg-95-tpl"/>
+                        <outlet property="userSuccesses" destination="BZJ-sV-1FU" id="ee2-rE-DtV"/>
                         <outlet property="userlevel" destination="pJ5-QH-U4h" id="fNP-Ex-wxE"/>
                         <outlet property="username" destination="FXx-uA-tnC" id="aYe-rf-uR0"/>
                     </connections>
