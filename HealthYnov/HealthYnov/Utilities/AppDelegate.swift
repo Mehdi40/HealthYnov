@@ -27,6 +27,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //}
           //  }
 dataHelper.setTables()
+        let HKDataHelper = HealthKitDataHelper()
+        
+        HKDataHelper.requestAuthorization()
 // Slow the app launch 1.5 sec to show the launchscreen
         Thread.sleep(forTimeInterval: 1.5)
         return true

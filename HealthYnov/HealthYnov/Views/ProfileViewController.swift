@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import CoreData
+import HealthKit
 
 class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UINavigationBarDelegate, UIBarPositioningDelegate {
 
@@ -186,6 +187,46 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let HKDataHelper = HealthKitDataHelper()
+        
+        // GET STEPS
+        
+        let healthStore: HKHealthStore? = {
+            if HKHealthStore.isHealthDataAvailable() {
+                return HKHealthStore()
+            } else {
+                return nil
+            }
+        }()
+        
+        let stepsQuantityType = HKQuantityType.quantityType(forIdentifier: .stepCount)!
+        
+        let now = Date()
+        let startOfDay = Calendar.current.startOfDay(for: now)
+        let predicate = HKQuery.predicateForSamples(withStart: startOfDay, end: now, options: .strictStartDate)
+        
+        let query = HKStatisticsQuery(quantityType: stepsQuantityType, quantitySamplePredicate: predicate, options: .cumulativeSum) { (_, result, error) in
+            guard let result = result, let sum = result.sumQuantity() else {
+                print("Failed to fetch steps = \(error?.localizedDescription ?? "N/A")")
+                //completion(0.0)
+                return
+            }
+            
+            DispatchQueue.main.async {
+                //completion(sum.doubleValue(for: HKUnit.count()))
+            }
+        }
+        
+        healthStore?.execute(query)
+        print(healthStore!)
+        
+        
+        
+        
+        
+        
+        
         
         profilePic.isUserInteractionEnabled = true
         // We're going to fetch the last success which has been unlocked
