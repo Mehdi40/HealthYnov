@@ -27,8 +27,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
                 cell.title.text = suc.name
                 cell.desc.text = suc.desc
             } else {
-                cell.title.text = "Pas de succès"
-                cell.desc.text = "Débloquez des succès."
+                cell.title.text = "No unlocked success"
+                cell.desc.text = "Let's go!"
             }
             
             return cell
@@ -37,8 +37,8 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
                 cell.title.text = act.activity!.name
                 cell.desc.text = String(act.score)
             } else {
-                cell.title.text = "Pas d'activité"
-                cell.desc.text = "Bougez-vous un peu sérieux"
+                cell.title.text = "You didn't practice any activity"
+                cell.desc.text = "Let's go!"
             }
             
             return cell
