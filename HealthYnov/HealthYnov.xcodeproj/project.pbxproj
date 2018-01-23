@@ -151,7 +151,6 @@
 		8B978D522016AD7600FD34FD /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				912BED0E2003B4A200749DEF /* Info.plist */,
 				9154A36C200DF2A500220F0D /* ProfileTableViewCell.swift */,
 				912BED022003B4A200749DEF /* AppDelegate.swift */,
 				8B9958062004CA6200002EC7 /* RoundedUImage.swift */,
@@ -214,6 +213,7 @@
 		912BED012003B4A200749DEF /* HealthYnov */ = {
 			isa = PBXGroup;
 			children = (
+				912BED0E2003B4A200749DEF /* Info.plist */,
 				8B978D512016AD4A00FD34FD /* Views */,
 				8BA3D1362014F96900CC825B /* HealthYnov.entitlements */,
 				912BED062003B4A200749DEF /* Main.storyboard */,

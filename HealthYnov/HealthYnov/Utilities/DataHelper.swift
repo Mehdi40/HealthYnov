@@ -58,9 +58,11 @@ public class DataHelper{
         let userFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "User")
         userFetch.fetchLimit = 1
         let users = try! context.fetch(userFetch) as! [User]
-        let user = users.first as? User
+        let user = users.first as! User
         
-        if user!.username! == "JohnDoe" {
+        print(user)
+        
+        if user.username! == "JohnDoe" {
             return false
         }
         

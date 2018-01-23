@@ -162,11 +162,17 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        let controller = UIImagePickerController()
-        controller.delegate = self
-        controller.sourceType = .savedPhotosAlbum
-        controller.allowsEditing = true
-        present(controller, animated: true, completion: nil)
+        super.touchesBegan(touches, with: event)
+        
+        let touch: UITouch = touches.first as! UITouch
+        
+        if (touch.view == profilePic){
+            let controller = UIImagePickerController()
+            controller.delegate = self
+            controller.sourceType = .savedPhotosAlbum
+            controller.allowsEditing = true
+            present(controller, animated: true, completion: nil)
+        }
     }
     
     override var preferredStatusBarStyle: UIStatusBarStyle {
@@ -181,8 +187,7 @@ class ProfileViewController: UIViewController, UITableViewDataSource, UIImagePic
     override func viewDidLoad() {
         super.viewDidLoad()
         
-
-        
+        profilePic.isUserInteractionEnabled = true
         // We're going to fetch the last success which has been unlocked
         let successFetch = NSFetchRequest<NSFetchRequestResult>(entityName: "Success")
         successFetch.fetchLimit = 1
